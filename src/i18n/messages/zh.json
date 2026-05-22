@@ -83,7 +83,7 @@
     "copyHash": "复制校验和",
     "verification": {
       "title": "如何验证下载文件",
-      "body": "用 shasum -a 256 {'<'}文件名{'>'} 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
+      "body": "用 shasum -a 256 FILENAME 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
     }
   },
   "useCases": {
