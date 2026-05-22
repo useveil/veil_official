@@ -63,6 +63,13 @@
       "cta": "Download now"
     }
   },
+  "compare": {
+    "eyebrow": "Compare",
+    "title": "How Veil differs from comparable tools",
+    "description": "We only list independently verifiable facts. Pricing reflects public pages as of May 2026.",
+    "featureColumn": "Feature",
+    "footnote": "* Pricing and feature sets may change. Confirm vendor websites before purchasing."
+  },
   "security": {
     "stack": {
       "eyebrow": "Encryption stack",

@@ -63,6 +63,13 @@
       "cta": "前往下载"
     }
   },
+  "compare": {
+    "eyebrow": "对比",
+    "title": "Veil 与同类工具的核心差异",
+    "description": "我们只列可以被独立验证的事实。价格信息基于 2026 年 5 月公开页面。",
+    "featureColumn": "特性",
+    "footnote": "* 价格信息和功能集合可能随产品更新发生变化。建议在购买前以厂商官网为准。"
+  },
   "security": {
     "stack": {
       "eyebrow": "加密栈",
