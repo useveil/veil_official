@@ -75,6 +75,17 @@
     "featureColumn": "Feature",
     "footnote": "* Pricing and feature sets may change. Confirm vendor websites before purchasing."
   },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Choose your platform",
+    "description": "Every release ships with SHA-256 checksums and GitHub-signed artifacts. Please verify before installing.",
+    "downloadFor": "Download for {platform}",
+    "copyHash": "Copy checksum",
+    "verification": {
+      "title": "How to verify your download",
+      "body": "Compute the hash with shasum -a 256 <filename> and compare to the SHA-256 above. You can also verify cosign signatures on the GitHub Releases page."
+    }
+  },
   "security": {
     "stack": {
       "eyebrow": "Encryption stack",

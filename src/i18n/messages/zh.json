@@ -75,6 +75,17 @@
     "featureColumn": "特性",
     "footnote": "* 价格信息和功能集合可能随产品更新发生变化。建议在购买前以厂商官网为准。"
   },
+  "download": {
+    "eyebrow": "下载",
+    "title": "选择你的平台",
+    "description": "所有发布都附带 SHA-256 校验和与 GitHub 签名。建议在安装前先校验。",
+    "downloadFor": "下载 {platform}",
+    "copyHash": "复制校验和",
+    "verification": {
+      "title": "如何验证下载文件",
+      "body": "用 shasum -a 256 {'<'}文件名{'>'} 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
+    }
+  },
   "security": {
     "stack": {
       "eyebrow": "加密栈",
