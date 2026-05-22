@@ -3,5 +3,24 @@
     "download": "Download",
     "viewSource": "View Source",
     "skeleton": "Skeleton placeholder"
+  },
+  "nav": {
+    "security": "Security",
+    "useCases": "Use Cases",
+    "compare": "Compare",
+    "automation": "Automation",
+    "changelog": "Changelog",
+    "download": "Download",
+    "faq": "FAQ",
+    "source": "Source",
+    "issues": "Report Issue"
+  },
+  "footer": {
+    "tagline": "Open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data encrypted locally, network behavior visible, fingerprint generated from controlled profiles.",
+    "groups": {
+      "product": "Product",
+      "developers": "Developers",
+      "community": "Community"
+    }
   }
 }

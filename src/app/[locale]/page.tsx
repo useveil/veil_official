@@ -1,7 +1,4 @@
 import { setRequestLocale } from 'next-intl/server';
-import { Logo } from '@/components/layout/Logo';
-import { ThemeToggle } from '@/components/layout/ThemeToggle';
-import { LanguageSwitch } from '@/components/layout/LanguageSwitch';
 import { routing, type Locale } from '@/i18n/routing';
 
 export function generateStaticParams() {
@@ -17,11 +14,9 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   return (
-    <main className="p-8 flex items-center gap-4">
-      <Logo />
-      <ThemeToggle />
-      <LanguageSwitch />
-      <span className="text-sm text-ink-500">locale: {locale}</span>
+    <main className="mx-auto max-w-7xl px-6 py-24">
+      <h1 className="text-5xl font-bold tracking-tight">首页占位（locale: {locale}）</h1>
+      <p className="mt-4 text-foreground-muted">Phase 3 会构建真正的 Hero。</p>
     </main>
   );
 }

@@ -3,5 +3,24 @@
     "download": "下载",
     "viewSource": "查看源码",
     "skeleton": "骨架占位"
+  },
+  "nav": {
+    "security": "安全",
+    "useCases": "应用场景",
+    "compare": "对比",
+    "automation": "自动化",
+    "changelog": "更新日志",
+    "download": "下载",
+    "faq": "常见问题",
+    "source": "源代码",
+    "issues": "提交问题"
+  },
+  "footer": {
+    "tagline": "开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成。",
+    "groups": {
+      "product": "产品",
+      "developers": "开发者",
+      "community": "社区"
+    }
   }
 }
