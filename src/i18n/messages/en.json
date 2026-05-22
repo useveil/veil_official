@@ -86,6 +86,12 @@
       "body": "Compute the hash with shasum -a 256 <filename> and compare to the SHA-256 above. You can also verify cosign signatures on the GitHub Releases page."
     }
   },
+  "useCases": {
+    "eyebrow": "Use cases",
+    "title": "Different audiences, same job: verifiable isolation",
+    "description": "Four real workflow scenarios. In each one, Veil cares not about looking secure, but about being provably secure.",
+    "capabilitiesTitle": "Key capabilities"
+  },
   "security": {
     "stack": {
       "eyebrow": "Encryption stack",

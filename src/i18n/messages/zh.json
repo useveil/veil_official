@@ -86,6 +86,12 @@
       "body": "用 shasum -a 256 {'<'}文件名{'>'} 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
     }
   },
+  "useCases": {
+    "eyebrow": "应用场景",
+    "title": "为不同人群，做同一件事：可验证的隔离",
+    "description": "四个真实的工作流场景。每个场景下，Veil 关心的不是看起来安全，而是可以被证明安全。",
+    "capabilitiesTitle": "关键能力"
+  },
   "security": {
     "stack": {
       "eyebrow": "加密栈",
