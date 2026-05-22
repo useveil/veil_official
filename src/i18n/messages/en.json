@@ -40,6 +40,11 @@
       "eyebrow": "Why Veil",
       "title": "Replace \"trust the platform\" with \"verify the system\"",
       "description": "Six core features that set Veil apart from other fingerprint browsers."
+    },
+    "useCases": {
+      "eyebrow": "Use cases",
+      "title": "Built for high-value identity isolation",
+      "description": "Multi-account, wallet isolation, storefront operations, automation teams — Veil turns \"isolation\" into a verifiable engineering concern."
     }
   }
 }
