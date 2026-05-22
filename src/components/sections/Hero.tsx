@@ -2,6 +2,7 @@ import { ArrowDownToLine, GitBranch, LockKeyhole, MonitorCheck, Shield } from 'l
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/content/constants';
+import { Reveal } from '@/components/motion/Reveal';
 
 const trustBadges = [
   { icon: Shield, key: 'license' },
@@ -19,7 +20,7 @@ export function Hero() {
         className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(45,212,191,0.10),transparent_70%)]"
       />
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 lg:pt-32 lg:pb-40">
-        <div className="max-w-4xl">
+        <Reveal className="max-w-4xl">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium uppercase tracking-wider text-foreground-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
             {t('eyebrow')}
@@ -51,7 +52,7 @@ export function Hero() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

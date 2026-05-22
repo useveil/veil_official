@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { features } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
+import { StaggerChildren, StaggerItem } from '@/components/motion/StaggerChildren';
 import { SectionHeading } from './SectionHeading';
 
 export type FeatureGridProps = {
@@ -19,27 +20,24 @@ export function FeatureGrid({ variant = 'all' }: FeatureGridProps) {
         title={t('title')}
         description={t('description')}
       />
-      <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <StaggerChildren className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" role="list">
         {items.map((feature) => {
           const Icon = feature.icon;
           return (
-            <li
+            <StaggerItem
               key={feature.key}
               className="group relative rounded-lg border border-border bg-surface-elevated p-6 transition-colors hover:border-border-strong"
+              role="listitem"
             >
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-lg font-semibold tracking-tight">
-                {feature.title[locale]}
-              </h3>
-              <p className="mt-2 text-sm text-foreground-muted leading-relaxed">
-                {feature.body[locale]}
-              </p>
-            </li>
+              <h3 className="mt-5 text-lg font-semibold tracking-tight">{feature.title[locale]}</h3>
+              <p className="mt-2 text-sm text-foreground-muted leading-relaxed">{feature.body[locale]}</p>
+            </StaggerItem>
           );
         })}
-      </ul>
+      </StaggerChildren>
     </section>
   );
 }
