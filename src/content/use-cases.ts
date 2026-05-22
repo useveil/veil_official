@@ -1,10 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import {
-  Boxes,
-  CircuitBoard,
-  ShoppingCart,
-  TerminalSquare,
-} from 'lucide-react';
+import { Boxes, CircuitBoard, ShoppingCart, TerminalSquare } from 'lucide-react';
 import type { LocalizedText } from './features';
 
 export type UseCase = {
@@ -30,9 +25,15 @@ export const useCases: UseCase[] = [
       en: 'Each Profile holds its own fingerprint, cookies, cache, extensions, and proxy lane. No cross-context residue between windows; no plaintext on disk; only ciphertext synced. Ideal for ad, social, and e-commerce multi-account operations.',
     },
     capabilities: [
-      { zh: '确定性指纹种子，画像跨会话稳定', en: 'Deterministic seeds, stable identities across sessions' },
+      {
+        zh: '确定性指纹种子，画像跨会话稳定',
+        en: 'Deterministic seeds, stable identities across sessions',
+      },
       { zh: '每 Profile 独立代理、独立 DNS', en: 'Per-profile proxy, per-profile DNS' },
-      { zh: '本地数据 AES-256 加密 + SQLCipher 整库', en: 'AES-256 + SQLCipher full-database encryption' },
+      {
+        zh: '本地数据 AES-256 加密 + SQLCipher 整库',
+        en: 'AES-256 + SQLCipher full-database encryption',
+      },
     ],
   },
   {
@@ -85,7 +86,10 @@ export const useCases: UseCase[] = [
     },
     capabilities: [
       { zh: 'HTTP API + CDP 双通道', en: 'HTTP API + CDP dual channel' },
-      { zh: 'Playwright / Puppeteer / Selenium 兼容', en: 'Playwright / Puppeteer / Selenium compatible' },
+      {
+        zh: 'Playwright / Puppeteer / Selenium 兼容',
+        en: 'Playwright / Puppeteer / Selenium compatible',
+      },
       { zh: 'API Key 细粒度权限', en: 'Fine-grained API key permissions' },
     ],
   },

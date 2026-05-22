@@ -1,9 +1,9 @@
+import { ChangelogList } from '@/components/sections/ChangelogList';
+import { type Locale, routing } from '@/i18n/routing';
+import { getAllChangelogs } from '@/lib/changelog';
+import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { ChangelogList } from '@/components/sections/ChangelogList';
-import { getAllChangelogs } from '@/lib/changelog';
-import { routing, type Locale } from '@/i18n/routing';
-import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,

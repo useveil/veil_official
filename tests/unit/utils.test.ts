@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { cn } from '@/lib/utils';
+import { describe, expect, it } from 'vitest';
 
 describe('cn()', () => {
   it('合并多个 class 字符串', () => {
@@ -15,6 +15,6 @@ describe('cn()', () => {
   });
 
   it('支持条件对象', () => {
-    expect(cn({ 'opacity-50': true, 'hidden': false })).toBe('opacity-50');
+    expect(cn({ 'opacity-50': true, hidden: false })).toBe('opacity-50');
   });
 });

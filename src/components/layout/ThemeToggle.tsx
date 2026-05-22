@@ -1,10 +1,10 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { Monitor, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 const order = ['system', 'light', 'dark'] as const;
 type ThemeKey = (typeof order)[number];

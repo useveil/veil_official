@@ -1,7 +1,7 @@
+import { SITE } from '@/content/constants';
+import { type Locale, routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { routing, type Locale } from '@/i18n/routing';
-import { SITE } from '@/content/constants';
 
 const PROD_URL = 'https://veil.app';
 

@@ -28,8 +28,8 @@ export async function getAllChangelogs(): Promise<ChangelogEntry[]> {
       const slug = file.replace(/\.mdx$/, '');
       // gray-matter 会把 YAML 日期字段解析为 Date 对象，需强制转为字符串
       const raw = data as Record<string, unknown>;
-      if (raw['date'] instanceof Date) {
-        raw['date'] = (raw['date'] as Date).toISOString().slice(0, 10);
+      if (raw.date instanceof Date) {
+        raw.date = (raw.date as Date).toISOString().slice(0, 10);
       }
       return { ...(raw as ChangelogFrontmatter), slug };
     }),

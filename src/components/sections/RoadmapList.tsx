@@ -1,8 +1,8 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { roadmap, type RoadmapPhase } from '@/content/roadmap';
-import type { Locale } from '@/i18n/routing';
 import { Badge } from '@/components/ui/badge';
+import { type RoadmapPhase, roadmap } from '@/content/roadmap';
+import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 const variantClasses: Record<RoadmapPhase['statusVariant'], string> = {
@@ -22,24 +22,23 @@ export function RoadmapList({ compact = false }: { compact?: boolean }) {
         {roadmap.map((item) => (
           <li
             key={item.phase}
-            className={cn(
-              'grid gap-4 py-7 md:grid-cols-[200px_1fr_auto] md:items-center md:gap-8',
-            )}
+            className={cn('grid gap-4 py-7 md:grid-cols-[200px_1fr_auto] md:items-center md:gap-8')}
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
                 {item.phase}
               </p>
-              <h3 className="mt-1 text-lg font-semibold tracking-tight">
-                {item.title[locale]}
-              </h3>
+              <h3 className="mt-1 text-lg font-semibold tracking-tight">{item.title[locale]}</h3>
             </div>
             {!compact && (
-              <p className="text-sm text-foreground-muted leading-relaxed">
-                {item.body[locale]}
-              </p>
+              <p className="text-sm text-foreground-muted leading-relaxed">{item.body[locale]}</p>
             )}
-            <Badge className={cn('justify-self-start md:justify-self-end', variantClasses[item.statusVariant])}>
+            <Badge
+              className={cn(
+                'justify-self-start md:justify-self-end',
+                variantClasses[item.statusVariant],
+              )}
+            >
               {item.status[locale]}
             </Badge>
           </li>

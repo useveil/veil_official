@@ -1,8 +1,8 @@
+import { useCases } from '@/content/use-cases';
+import type { Locale } from '@/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useCases } from '@/content/use-cases';
-import type { Locale } from '@/i18n/routing';
 import { SectionHeading } from './SectionHeading';
 
 export function UseCaseGrid() {
@@ -12,11 +12,7 @@ export function UseCaseGrid() {
   return (
     <section className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-        <SectionHeading
-          eyebrow={t('eyebrow')}
-          title={t('title')}
-          description={t('description')}
-        />
+        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
         <ul className="mt-12 grid gap-4 sm:grid-cols-2">
           {useCases.map((useCase) => {
             const Icon = useCase.icon;

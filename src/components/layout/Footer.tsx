@@ -1,7 +1,7 @@
+import { SITE } from '@/content/constants';
+import { footerGroups } from '@/content/nav';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { footerGroups } from '@/content/nav';
-import { SITE } from '@/content/constants';
 import { Logo } from './Logo';
 
 export function Footer() {

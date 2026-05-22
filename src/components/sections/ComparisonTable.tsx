@@ -1,5 +1,3 @@
-import { Check, Minus, X } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
 import {
   type ComparisonCell,
   comparisonColumns,
@@ -8,6 +6,8 @@ import {
 } from '@/content/comparison';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
+import { Check, Minus, X } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 function renderCell(cell: ComparisonCell, locale: Locale, isVeil: boolean) {
@@ -29,16 +29,14 @@ export function ComparisonTable() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <SectionHeading
-        eyebrow={t('eyebrow')}
-        title={t('title')}
-        description={t('description')}
-      />
+      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       <div className="mt-12 overflow-x-auto rounded-lg border border-border">
         <table className="w-full min-w-[720px]">
           <thead className="bg-surface text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
             <tr>
-              <th scope="col" className="px-5 py-3 text-left">{t('featureColumn')}</th>
+              <th scope="col" className="px-5 py-3 text-left">
+                {t('featureColumn')}
+              </th>
               {comparisonColumns.map((col) => (
                 <th
                   key={col}

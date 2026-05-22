@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, type HTMLMotionProps } from 'motion/react';
 import { cn } from '@/lib/utils';
+import { type HTMLMotionProps, motion } from 'motion/react';
 
 const containerVariants = {
   hidden: {},
@@ -22,11 +22,7 @@ const childVariants = {
   },
 };
 
-export function StaggerChildren({
-  children,
-  className,
-  ...rest
-}: HTMLMotionProps<'div'>) {
+export function StaggerChildren({ children, className, ...rest }: HTMLMotionProps<'div'>) {
   return (
     <motion.div
       variants={containerVariants}

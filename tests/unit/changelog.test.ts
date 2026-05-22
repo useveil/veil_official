@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { getAllChangelogs, getChangelogBySlug } from '@/lib/changelog';
+import { describe, expect, it } from 'vitest';
 
 describe('changelog parser', () => {
   it('读取所有 MDX 文件并按日期倒序', async () => {

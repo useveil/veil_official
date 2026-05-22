@@ -1,8 +1,8 @@
-import { Check, X } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
 import type { LocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
+import { Check, X } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 type ThreatRow = {
@@ -51,7 +51,10 @@ const threats: ThreatRow[] = [
   },
   {
     key: 'device-malware',
-    threat: { zh: '本机被植入键盘记录恶意软件', en: 'Local device infected with keylogger malware' },
+    threat: {
+      zh: '本机被植入键盘记录恶意软件',
+      en: 'Local device infected with keylogger malware',
+    },
     protected: false,
     reasoning: {
       zh: '本地安全是用户自身的责任范围。Veil 不能替代终端 EDR。',
@@ -75,18 +78,20 @@ export function SecurityThreatModel() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <SectionHeading
-        eyebrow={t('eyebrow')}
-        title={t('title')}
-        description={t('description')}
-      />
+      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       <div className="mt-12 overflow-hidden rounded-lg border border-border">
         <table className="w-full">
           <thead className="bg-surface text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
             <tr>
-              <th scope="col" className="px-5 py-3 text-left">{t('headers.threat')}</th>
-              <th scope="col" className="px-5 py-3 text-left">{t('headers.protected')}</th>
-              <th scope="col" className="px-5 py-3 text-left">{t('headers.reasoning')}</th>
+              <th scope="col" className="px-5 py-3 text-left">
+                {t('headers.threat')}
+              </th>
+              <th scope="col" className="px-5 py-3 text-left">
+                {t('headers.protected')}
+              </th>
+              <th scope="col" className="px-5 py-3 text-left">
+                {t('headers.reasoning')}
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border bg-background text-sm">
@@ -103,7 +108,11 @@ export function SecurityThreatModel() {
                     )}
                     aria-label={row.protected ? t('protectedYes') : t('protectedNo')}
                   >
-                    {row.protected ? <Check className="h-3.5 w-3.5" /> : <X className="h-3.5 w-3.5" />}
+                    {row.protected ? (
+                      <Check className="h-3.5 w-3.5" />
+                    ) : (
+                      <X className="h-3.5 w-3.5" />
+                    )}
                   </span>
                 </td>
                 <td className="px-5 py-4 text-foreground-muted">{row.reasoning[locale]}</td>

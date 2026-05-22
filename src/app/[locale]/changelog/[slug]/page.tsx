@@ -1,11 +1,11 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
+import { type Locale, routing } from '@/i18n/routing';
+import { getAllChangelogs, getChangelogBySlug } from '@/lib/changelog';
+import { cn } from '@/lib/utils';
 import { ArrowLeft } from 'lucide-react';
 import { setRequestLocale } from 'next-intl/server';
-import { Badge } from '@/components/ui/badge';
-import { getAllChangelogs, getChangelogBySlug } from '@/lib/changelog';
-import { routing, type Locale } from '@/i18n/routing';
-import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 const channelClasses = {
   stable: 'bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-200',

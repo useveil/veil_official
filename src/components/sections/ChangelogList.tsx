@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
-import type { ChangelogEntry } from '@/lib/changelog';
 import type { Locale } from '@/i18n/routing';
+import type { ChangelogEntry } from '@/lib/changelog';
 import { cn } from '@/lib/utils';
+import { useLocale, useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { SectionHeading } from './SectionHeading';
 
 const channelClasses = {

@@ -1,6 +1,6 @@
-import type { MetadataRoute } from 'next';
-import { getAllChangelogs } from '@/lib/changelog';
 import { routing } from '@/i18n/routing';
+import { getAllChangelogs } from '@/lib/changelog';
+import type { MetadataRoute } from 'next';
 
 const PROD_URL = 'https://veil.app';
 const STATIC_PATHS = [

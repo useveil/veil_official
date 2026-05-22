@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, type HTMLMotionProps } from 'motion/react';
 import { cn } from '@/lib/utils';
+import { type HTMLMotionProps, motion } from 'motion/react';
 
 export type RevealProps = HTMLMotionProps<'div'> & {
   delay?: number;

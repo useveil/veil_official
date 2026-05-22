@@ -1,12 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import {
-  Blocks,
-  Fingerprint,
-  Gauge,
-  LockKeyhole,
-  Network,
-  Workflow,
-} from 'lucide-react';
+import { Blocks, Fingerprint, Gauge, LockKeyhole, Network, Workflow } from 'lucide-react';
 
 export type LocalizedText = { zh: string; en: string };
 

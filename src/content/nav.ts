@@ -34,7 +34,11 @@ export const footerGroups: { titleKey: string; items: NavItem[] }[] = [
     titleKey: 'footer.groups.community',
     items: [
       { key: 'faq', href: '/faq', labelKey: 'nav.faq' },
-      { key: 'issues', href: 'https://github.com/useveil/veil_official/issues', labelKey: 'nav.issues' },
+      {
+        key: 'issues',
+        href: 'https://github.com/useveil/veil_official/issues',
+        labelKey: 'nav.issues',
+      },
     ],
   },
 ];

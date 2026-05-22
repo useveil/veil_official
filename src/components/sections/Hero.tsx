@@ -1,8 +1,8 @@
-import { ArrowDownToLine, GitBranch, LockKeyhole, MonitorCheck, Shield } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/content/constants';
-import { Reveal } from '@/components/motion/Reveal';
+import { ArrowDownToLine, GitBranch, LockKeyhole, MonitorCheck, Shield } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const trustBadges = [
   { icon: Shield, key: 'license' },
@@ -32,11 +32,18 @@ export function Hero() {
             {t('subtitle')}
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button render={<a href={SITE.releaseUrl} target="_blank" rel="noreferrer" />} size="lg">
+            <Button
+              render={<a href={SITE.releaseUrl} target="_blank" rel="noreferrer" />}
+              size="lg"
+            >
               <ArrowDownToLine className="h-4 w-4" />
               {t('primaryCta')}
             </Button>
-            <Button render={<a href={SITE.repoUrl} target="_blank" rel="noreferrer" />} size="lg" variant="outline">
+            <Button
+              render={<a href={SITE.repoUrl} target="_blank" rel="noreferrer" />}
+              size="lg"
+              variant="outline"
+            >
               <GitBranch className="h-4 w-4" />
               {t('secondaryCta')}
             </Button>

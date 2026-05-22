@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { automationExamples } from '@/content/automation';
 import type { Locale } from '@/i18n/routing';
+import { useLocale, useTranslations } from 'next-intl';
+import { useState } from 'react';
 import { CodeSnippet } from './CodeSnippet';
 import { SectionHeading } from './SectionHeading';
 
@@ -15,16 +15,8 @@ export function AutomationApi() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <SectionHeading
-        eyebrow={t('eyebrow')}
-        title={t('title')}
-        description={t('description')}
-      />
-      <Tabs
-        value={active}
-        onValueChange={(val) => setActive(val as string)}
-        className="mt-12"
-      >
+      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
+      <Tabs value={active} onValueChange={(val) => setActive(val as string)} className="mt-12">
         <TabsList className="mb-6 flex h-auto flex-wrap justify-start gap-2 bg-transparent p-0">
           {automationExamples.map((example) => (
             <TabsTrigger

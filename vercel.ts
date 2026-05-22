@@ -1,4 +1,4 @@
-import { routes, type VercelConfig, type Redirect } from '@vercel/config/v1';
+import { type Redirect, type VercelConfig, routes } from '@vercel/config/v1';
 
 // Vercel 部署配置：缓存策略 + 旧 URL redirect
 export const config: VercelConfig = {

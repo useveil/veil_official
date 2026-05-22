@@ -9,5 +9,10 @@ test('移动端打开菜单抽屉', async ({ page }) => {
   // SheetContent 基于 @base-ui/react/dialog，渲染 role="dialog"
   await expect(page.getByRole('dialog')).toBeVisible();
   // primaryNav 第一项为 security，中文显示"安全"
-  await expect(page.locator('a').filter({ hasText: /安全|security/i }).last()).toBeVisible();
+  await expect(
+    page
+      .locator('a')
+      .filter({ hasText: /安全|security/i })
+      .last(),
+  ).toBeVisible();
 });

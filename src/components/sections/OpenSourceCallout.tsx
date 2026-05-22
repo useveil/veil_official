@@ -1,7 +1,7 @@
-import { GitBranch, Github } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/content/constants';
+import { GitBranch, Github } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function OpenSourceCallout() {
   const t = useTranslations('home.openSource');
@@ -14,18 +14,23 @@ export function OpenSourceCallout() {
             <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
               {t('eyebrow')}
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              {t('title')}
-            </h2>
-            <p className="mt-4 text-base text-foreground-muted leading-relaxed">
-              {t('body')}
-            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">{t('title')}</h2>
+            <p className="mt-4 text-base text-foreground-muted leading-relaxed">{t('body')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button render={<a href={SITE.repoUrl} target="_blank" rel="noreferrer" />}>
                 <Github className="h-4 w-4" />
                 {t('repoCta')}
               </Button>
-              <Button render={<a href={`${SITE.repoUrl}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noreferrer" />} variant="outline">
+              <Button
+                render={
+                  <a
+                    href={`${SITE.repoUrl}/blob/main/CONTRIBUTING.md`}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                variant="outline"
+              >
                 <GitBranch className="h-4 w-4" />
                 {t('contributeCta')}
               </Button>
@@ -35,15 +40,15 @@ export function OpenSourceCallout() {
             <pre className="overflow-x-auto">
               <code className="text-foreground-muted">
                 <span className="text-teal-600 dark:text-teal-400">$</span> git clone {SITE.repoUrl}
-                {`\n`}
+                {'\n'}
                 <span className="text-teal-600 dark:text-teal-400">$</span> cd veil_official
-                {`\n`}
+                {'\n'}
                 <span className="text-teal-600 dark:text-teal-400">$</span> pnpm install && pnpm dev
-                {`\n`}
-                {`\n`}
+                {'\n'}
+                {'\n'}
                 <span className="text-foreground-subtle">{`# License: ${SITE.license}`}</span>
-                {`\n`}
-                <span className="text-foreground-subtle">{`# Tests:   560+ automated`}</span>
+                {'\n'}
+                <span className="text-foreground-subtle">{'# Tests:   560+ automated'}</span>
               </code>
             </pre>
           </div>

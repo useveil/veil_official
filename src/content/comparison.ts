@@ -12,7 +12,13 @@ export type ComparisonRow = {
   vmlogin: ComparisonCell;
 };
 
-export const comparisonColumns = ['veil', 'multilogin', 'adspower', 'bitbrowser', 'vmlogin'] as const;
+export const comparisonColumns = [
+  'veil',
+  'multilogin',
+  'adspower',
+  'bitbrowser',
+  'vmlogin',
+] as const;
 export const comparisonLabels = {
   veil: 'Veil',
   multilogin: 'Multilogin',

@@ -1,7 +1,12 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { faqGroups } from '@/content/faq';
 import type { Locale } from '@/i18n/routing';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 export function FaqAccordion() {

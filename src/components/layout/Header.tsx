@@ -1,14 +1,14 @@
+import { buttonVariants } from '@/components/ui/button';
+import { SITE } from '@/content/constants';
+import { primaryNav } from '@/content/nav';
+import { cn } from '@/lib/utils';
 import { ArrowDownToLine } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { buttonVariants } from '@/components/ui/button';
-import { primaryNav } from '@/content/nav';
-import { SITE } from '@/content/constants';
 import { LanguageSwitch } from './LanguageSwitch';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
 import { ThemeToggle } from './ThemeToggle';
-import { cn } from '@/lib/utils';
 
 export function Header() {
   const t = useTranslations();

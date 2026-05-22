@@ -1,7 +1,7 @@
-import { CheckCircle2 } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
 import { useCases } from '@/content/use-cases';
 import type { Locale } from '@/i18n/routing';
+import { CheckCircle2 } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 export function UseCaseDeep() {
@@ -11,11 +11,7 @@ export function UseCaseDeep() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pt-24 md:pt-32">
-        <SectionHeading
-          eyebrow={t('eyebrow')}
-          title={t('title')}
-          description={t('description')}
-        />
+        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       </section>
       <div className="mx-auto mt-16 max-w-7xl px-6 pb-24 md:pb-32">
         <div className="divide-y divide-border border-y border-border">

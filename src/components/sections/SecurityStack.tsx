@@ -1,7 +1,7 @@
-import { ArrowDown, Database, FileLock2, KeyRound, Lock } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
 import type { LocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
+import { ArrowDown, Database, FileLock2, KeyRound, Lock } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
 
 type StackLayer = {
@@ -53,11 +53,7 @@ export function SecurityStack() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <SectionHeading
-        eyebrow={t('eyebrow')}
-        title={t('title')}
-        description={t('description')}
-      />
+      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       <ol className="mt-12 grid gap-3 md:max-w-2xl">
         {layers.map((layer, index) => {
           const Icon = layer.icon;
@@ -71,9 +67,7 @@ export function SecurityStack() {
                   <h3 className="text-sm font-mono font-semibold tracking-tight">
                     {layer.label[locale]}
                   </h3>
-                  <p className="mt-1 text-sm text-foreground-muted">
-                    {layer.detail[locale]}
-                  </p>
+                  <p className="mt-1 text-sm text-foreground-muted">{layer.detail[locale]}</p>
                 </div>
               </div>
               {index < layers.length - 1 && (

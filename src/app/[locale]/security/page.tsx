@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
 import { SecurityStack } from '@/components/sections/SecurityStack';
 import { SecurityThreatModel } from '@/components/sections/SecurityThreatModel';
 import { TrustList } from '@/components/sections/TrustList';
-import { routing, type Locale } from '@/i18n/routing';
+import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata({
   params,

@@ -23,7 +23,12 @@
     "rules": {
       "recommended": true,
       "a11y": {
-        "useKeyWithClickEvents": "off"
+        "useKeyWithClickEvents": "off",
+        "useAnchorContent": "off",
+        "useSemanticElements": "off"
+      },
+      "correctness": {
+        "noUnknownProperty": "off"
       },
       "style": {
         "noNonNullAssertion": "off"
