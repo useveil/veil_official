@@ -27,9 +27,18 @@ export const metadata: Metadata = {
   description: 'Open-source, self-hosted, zero-knowledge fingerprint browser.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // 在 [locale] 路由之外（如 _not-found）无 locale 上下文时降级为默认值
+  let locale = 'zh';
+  try {
+    const { getLocale } = await import('next-intl/server');
+    locale = await getLocale();
+  } catch {
+    // 无 next-intl 上下文时使用默认值
+  }
+
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansSC.variable}`}>
         {children}
       </body>
