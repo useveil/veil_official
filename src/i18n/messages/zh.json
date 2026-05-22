@@ -63,6 +63,11 @@
       "cta": "前往下载"
     }
   },
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "在你决定使用之前",
+    "description": "如果下面没有覆盖你的问题，欢迎在 GitHub Issues 直接提问。"
+  },
   "compare": {
     "eyebrow": "对比",
     "title": "Veil 与同类工具的核心差异",

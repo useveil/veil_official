@@ -63,6 +63,11 @@
       "cta": "Download now"
     }
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Before you decide",
+    "description": "If your question isn't covered, please open a GitHub issue."
+  },
   "compare": {
     "eyebrow": "Compare",
     "title": "How Veil differs from comparable tools",
