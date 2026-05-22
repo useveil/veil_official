@@ -45,6 +45,22 @@
       "eyebrow": "Use cases",
       "title": "Built for high-value identity isolation",
       "description": "Multi-account, wallet isolation, storefront operations, automation teams — Veil turns \"isolation\" into a verifiable engineering concern."
+    },
+    "roadmap": {
+      "eyebrow": "Roadmap",
+      "title": "From local security to zero-knowledge collaboration"
+    },
+    "openSource": {
+      "eyebrow": "Open source",
+      "title": "Make security promises visible, auditable, and rebuildable",
+      "body": "Veil's core engine is AGPL-3.0 licensed. You can audit the code, build it yourself, self-host it, and verify every security claim we make.",
+      "repoCta": "Open on GitHub",
+      "contributeCta": "Contribute"
+    },
+    "finalCta": {
+      "title": "You don't need to trust us.",
+      "body": "You just need the ability to verify us. Download Veil and turn security promises into checkable engineering facts.",
+      "cta": "Download now"
     }
   }
 }
