@@ -97,6 +97,11 @@
     "title": "Profiles as callable resources",
     "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly."
   },
+  "changelog": {
+    "eyebrow": "Changelog",
+    "title": "Every release, recorded",
+    "description": "What's new, what changed, what was fixed, known limits, and upgrade paths."
+  },
   "security": {
     "stack": {
       "eyebrow": "Encryption stack",
