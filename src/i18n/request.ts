@@ -1,9 +1,14 @@
 import { getRequestConfig } from 'next-intl/server';
+import { routing } from './routing';
 
-// 占位文件：Task 1.3 将实现完整的 next-intl 路由配置
-export default getRequestConfig(async ({ locale }) => {
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale;
+  const locale = (routing.locales as readonly string[]).includes(requested ?? '')
+    ? (requested as typeof routing.defaultLocale)
+    : routing.defaultLocale;
+
   return {
-    locale: locale ?? 'zh',
-    messages: {},
+    locale,
+    messages: (await import(`./messages/${locale}.json`)).default,
   };
 });
