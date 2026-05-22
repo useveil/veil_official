@@ -35,6 +35,11 @@
         "sqlcipher": "SQLCipher",
         "platforms": "macOS · Windows · Linux"
       }
+    },
+    "features": {
+      "eyebrow": "Why Veil",
+      "title": "Replace \"trust the platform\" with \"verify the system\"",
+      "description": "Six core features that set Veil apart from other fingerprint browsers."
     }
   }
 }

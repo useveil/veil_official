@@ -35,6 +35,11 @@
         "sqlcipher": "SQLCipher",
         "platforms": "macOS · Windows · Linux"
       }
+    },
+    "features": {
+      "eyebrow": "为什么选择 Veil",
+      "title": "把“相信平台”换成“验证系统”",
+      "description": "六个核心特性，决定了 Veil 与其他指纹浏览器的根本差异。"
     }
   }
 }

@@ -1,4 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
+import { FeatureGrid } from '@/components/sections/FeatureGrid';
 import { Hero } from '@/components/sections/Hero';
 import { routing, type Locale } from '@/i18n/routing';
 
@@ -14,5 +15,10 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <FeatureGrid variant="highlight" />
+    </>
+  );
 }
