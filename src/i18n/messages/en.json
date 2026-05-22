@@ -92,6 +92,11 @@
     "description": "Four real workflow scenarios. In each one, Veil cares not about looking secure, but about being provably secure.",
     "capabilitiesTitle": "Key capabilities"
   },
+  "automation": {
+    "eyebrow": "Automation",
+    "title": "Profiles as callable resources",
+    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly."
+  },
   "security": {
     "stack": {
       "eyebrow": "Encryption stack",

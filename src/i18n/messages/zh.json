@@ -92,6 +92,11 @@
     "description": "四个真实的工作流场景。每个场景下，Veil 关心的不是看起来安全，而是可以被证明安全。",
     "capabilitiesTitle": "关键能力"
   },
+  "automation": {
+    "eyebrow": "自动化",
+    "title": "把 Profile 当作可调用的资源",
+    "description": "Veil 提供本地 HTTP API（生命周期管理）+ 标准 CDP 端点（页面操作）。Playwright / Puppeteer / Selenium 都能直接接入。"
+  },
   "security": {
     "stack": {
       "eyebrow": "加密栈",
