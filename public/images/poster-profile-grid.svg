@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Veil profile grid example</title>
+  <desc id="desc">A product example showing isolated browser profiles with health and audit states.</desc>
+  <rect width="1200" height="800" fill="#f0f6f8"/>
+  <rect x="92" y="86" width="1016" height="628" rx="8" fill="#ffffff" stroke="#b6c8d8" stroke-width="2"/>
+  <rect x="92" y="86" width="1016" height="78" rx="8" fill="#07111f"/>
+  <circle cx="134" cy="126" r="10" fill="#ef6a73"/>
+  <circle cx="166" cy="126" r="10" fill="#f4b860"/>
+  <circle cx="198" cy="126" r="10" fill="#45d4a6"/>
+  <text x="242" y="136" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Veil profile workspace</text>
+  <rect x="132" y="210" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <rect x="416" y="210" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <rect x="700" y="210" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <rect x="132" y="430" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <rect x="416" y="430" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <rect x="700" y="430" width="244" height="180" rx="8" fill="#f8fafc" stroke="#dce6ef"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(132 210)">
+      <circle cx="40" cy="42" r="12" fill="#2dd4bf"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 01</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">Vault sealed</text>
+      <rect x="28" y="126" width="188" height="12" rx="6" fill="#d9fbf5"/>
+    </g>
+    <g transform="translate(416 210)">
+      <circle cx="40" cy="42" r="12" fill="#38bdf8"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 02</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">Proxy healthy</text>
+      <rect x="28" y="126" width="160" height="12" rx="6" fill="#dff4ff"/>
+    </g>
+    <g transform="translate(700 210)">
+      <circle cx="40" cy="42" r="12" fill="#f4b860"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 03</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">Seed stable</text>
+      <rect x="28" y="126" width="176" height="12" rx="6" fill="#fff1d2"/>
+    </g>
+    <g transform="translate(132 430)">
+      <circle cx="40" cy="42" r="12" fill="#2dd4bf"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 04</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">CDP ready</text>
+      <rect x="28" y="126" width="144" height="12" rx="6" fill="#d9fbf5"/>
+    </g>
+    <g transform="translate(416 430)">
+      <circle cx="40" cy="42" r="12" fill="#e8798b"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 05</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">Audit visible</text>
+      <rect x="28" y="126" width="180" height="12" rx="6" fill="#ffe2e7"/>
+    </g>
+    <g transform="translate(700 430)">
+      <circle cx="40" cy="42" r="12" fill="#38bdf8"/>
+      <text x="68" y="51" fill="#07111f" font-size="20" font-weight="800">Profile 06</text>
+      <text x="28" y="102" fill="#5d6b7d" font-size="18">Window grid</text>
+      <rect x="28" y="126" width="154" height="12" rx="6" fill="#dff4ff"/>
+    </g>
+  </g>
+  <text x="600" y="682" fill="#07111f" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle">多账号隔离管理，状态、代理、审计一屏可见</text>
+</svg>

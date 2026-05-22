@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Veil zero-knowledge encryption poster</title>
+  <desc id="desc">A poster showing a sealed vault, encrypted storage, and local key ownership.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" x2="1130" y1="80" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111f"/>
+      <stop offset="0.56" stop-color="#13314a"/>
+      <stop offset="1" stop-color="#0b4d49"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="360" x2="850" y1="180" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#d9fbf5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <path d="M100 660h1000" stroke="#2dd4bf" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M150 180h230M820 148h230M160 248h120M900 228h160M138 590h180M850 590h220" stroke="#38bdf8" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+  <rect x="342" y="146" width="516" height="508" rx="8" fill="url(#panel)" stroke="#b6c8d8" stroke-width="2"/>
+  <rect x="390" y="392" width="420" height="176" rx="8" fill="#07111f"/>
+  <path d="M476 392v-78c0-74 51-130 124-130s124 56 124 130v78" fill="none" stroke="#07111f" stroke-width="42" stroke-linecap="round"/>
+  <path d="M540 392v-70c0-38 23-68 60-68s60 30 60 68v70" fill="none" stroke="#d9fbf5" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="600" cy="466" r="30" fill="#2dd4bf"/>
+  <rect x="584" y="490" width="32" height="44" rx="8" fill="#2dd4bf"/>
+  <text x="600" y="102" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" text-anchor="middle">Zero-knowledge by design</text>
+  <text x="600" y="616" fill="#07111f" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle">主密码不离开本机，服务端只见密文</text>
+  <g fill="#e7f7f4" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">
+    <text x="124" y="444">Argon2id</text>
+    <text x="898" y="442">SQLCipher</text>
+    <text x="130" y="514">AES-256-GCM</text>
+    <text x="872" y="514">Audit log</text>
+  </g>
+</svg>

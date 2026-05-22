@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Veil mark</title>
+  <desc id="desc">Two folded translucent panels forming a V.</desc>
+  <defs>
+    <linearGradient id="leftVeil" x1="180" y1="146" x2="512" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.45" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="rightVeil" x1="844" y1="146" x2="512" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.42" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="342" y1="706" x2="682" y2="706" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#99f6e4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f8fafc" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#bae6fd" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M164 156c74 64 139 153 204 268 62 109 110 211 144 309 34-98 82-200 144-309 65-115 130-204 204-268 35-30 88-5 88 42 0 13-5 26-14 37-111 132-203 277-276 435-37 81-67 161-90 241-11 38-43 63-56 63s-45-25-56-63c-23-80-53-160-90-241-73-158-165-303-276-435-9-11-14-24-14-37 0-47 53-72 88-42Z" fill="url(#leftVeil)" opacity="0.95"/>
+  <path d="M860 156c-74 64-139 153-204 268-62 109-110 211-144 309-34-98-82-200-144-309-65-115-130-204-204-268-35-30-88-5-88 42 0 13 5 26 14 37 111 132 203 277 276 435 37 81 67 161 90 241 11 38 43 63 56 63s45-25 56-63c23-80 53-160 90-241 73-158 165-303 276-435 9-11 14-24 14-37 0-47-53-72-88-42Z" fill="url(#rightVeil)" opacity="0.82"/>
+  <path d="M342 706c55 70 111 117 170 141 59-24 115-71 170-141-27 72-53 140-78 205-19 47-62 76-92 76s-73-29-92-76c-25-65-51-133-78-205Z" fill="url(#fold)" opacity="0.76"/>
+</svg>

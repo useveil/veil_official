@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Veil automation API example</title>
+  <desc id="desc">A product example showing API, CDP, daemon, and browser profiles connected in a local automation flow.</desc>
+  <rect width="1200" height="800" fill="#07111f"/>
+  <rect x="108" y="104" width="984" height="592" rx="8" fill="#0f1d31" stroke="#24425a" stroke-width="2"/>
+  <text x="156" y="166" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Automation without giving up custody</text>
+  <text x="156" y="214" fill="#a8b8ca" font-family="Inter, Arial, sans-serif" font-size="20">REST API + CDP proxy + local daemon</text>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800">
+    <rect x="156" y="300" width="220" height="104" rx="8" fill="#f8fafc"/>
+    <text x="266" y="362" fill="#07111f" font-size="24" text-anchor="middle">Script</text>
+    <rect x="490" y="300" width="220" height="104" rx="8" fill="#d9fbf5"/>
+    <text x="600" y="362" fill="#07111f" font-size="24" text-anchor="middle">Veil Daemon</text>
+    <rect x="824" y="300" width="220" height="104" rx="8" fill="#dff4ff"/>
+    <text x="934" y="362" fill="#07111f" font-size="24" text-anchor="middle">Browser Pool</text>
+  </g>
+  <path d="M390 352h84M724 352h84" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M456 334l22 18-22 18M790 334l22 18-22 18" fill="none" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="156" y="496" width="888" height="92" rx="8" fill="#091426" stroke="#24425a"/>
+  <g fill="#d9fbf5" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">
+    <text x="188" y="552">Create profile</text>
+    <text x="404" y="552">Open browser</text>
+    <text x="628" y="552">Connect CDP</text>
+    <text x="824" y="552">Run task</text>
+  </g>
+  <g stroke="#38bdf8" stroke-width="5" stroke-linecap="round">
+    <path d="M338 544h40"/>
+    <path d="M566 544h40"/>
+    <path d="M770 544h40"/>
+  </g>
+  <text x="600" y="650" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle">自动化端点留在本地，敏感数据仍由用户持有</text>
+</svg>

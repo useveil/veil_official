@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 420" role="img" aria-labelledby="title desc">
+  <title id="title">Veil horizontal lockup</title>
+  <desc id="desc">Veil folded V mark with wordmark.</desc>
+  <defs>
+    <linearGradient id="leftVeil" x1="50" y1="72" x2="210" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.48" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="rightVeil" x1="372" y1="72" x2="212" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.42" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="word" x1="498" y1="114" x2="1260" y2="318" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="420" fill="none"/>
+  <g transform="translate(34 22) scale(0.72)">
+    <path d="M60 68c42 36 79 87 116 152 35 62 63 121 82 177 20-56 47-115 82-177 37-65 74-116 116-152 20-17 50-3 50 24 0 8-3 15-8 22-63 75-115 158-157 248-21 46-38 92-51 138-6 22-24 36-32 36s-26-14-32-36c-13-46-30-92-51-138-42-90-94-173-157-248-5-7-8-14-8-22 0-27 30-41 50-24Z" fill="url(#leftVeil)" opacity="0.95"/>
+    <path d="M456 68c-42 36-79 87-116 152-35 62-62 121-82 177-19-56-47-115-82-177-37-65-74-116-116-152-20-17-50-3-50 24 0 8 3 15 8 22 63 75 115 158 157 248 21 46 38 92 51 138 6 22 24 36 32 36s26-14 32-36c13-46 30-92 51-138 42-90 94-173 157-248 5-7 8-14 8-22 0-27-30-41-50-24Z" fill="url(#rightVeil)" opacity="0.82"/>
+  </g>
+  <text x="500" y="288" fill="url(#word)" font-family="Inter, SF Pro Display, Segoe UI, Arial, sans-serif" font-size="214" font-weight="760" letter-spacing="0">Veil</text>
+  <text x="508" y="346" fill="#475569" font-family="Inter, SF Pro Text, Segoe UI, Arial, sans-serif" font-size="34" font-weight="500" letter-spacing="8">IDENTITY BROWSER</text>
+</svg>
