@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
       'next-intl/config': './src/i18n/request.ts',
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
 };
 
 export default withNextIntl(withMDX(nextConfig));
