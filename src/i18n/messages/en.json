@@ -28,6 +28,7 @@
       "eyebrow": "v0.1.0 RC · Open source · Zero-knowledge",
       "title": "Trust nothing. Verify everything.",
       "subtitle": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
+      "description": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
       "primaryCta": "Download v0.1 RC",
       "secondaryCta": "View Source",
       "badges": {
