@@ -62,5 +62,28 @@
       "body": "You just need the ability to verify us. Download Veil and turn security promises into checkable engineering facts.",
       "cta": "Download now"
     }
+  },
+  "security": {
+    "stack": {
+      "eyebrow": "Encryption stack",
+      "title": "From master password to ciphertext on disk",
+      "description": "Each layer uses industry-standard algorithms and is independently replaceable. Compromising one layer doesn't grant access to the next."
+    },
+    "trust": {
+      "eyebrow": "Why trust this",
+      "title": "Four specific promises, each one verifiable"
+    },
+    "threats": {
+      "eyebrow": "Threat model",
+      "title": "What Veil protects against — and what it doesn't",
+      "description": "We honestly list both the threats we cover and the ones we don't. No security product is effective against attacks outside its threat model.",
+      "headers": {
+        "threat": "Threat",
+        "protected": "Protected",
+        "reasoning": "Reasoning"
+      },
+      "protectedYes": "Protected",
+      "protectedNo": "Outside threat model"
+    }
   }
 }

@@ -62,5 +62,28 @@
       "body": "你只需要让自己有能力验证我们。下载 Veil，把安全承诺变成可被检查的工程事实。",
       "cta": "前往下载"
     }
+  },
+  "security": {
+    "stack": {
+      "eyebrow": "加密栈",
+      "title": "从主密码到密文落库的完整路径",
+      "description": "每一层都使用业界标准算法且可独立替换。攻击者拿到任何一层的数据都无法跳到下一层。"
+    },
+    "trust": {
+      "eyebrow": "为什么可信",
+      "title": "四个具体承诺，每个都可被验证"
+    },
+    "threats": {
+      "eyebrow": "威胁模型",
+      "title": "Veil 防护谁，不防护谁",
+      "description": "诚实地列出我们覆盖的威胁与不覆盖的威胁。任何安全产品对超出威胁模型的攻击都无能为力。",
+      "headers": {
+        "threat": "威胁",
+        "protected": "是否防护",
+        "reasoning": "原因"
+      },
+      "protectedYes": "已防护",
+      "protectedNo": "不在威胁模型内"
+    }
   }
 }
