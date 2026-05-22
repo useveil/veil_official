@@ -13,6 +13,8 @@ export function LanguageSwitch({ className }: { className?: string }) {
   const pathname = usePathname();
 
   function switchTo(target: string) {
+    // 设置 NEXT_LOCALE cookie，让 next-intl middleware 优先使用用户选择
+    document.cookie = `NEXT_LOCALE=${target};path=/;max-age=31536000`;
     // 去掉当前 locale 前缀（如有）
     let path = pathname;
     for (const l of routing.locales) {
