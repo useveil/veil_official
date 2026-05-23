@@ -76,10 +76,10 @@ export const comparisonRows: ComparisonRow[] = [
   {
     key: 'price',
     feature: { zh: '本体价格', en: 'Core pricing' },
-    veil: { zh: '免费', en: 'Free' },
-    multilogin: { zh: '$99/月起', en: 'From $99/mo' },
-    adspower: { zh: '$5.4/月起', en: 'From $5.4/mo' },
-    bitbrowser: { zh: '免费 + 收费档', en: 'Free + paid tiers' },
-    vmlogin: { zh: '$59/月起', en: 'From $59/mo' },
+    veil: { zh: '免费 · 无限环境', en: 'Free · unlimited profiles' },
+    multilogin: { zh: '$7.08/月 · 10 环境', en: '$7.08/mo · 10 profiles' },
+    adspower: { zh: '$7.2/月 · 10 环境', en: '$7.2/mo · 10 profiles' },
+    bitbrowser: { zh: '$10/月 · 50 环境', en: '$10/mo · 50 profiles' },
+    vmlogin: { zh: '$100/月 · 200 环境', en: '$100/mo · 200 profiles' },
   },
 ];
