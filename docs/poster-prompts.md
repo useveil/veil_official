@@ -1,172 +1,71 @@
-# Veil 海报 AI 生图 Prompts
+# Veil 海报 · AI 生图 Prompts（精简版）
 
-这份文档收集了 4 张首页海报的 AI 生图 prompt。生成出图后请按文件名替换 `public/images/posters/` 下对应的占位 SVG。
+每张海报一段 prompt，直接复制粘贴到任何模型（Midjourney v6+ / Flux / Stable Diffusion / DALL-E 3 / Imagen / Gemini）都能用。生成完成后把文件放到 `public/images/posters/` 覆盖同名 SVG（或改后缀为 `.png` 并更新 `src/content/posters.ts` 中的 `src`/`width`/`height`）。
 
-## 全局共享规范
-
-所有海报共享同一视觉系统（Architectural Minimal · Linear / Vercel / Anthropic 谱系）：
-
-| 项 | 规范 |
-|---|---|
-| 整体调性 | 极简、克制、几何抽象、工程美学 |
-| 主色 | 深海军蓝 `#07111f` / 米白 `#fafbfc` |
-| 强调色 | Teal `#14b8a6` / Teal-soft `#5eead4` |
-| 警示色（极少用）| Amber `#f4b860` / Rose `#e8798b` |
-| 禁用 | ❌ 人物 / 真实物体 / 真实摄影 / Apple Liquid Glass / 卡通 / 3D 真实材质 / 任何文字、logo、品牌名 |
-| 字体（若必须）| 等宽：JetBrains Mono / IBM Plex Mono / Geist Mono |
-| 输出格式 | PNG（首选）或 WebP，**不要 JPG**（避免渐变 banding） |
-| 输出分辨率 | 见各海报"输出"字段，建议 2× retina 上传 |
-
-替换占位时把生成图的文件名改为对应 SVG 文件名（保留 `.svg` 后缀 OR 改成 `.png` 并同步修改 `src/content/posters.ts` 里的 `src` 路径与 width/height）。
+**通用约束**（每段 prompt 都已包含，但生成时若工具有"风格预设"也请保持）：
+- 视觉系统：Architectural Minimal（Linear / Vercel / Anthropic 谱系）
+- 不要：人物、真实物体、真实摄影、Apple Liquid Glass、卡通、3D 真实材质、**任何文字 / logo / 品牌名**
+- 主色：深海军蓝 `#07111f` / 米白 `#fafbfc`，强调色 Teal `#14b8a6` / `#5eead4`
+- 输出：PNG 或 WebP（不要 JPG），建议 retina 2× 分辨率上传
 
 ---
 
-## 1 · Hero 海报 · 加密栈层叠
+## 1 · `poster-encryption-stack.svg` · 600×750（4:5 竖向）
 
-**文件：** `public/images/posters/poster-encryption-stack.svg`（替换为 `.png` 时改后缀并更新 `posters.ts`）
-**输出尺寸：** 600 × 750（4:5 竖向，retina 上传 1200 × 1500）
-**位置：** 首页 Hero 右侧
-**主题：** Veil 加密栈 4 层结构的视觉化（Master Password → Argon2id → AES-256-GCM → SQLCipher）
-
-### Midjourney / Niji / Flux
+> 用于首页 Hero 右侧。
 
 ```
-A minimalist architectural diagram of a layered encryption stack, isometric flat geometric composition, four horizontal translucent panels stacked at slightly different scales, each panel a different finely tuned shade of deep navy with one panel highlighted in muted teal, ultra-clean engineering blueprint aesthetic, subtle grid background, soft inner glow, vertical 4:5 poster format, no text, no logos, no people, in the style of Linear product illustration meets Vercel design system meets Massimo Vignelli grid posters, monospace technical labels visible but unreadable, deep navy #07111f and teal accent #14b8a6, generous negative space, premium technical poster, --ar 4:5 --style raw --v 6
-```
-
-### Stable Diffusion / Flux dev
-
-**Positive prompt:**
-```
-minimalist architectural diagram, four stacked translucent geometric panels representing an encryption stack, isometric flat composition, subtle grid background, deep navy background (#07111f), one teal accent layer (#14b8a6), vertical poster 4:5, engineering blueprint, generous negative space, soft volumetric glow, ultra clean, premium tech illustration style of Linear and Vercel, monochromatic with single accent color, smooth gradients, no banding
-```
-
-**Negative prompt:**
-```
-text, words, letters, logo, brand, watermark, signature, people, person, hands, face, photorealistic, photograph, real material, plastic, metal sheen, 3D rendering, glossy reflection, glass, liquid glass, cartoon, anime, illustration of person, low quality, jpeg artifacts, noise, dust, scratches
-```
-
-### DALL-E 3 / Imagen 3 / Gemini
-
-```
-Create a minimalist vertical poster (4:5 aspect ratio) showing four horizontal panels stacked from large at the bottom to small at the top, like an encryption stack diagram. Each panel is a translucent geometric rectangle in a different shade of deep navy blue (#07111f, #1a212d, #2f3845), with the topmost panel in muted teal (#14b8a6). Background is deep navy with a barely-visible technical grid pattern. No text, no logos, no people. Architectural minimalism, premium engineering aesthetic, generous whitespace. Style of Vercel and Linear design systems.
+A minimalist vertical poster in 4:5 aspect ratio (1200x1500 px) depicting an abstract layered encryption stack. Four horizontal isometric panels stacked vertically with slight 3D perspective — the largest panel at the bottom and progressively smaller panels above. The bottom three panels are deep navy gradients (#1a2533 / #15202e / #101b29) with subtle inner shadows. The topmost panel is filled with a muted teal-to-cyan gradient (#14b8a6 to #5eead4) and is slightly smaller, creating a pyramid-like silhouette. Each panel has a hairline edge highlight in soft cream (#fafbfc at 12% opacity). Thin teal connector arrows (#5eead4) flow downward between adjacent panels along the center axis, indicating data direction. Background is a deep navy gradient (#07111f to #050b14) with a barely-visible technical grid overlay and a soft teal radial glow concentrated at the top. Four tiny corner registration marks. Generous negative space. No text, no labels, no logos, no people, no photography. Style: Massimo Vignelli grid posters meets Linear product illustration meets Vercel design system. Engineering blueprint aesthetic, premium minimalism, ultra clean vector look.
 ```
 
 ---
 
-## 2 · 海报 1 · 指纹画像确定性
+## 2 · `poster-fingerprint.svg` · 640×400（16:10 横向）
 
-**文件：** `public/images/posters/poster-fingerprint.svg`
-**输出尺寸：** 640 × 400（16:10 横向，retina 1280 × 800）
-**位置：** 首页 PosterGallery 第 1 位
-**主题：** 抽象指纹纹路 + 数据网格，传达"种子稳定 → 信号一致"
-
-### Midjourney / Niji / Flux
+> 用于首页 PosterGallery 第 1 位。
 
 ```
-An abstract minimalist poster of fingerprint ridges rendered as fine concentric arcs and asymmetric loops, drawn in single-weight teal lines on a soft cream background, accompanied by a barely-visible technical grid and 3 small dot markers at ridge endpoints, no actual fingerprint photograph, purely geometric vector aesthetic, premium engineering illustration, horizontal 16:10 poster, generous negative space on the right side, no text, no logos, no people, monochromatic cream and single teal accent #14b8a6, in the style of Edward Tufte data visualization meets Linear product illustration, --ar 16:10 --style raw --v 6
-```
-
-### Stable Diffusion / Flux dev
-
-**Positive prompt:**
-```
-abstract fingerprint ridge pattern as concentric arcs and asymmetric loops, single-weight teal line drawing, soft cream background (#fafbfc), technical grid overlay barely visible, three small accent dots, horizontal 16:10 poster, premium engineering illustration, vector aesthetic, generous whitespace on the right, monochromatic with single teal accent (#14b8a6), Edward Tufte data viz style, Linear product illustration style, no real fingerprint photo
-```
-
-**Negative prompt:**
-```
-text, words, letters, logo, real fingerprint photo, photorealistic skin, finger, hand, biometric scanner UI, generic stock illustration, gradient mesh, glass, glossy, 3D, banding, jpeg artifacts, dust, noise, watermark
-```
-
-### DALL-E 3 / Imagen 3 / Gemini
-
-```
-Horizontal poster (16:10) on a soft cream background. On the left half, draw an abstract pattern of fine concentric arcs and asymmetric loops in muted teal (#14b8a6), resembling fingerprint ridges but stylized as a pure line drawing—not a photograph. Add a barely-visible square grid behind it. Three tiny dark dots mark ridge endpoints. Right half is mostly empty (negative space). No text, no logos. Minimalist engineering aesthetic, style of Linear and Vercel design.
+A minimalist horizontal poster in 16:10 aspect ratio (1280x800 px) depicting an abstract deterministic fingerprint pattern. On the left two-thirds of the canvas, draw a stylized fingerprint composed of fine concentric arcs and asymmetric loops, rendered as single-weight teal lines (#14b8a6) about 2px wide, on a soft cream background (#fafbfc to #eef2f4 gradient). The arcs should evoke a real fingerprint's flow but remain purely geometric — not a scan or photograph. A barely-visible square grid (1px lines at 4.5% opacity) sits behind the pattern. Three small solid dark dots (#07111f) mark ridge endpoint signature points. The right one-third of the canvas is mostly empty negative space, decorated only with a faint 3x3 grid of tiny teal dots and three or four thin horizontal cream guide lines — like a data sheet placeholder. Soft radial teal wash (#5eead4 at 12% opacity) centered on the fingerprint. No text, no labels, no logos, no real finger or hand, no biometric scanner UI. Style: Edward Tufte data visualization meets Linear product illustration meets Otl Aicher infographics. Ultra-clean vector aesthetic, monochromatic with single teal accent.
 ```
 
 ---
 
-## 3 · 海报 2 · 网络出站审计
+## 3 · `poster-network-audit.svg` · 640×400（16:10 横向）
 
-**文件：** `public/images/posters/poster-network-audit.svg`
-**输出尺寸：** 640 × 400（16:10 横向，retina 1280 × 800）
-**位置：** 首页 PosterGallery 第 2 位
-**主题：** 节点图视化出站连接，一个来源节点 → 多个目标节点，部分连接被审计标记
-
-### Midjourney / Niji / Flux
+> 用于首页 PosterGallery 第 2 位。
 
 ```
-A minimalist network topology diagram, single large origin node on the left connected by thin curved lines to four small destination nodes scattered on the right, each node a simple circle with a softly glowing teal ring, one of the connections drawn as a dashed amber line indicating a flagged outbound, deep navy background #07111f with a subtle technical grid, horizontal 16:10 poster, premium engineering visualization, no text on the nodes, geometric and clean, in the style of Vercel observability dashboard meets Tron geometric minimalism meets Otl Aicher infographics, single accent color teal #14b8a6, one warning amber accent #f4b860, --ar 16:10 --style raw --v 6
-```
-
-### Stable Diffusion / Flux dev
-
-**Positive prompt:**
-```
-minimalist network topology diagram, one large origin circular node on the left connected by thin curved lines to four small destination nodes on the right, each node has a soft teal glowing ring, one connection is a dashed amber line indicating flagged outbound, deep navy background (#07111f), subtle technical grid, horizontal 16:10 poster, premium engineering visualization, clean geometric, monochromatic with teal accent (#14b8a6) and a single amber warning (#f4b860), style of Vercel observability dashboard
-```
-
-**Negative prompt:**
-```
-text on nodes, words, letters, logo, photorealistic, 3D render, glassy, glossy, liquid glass, busy composition, too many lines, chaotic, gradient mesh, banding, jpeg artifacts, watermark, real network equipment, server racks, fiber optics photo
-```
-
-### DALL-E 3 / Imagen 3 / Gemini
-
-```
-Horizontal poster (16:10) on a deep navy background (#07111f) with a barely-visible grid. On the left, draw one large circle (the origin node) with a soft teal glowing ring (#14b8a6). On the right, place four smaller circular nodes at different vertical positions, each also ringed in teal. Connect the origin to each destination with a thin curved line. Make one of those four lines dashed and amber-colored (#f4b860) to indicate a flagged connection. No text labels, no logos, no people. Style of an engineering observability dashboard reduced to its essence.
+A minimalist horizontal poster in 16:10 aspect ratio (1280x800 px) showing an abstract network audit diagram on a deep navy background (#07111f to #050b14 gradient) with a faint technical grid (1px lines at 4% opacity). On the left side, place one large origin circle — a 9px solid teal core (#5eead4) wrapped by two softly glowing concentric teal rings (#14b8a6 with low opacity), plus a wider radial glow halo. On the right side, place four smaller destination nodes (5.5px solid teal core with single ring) at staggered vertical positions. Connect the origin to each destination with thin smooth curved lines (1.4px). Three connections are solid teal lines (#5eead4 at ~50% opacity) indicating trusted traffic. One connection — the third one going to a slightly highlighted node — is rendered as a dashed amber line (#f4b860, 1.55px, dash pattern 7-8) indicating a flagged outbound connection; that destination node is amber (#f4b860) with an amber glow instead of teal. Scattered tiny cream dots (#fafbfc at 12% opacity) suggest background data points. Subtle corner registration marks in soft teal at very low opacity. No text, no labels, no logos, no real servers or fiber optics, no people. Style: Vercel observability dashboard meets Tron geometric minimalism meets Otl Aicher infographics. Ultra-clean engineering visualization, premium dark aesthetic.
 ```
 
 ---
 
-## 4 · 海报 3 · 多 Profile 隔离
+## 4 · `poster-isolation.svg` · 640×400（16:10 横向）
 
-**文件：** `public/images/posters/poster-isolation.svg`
-**输出尺寸：** 640 × 400（16:10 横向，retina 1280 × 800）
-**位置：** 首页 PosterGallery 第 3 位
-**主题：** 4 个并列的几何容器，代表 4 个完全隔离的 Profile
-
-### Midjourney / Niji / Flux
+> 用于首页 PosterGallery 第 3 位。
 
 ```
-A minimalist diagram of four isolated chambers arranged side by side, each chamber a rounded rectangle filled with a different solid muted color (teal, soft blue, warm amber, dusty rose), the chambers separated by clean thin walls, no objects inside the chambers just abstract small geometric markers, soft cream background #fafbfc with a barely-visible grid, horizontal 16:10 poster, premium engineering illustration, generous spacing between chambers, no text, no logos, in the style of Massimo Vignelli grid posters meets Linear design system, monochromatic cream with four subtle accent fills, --ar 16:10 --style raw --v 6
-```
-
-### Stable Diffusion / Flux dev
-
-**Positive prompt:**
-```
-minimalist isolation diagram, four rounded rectangular chambers arranged side by side, each chamber filled with a different muted accent color (teal #14b8a6, soft blue #38bdf8, warm amber #f4b860, dusty rose #e8798b), thin clean separating walls, abstract small geometric markers inside each chamber, soft cream background (#fafbfc), barely-visible grid overlay, horizontal 16:10 poster, premium engineering illustration, generous spacing, style of Massimo Vignelli grid posters
-```
-
-**Negative prompt:**
-```
-text, words, letters, logo, people, faces, real objects inside chambers, photographic content, 3D render, glassy, glossy, gradient mesh, banding, jpeg artifacts, cluttered, busy composition, ornate, watermark
-```
-
-### DALL-E 3 / Imagen 3 / Gemini
-
-```
-Horizontal poster (16:10) on a soft cream background (#fafbfc) with a barely-visible grid. Draw four rounded rectangles arranged side by side, each acting as an isolated chamber. Fill them with these muted accent colors in order: teal (#14b8a6), soft blue (#38bdf8), warm amber (#f4b860), dusty rose (#e8798b)—all at low saturation. Inside each chamber, add a few tiny abstract geometric markers (dots, short lines). Walls between chambers are thin and clean. No text, no logos, no people. Style of Massimo Vignelli grid posters meets Linear design system.
+A minimalist horizontal poster in 16:10 aspect ratio (1280x800 px) depicting four isolated chambers side by side, on a soft cream background (#fafbfc to #eef2f4 gradient) with a barely-visible square grid (1px at 4.5% opacity). Four rounded rectangles (112x212 px each, 8px radius) sit in a row with equal generous spacing between them, each rendered as an isolated "chamber". Each chamber has a unique muted pastel fill and matching border color at low opacity:
+1) Leftmost chamber: pale teal fill (#d8f4ef) with teal border (#14b8a6 at 48% opacity)
+2) Second chamber: pale sky-blue fill (#d9eff8) with blue border (#38bdf8 at 48% opacity)
+3) Third chamber: pale amber fill (#f7e5c5) with amber border (#f4b860 at 55% opacity)
+4) Rightmost chamber: pale rose fill (#f5dce2) with rose border (#e8798b at 50% opacity)
+Inside each chamber, place a few small abstract geometric markers in the chamber's accent color at varying opacities — combinations of small circles, small rounded rectangles, short horizontal lines (suggesting data rows), and one accent shape per chamber (a rectangle, a plus, a triangle, a square frame). The chambers cast a very soft dark shadow downward (#07111f at 9% opacity). Thin nearly-invisible vertical guide lines (#07111f at 9% opacity) sit between chambers to emphasize separation, plus a faint outer rectangle frame surrounding all four. Generous whitespace. No text, no labels, no logos, no people, no photographic content, no glass or 3D rendering. Style: Massimo Vignelli grid posters meets Linear design system meets Swiss modernist info graphics. Premium engineering illustration, ultra-clean vector look.
 ```
 
 ---
 
 ## 替换流程
 
-1. 用上面任意一组 prompt 在你选择的 AI 工具里生成图
-2. 选出你最满意的版本，导出为 PNG（首选）或 WebP
-3. 放到 `public/images/posters/` 下，文件名可以是：
-   - 直接覆盖 SVG 占位（用同名 `.svg` 文件）—— 适合保留矢量
-   - 或改名为 `.png` / `.webp`，**同时**更新 `src/content/posters.ts` 里对应条目的 `src` 字段
-4. 重新构建：`pnpm build`，确认图片正确加载
-5. （可选）用 `Image.tsx` 的 `priority` 字段控制首屏加载策略——Hero 海报已经 `priority`，Gallery 海报默认 lazy load
+1. 用上面任意一段 prompt 在你的 AI 工具里生成图
+2. 选满意版本导出为 PNG（首选）或 WebP
+3. 把文件放到 `public/images/posters/` 下覆盖同名 SVG，**或**改名为 `.png`/`.webp` 并更新 `src/content/posters.ts` 里对应条目的 `src` 字段（同时把 `width`/`height` 改成新图尺寸）
+4. 运行 `pnpm build` 验证图片正确加载
+5. `git add -A && git commit -m "feat(posters): 替换 hero/gallery 海报"`
 
 ## 调优提示
 
-- **首次生成不满意**：换关键词强度（如把 "minimalist" 改成 "ultra-minimalist"），或降低 `--stylize` (Midjourney) / `cfg_scale` (Stable Diffusion)
-- **配色偏差**：在 prompt 里强调 hex 代码，且生成后用图像编辑工具（Affinity / Figma）做最后一道色彩校正
-- **AI 总想加文字**：在 negative prompt 里多列几个变体：`"text, typography, lettering, characters, glyphs, symbols, watermark"`
-- **图太花、太满**：加 `"generous whitespace, lots of negative space, sparse composition, minimalist negative space poster"`
-- **想要更黑暗色版本**：把背景替换为 `#050308`、accent 改为 `#5eead4`，整体氛围更"加密黑客"风
+- **AI 总想加文字**：在 prompt 结尾追加 "absolutely no text, no typography, no lettering, no glyphs, no watermark"
+- **颜色偏差**：在结尾追加 "strict color palette: exactly #07111f / #fafbfc / #14b8a6 / #5eead4"
+- **图太满**：在结尾追加 "extreme negative space, sparse composition, 70% empty canvas"
+- **想要纯暗色版**：把背景替换为 `#050308`，accent 改为 `#5eead4` 全部、移除任何米白色

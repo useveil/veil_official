@@ -1,75 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Multi-profile isolation poster placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Abstract multi-profile isolation poster">
   <defs>
-    <linearGradient id="bg-iso" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fafbfc" />
-      <stop offset="100%" stop-color="#eef1f5" />
+    <linearGradient id="iso-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fafbfc"/>
+      <stop offset="1" stop-color="#eef2f4"/>
     </linearGradient>
-    <pattern id="grid-iso" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(10,14,26,0.04)" stroke-width="1"/>
+    <pattern id="iso-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#07111f" stroke-opacity="0.045" stroke-width="1"/>
     </pattern>
+    <filter id="iso-shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#07111f" flood-opacity="0.09"/>
+    </filter>
   </defs>
 
-  <rect width="640" height="400" fill="url(#bg-iso)"/>
-  <rect width="640" height="400" fill="url(#grid-iso)"/>
+  <rect width="640" height="400" fill="url(#iso-bg)"/>
+  <rect width="640" height="400" fill="url(#iso-grid)"/>
 
-  <!-- Top-left header -->
-  <g>
-    <text x="40" y="48" font-family="ui-monospace" font-size="10" fill="#168a7e" letter-spacing="2">// PROFILE ISOLATION</text>
-    <text x="40" y="78" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="#0a0e1a" letter-spacing="-0.5">Four worlds.</text>
-    <text x="40" y="104" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="#0a0e1a" letter-spacing="-0.5">Zero crossover.</text>
+  <g fill="none" stroke="#07111f" stroke-opacity="0.07" stroke-width="1">
+    <path d="M44 72H596"/>
+    <path d="M44 328H596"/>
+    <path d="M44 72V328"/>
+    <path d="M596 72V328"/>
   </g>
 
-  <!-- 4 chambers -->
-  <g font-family="ui-monospace, SF Mono, Menlo, monospace">
-    <!-- Profile A -->
-    <g transform="translate(40, 160)">
-      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
-      <circle cx="65" cy="56" r="14" fill="rgba(20,184,166,0.18)" stroke="#14b8a6" stroke-width="1.4"/>
-      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#168a7e" font-weight="700">A</text>
-      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">VAULT</text>
-      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
-      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 142</text>
-      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 38 MB</text>
-      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · sg-01</text>
-      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+  <g filter="url(#iso-shadow)">
+    <g transform="translate(54 94)">
+      <rect width="112" height="212" rx="8" fill="#d8f4ef" stroke="#14b8a6" stroke-opacity="0.48" stroke-width="1.25"/>
+      <rect x="18" y="26" width="76" height="42" rx="5" fill="#14b8a6" fill-opacity="0.2"/>
+      <circle cx="36" cy="112" r="6" fill="#14b8a6" fill-opacity="0.56"/>
+      <circle cx="78" cy="112" r="6" fill="#14b8a6" fill-opacity="0.32"/>
+      <path d="M28 150h56M28 172h36" stroke="#14b8a6" stroke-opacity="0.48" stroke-width="2" stroke-linecap="round"/>
+      <rect x="46" y="28" width="20" height="38" rx="3" fill="#14b8a6" fill-opacity="0.42"/>
     </g>
-    <!-- Profile B -->
-    <g transform="translate(190, 160)">
-      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
-      <circle cx="65" cy="56" r="14" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.4"/>
-      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#0369a1" font-weight="700">B</text>
-      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">WALLET</text>
-      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
-      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 5</text>
-      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 4 MB</text>
-      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · us-02</text>
-      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+
+    <g transform="translate(194 94)">
+      <rect width="112" height="212" rx="8" fill="#d9eff8" stroke="#38bdf8" stroke-opacity="0.48" stroke-width="1.25"/>
+      <circle cx="56" cy="48" r="22" fill="#38bdf8" fill-opacity="0.2"/>
+      <path d="M32 112h48M56 88v48" stroke="#38bdf8" stroke-opacity="0.48" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="36" cy="170" r="5" fill="#38bdf8" fill-opacity="0.52"/>
+      <circle cx="56" cy="170" r="5" fill="#38bdf8" fill-opacity="0.34"/>
+      <circle cx="76" cy="170" r="5" fill="#38bdf8" fill-opacity="0.22"/>
     </g>
-    <!-- Profile C -->
-    <g transform="translate(340, 160)">
-      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
-      <circle cx="65" cy="56" r="14" fill="rgba(244,184,96,0.2)" stroke="#f4b860" stroke-width="1.4"/>
-      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#92400e" font-weight="700">C</text>
-      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">SHOP</text>
-      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
-      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 318</text>
-      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 124 MB</text>
-      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · jp-03</text>
-      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+
+    <g transform="translate(334 94)">
+      <rect width="112" height="212" rx="8" fill="#f7e5c5" stroke="#f4b860" stroke-opacity="0.55" stroke-width="1.25"/>
+      <path d="M28 48h56l-28 46Z" fill="#f4b860" fill-opacity="0.28" stroke="#f4b860" stroke-opacity="0.5" stroke-width="1.5" stroke-linejoin="round"/>
+      <rect x="30" y="128" width="52" height="14" rx="4" fill="#f4b860" fill-opacity="0.32"/>
+      <rect x="30" y="158" width="34" height="14" rx="4" fill="#f4b860" fill-opacity="0.22"/>
+      <circle cx="82" cy="165" r="6" fill="#f4b860" fill-opacity="0.45"/>
     </g>
-    <!-- Profile D -->
-    <g transform="translate(490, 160)">
-      <rect width="110" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
-      <circle cx="55" cy="56" r="14" fill="rgba(232,121,139,0.2)" stroke="#e8798b" stroke-width="1.4"/>
-      <text x="55" y="60" text-anchor="middle" font-size="11" fill="#9f1239" font-weight="700">D</text>
-      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">BOT</text>
-      <line x1="14" y1="116" x2="96" y2="116" stroke="#dfe5ec"/>
-      <text x="14" y="136" font-size="9" fill="#4a5564">api  · v0.1</text>
-      <text x="14" y="152" font-size="9" fill="#4a5564">cdp  · :9222</text>
-      <text x="14" y="168" font-size="9" fill="#4a5564">tasks · 47</text>
-      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+
+    <g transform="translate(474 94)">
+      <rect width="112" height="212" rx="8" fill="#f5dce2" stroke="#e8798b" stroke-opacity="0.5" stroke-width="1.25"/>
+      <rect x="28" y="36" width="56" height="56" rx="7" fill="#e8798b" fill-opacity="0.24"/>
+      <circle cx="56" cy="64" r="12" fill="#e8798b" fill-opacity="0.42"/>
+      <path d="M30 130h52M30 154h52M30 178h30" stroke="#e8798b" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
     </g>
   </g>
 
-  <text x="40" y="382" font-family="ui-monospace" font-size="9" fill="#6b7787" letter-spacing="1.4">VEIL · NO CROSS-CONTEXT RESIDUE · PER-PROFILE PROXY / DNS</text>
+  <g stroke="#07111f" stroke-opacity="0.09" stroke-width="1">
+    <path d="M180 88v224"/>
+    <path d="M320 88v224"/>
+    <path d="M460 88v224"/>
+  </g>
 </svg>
