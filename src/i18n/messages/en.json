@@ -1,0 +1,129 @@
+{
+  "common": {
+    "download": "Download",
+    "viewSource": "View Source",
+    "skeleton": "Skeleton placeholder"
+  },
+  "nav": {
+    "security": "Security",
+    "useCases": "Use Cases",
+    "compare": "Compare",
+    "automation": "Automation",
+    "changelog": "Changelog",
+    "download": "Download",
+    "faq": "FAQ",
+    "source": "Source",
+    "issues": "Report Issue"
+  },
+  "footer": {
+    "tagline": "Open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data encrypted locally, network behavior visible, fingerprint generated from controlled profiles.",
+    "groups": {
+      "product": "Product",
+      "developers": "Developers",
+      "community": "Community"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "v0.1.0 RC · Open source · Zero-knowledge",
+      "title": "Trust nothing. Verify everything.",
+      "subtitle": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
+      "description": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
+      "primaryCta": "Download v0.1 RC",
+      "secondaryCta": "View Source",
+      "badges": {
+        "license": "AGPL-3.0",
+        "sqlcipher": "SQLCipher",
+        "platforms": "macOS · Windows · Linux"
+      }
+    },
+    "features": {
+      "eyebrow": "Why Veil",
+      "title": "Replace \"trust the platform\" with \"verify the system\"",
+      "description": "Six core features that set Veil apart from other fingerprint browsers."
+    },
+    "useCases": {
+      "eyebrow": "Use cases",
+      "title": "Built for high-value identity isolation",
+      "description": "Multi-account, wallet isolation, storefront operations, automation teams — Veil turns \"isolation\" into a verifiable engineering concern."
+    },
+    "roadmap": {
+      "eyebrow": "Roadmap",
+      "title": "From local security to zero-knowledge collaboration"
+    },
+    "openSource": {
+      "eyebrow": "Open source",
+      "title": "Make security promises visible, auditable, and rebuildable",
+      "body": "Veil's core engine is AGPL-3.0 licensed. You can audit the code, build it yourself, self-host it, and verify every security claim we make.",
+      "repoCta": "Open on GitHub",
+      "contributeCta": "Contribute"
+    },
+    "finalCta": {
+      "title": "You don't need to trust us.",
+      "body": "You just need the ability to verify us. Download Veil and turn security promises into checkable engineering facts.",
+      "cta": "Download now"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Before you decide",
+    "description": "If your question isn't covered, please open a GitHub issue."
+  },
+  "compare": {
+    "eyebrow": "Compare",
+    "title": "How Veil differs from comparable tools",
+    "description": "We only list independently verifiable facts. Pricing reflects public pages as of May 2026.",
+    "featureColumn": "Feature",
+    "footnote": "* Pricing and feature sets may change. Confirm vendor websites before purchasing."
+  },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Choose your platform",
+    "description": "Every release ships with SHA-256 checksums and GitHub-signed artifacts. Please verify before installing.",
+    "downloadFor": "Download for {platform}",
+    "copyHash": "Copy checksum",
+    "verification": {
+      "title": "How to verify your download",
+      "body": "Compute the hash with shasum -a 256 FILENAME and compare to the SHA-256 above. You can also verify cosign signatures on the GitHub Releases page."
+    }
+  },
+  "useCases": {
+    "eyebrow": "Use cases",
+    "title": "Different audiences, same job: verifiable isolation",
+    "description": "Four real workflow scenarios. In each one, Veil cares not about looking secure, but about being provably secure.",
+    "capabilitiesTitle": "Key capabilities"
+  },
+  "automation": {
+    "eyebrow": "Automation",
+    "title": "Profiles as callable resources",
+    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly."
+  },
+  "changelog": {
+    "eyebrow": "Changelog",
+    "title": "Every release, recorded",
+    "description": "What's new, what changed, what was fixed, known limits, and upgrade paths."
+  },
+  "security": {
+    "stack": {
+      "eyebrow": "Encryption stack",
+      "title": "From master password to ciphertext on disk",
+      "description": "Each layer uses industry-standard algorithms and is independently replaceable. Compromising one layer doesn't grant access to the next."
+    },
+    "trust": {
+      "eyebrow": "Why trust this",
+      "title": "Four specific promises, each one verifiable"
+    },
+    "threats": {
+      "eyebrow": "Threat model",
+      "title": "What Veil protects against — and what it doesn't",
+      "description": "We honestly list both the threats we cover and the ones we don't. No security product is effective against attacks outside its threat model.",
+      "headers": {
+        "threat": "Threat",
+        "protected": "Protected",
+        "reasoning": "Reasoning"
+      },
+      "protectedYes": "Protected",
+      "protectedNo": "Outside threat model"
+    }
+  }
+}

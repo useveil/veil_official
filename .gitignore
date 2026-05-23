@@ -1,7 +1,11 @@
 node_modules/
 dist/
+.next/
 .env
 .env.*
 .DS_Store
 .vercel/
 .superpowers/
+tsconfig.tsbuildinfo
+test-results/
+playwright-report/

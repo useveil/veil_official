@@ -1,0 +1,129 @@
+{
+  "common": {
+    "download": "下载",
+    "viewSource": "查看源码",
+    "skeleton": "骨架占位"
+  },
+  "nav": {
+    "security": "安全",
+    "useCases": "应用场景",
+    "compare": "对比",
+    "automation": "自动化",
+    "changelog": "更新日志",
+    "download": "下载",
+    "faq": "常见问题",
+    "source": "源代码",
+    "issues": "提交问题"
+  },
+  "footer": {
+    "tagline": "开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成。",
+    "groups": {
+      "product": "产品",
+      "developers": "开发者",
+      "community": "社区"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "v0.1.0 RC · 开源 · 零知识加密",
+      "title": "把\"相信平台\"换成\"验证系统\"",
+      "subtitle": "Veil 是一个开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成——面向高价值多账号、Web3、电商和自动化团队。",
+      "description": "Veil 是一个开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成——面向高价值多账号、Web3、电商和自动化团队。",
+      "primaryCta": "下载 v0.1 RC",
+      "secondaryCta": "查看源码",
+      "badges": {
+        "license": "AGPL-3.0",
+        "sqlcipher": "SQLCipher",
+        "platforms": "macOS · Windows · Linux"
+      }
+    },
+    "features": {
+      "eyebrow": "为什么选择 Veil",
+      "title": "把\"相信平台\"换成\"验证系统\"",
+      "description": "六个核心特性，决定了 Veil 与其他指纹浏览器的根本差异。"
+    },
+    "useCases": {
+      "eyebrow": "应用场景",
+      "title": "为高价值身份隔离而生",
+      "description": "无论是多账号、钱包隔离、电商运营，还是自动化团队——Veil 都把\"隔离\"做成了可验证的工程问题。"
+    },
+    "roadmap": {
+      "eyebrow": "路线图",
+      "title": "从本地安全，到零知识协作"
+    },
+    "openSource": {
+      "eyebrow": "开源",
+      "title": "让安全承诺能被看见、被审计、被重新构建",
+      "body": "Veil 核心引擎采用 AGPL-3.0 开源协议。你可以审计代码、独立编译、自托管运行，并验证我们的所有安全承诺。",
+      "repoCta": "前往 GitHub",
+      "contributeCta": "参与贡献"
+    },
+    "finalCta": {
+      "title": "你不需要相信我们。",
+      "body": "你只需要让自己有能力验证我们。下载 Veil，把安全承诺变成可被检查的工程事实。",
+      "cta": "前往下载"
+    }
+  },
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "在你决定使用之前",
+    "description": "如果下面没有覆盖你的问题，欢迎在 GitHub Issues 直接提问。"
+  },
+  "compare": {
+    "eyebrow": "对比",
+    "title": "Veil 与同类工具的核心差异",
+    "description": "我们只列可以被独立验证的事实。价格信息基于 2026 年 5 月公开页面。",
+    "featureColumn": "特性",
+    "footnote": "* 价格信息和功能集合可能随产品更新发生变化。建议在购买前以厂商官网为准。"
+  },
+  "download": {
+    "eyebrow": "下载",
+    "title": "选择你的平台",
+    "description": "所有发布都附带 SHA-256 校验和与 GitHub 签名。建议在安装前先校验。",
+    "downloadFor": "下载 {platform}",
+    "copyHash": "复制校验和",
+    "verification": {
+      "title": "如何验证下载文件",
+      "body": "用 shasum -a 256 FILENAME 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
+    }
+  },
+  "useCases": {
+    "eyebrow": "应用场景",
+    "title": "为不同人群，做同一件事：可验证的隔离",
+    "description": "四个真实的工作流场景。每个场景下，Veil 关心的不是看起来安全，而是可以被证明安全。",
+    "capabilitiesTitle": "关键能力"
+  },
+  "automation": {
+    "eyebrow": "自动化",
+    "title": "把 Profile 当作可调用的资源",
+    "description": "Veil 提供本地 HTTP API（生命周期管理）+ 标准 CDP 端点（页面操作）。Playwright / Puppeteer / Selenium 都能直接接入。"
+  },
+  "changelog": {
+    "eyebrow": "更新日志",
+    "title": "每一次发布都被记录",
+    "description": "包含新增、变更、修复、已知限制和升级路径。"
+  },
+  "security": {
+    "stack": {
+      "eyebrow": "加密栈",
+      "title": "从主密码到密文落库的完整路径",
+      "description": "每一层都使用业界标准算法且可独立替换。攻击者拿到任何一层的数据都无法跳到下一层。"
+    },
+    "trust": {
+      "eyebrow": "为什么可信",
+      "title": "四个具体承诺，每个都可被验证"
+    },
+    "threats": {
+      "eyebrow": "威胁模型",
+      "title": "Veil 防护谁，不防护谁",
+      "description": "诚实地列出我们覆盖的威胁与不覆盖的威胁。任何安全产品对超出威胁模型的攻击都无能为力。",
+      "headers": {
+        "threat": "威胁",
+        "protected": "是否防护",
+        "reasoning": "原因"
+      },
+      "protectedYes": "已防护",
+      "protectedNo": "不在威胁模型内"
+    }
+  }
+}

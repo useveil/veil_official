@@ -1,0 +1,30 @@
+---
+version: 0.1.0-rc
+date: 2026-05-15
+channel: rc
+title:
+  zh: v0.1.0 RC · 首个公开候选版
+  en: v0.1.0 RC · First public release candidate
+summary:
+  zh: Veil 单机完整版 RC 发布。桌面端、Profile、代理、指纹引擎、审计日志和自动化 API 全部就位。
+  en: Veil single-device complete RC is here. Desktop app, profiles, proxy, fingerprint engine, audit log, and automation API are all in place.
+---
+
+## 新增
+
+- 桌面端完整 Profile 管理工作台（macOS / Windows / Linux）
+- 指纹引擎：Canvas / WebGL / Audio / 字体 / 平台信号确定性生成
+- 网络栈：每 Profile 独立代理、独立 DNS、WebRTC 泄漏防护
+- 数据层：Argon2id + AES-256-GCM + SQLCipher 整库加密
+- 自动化：HTTP API + CDP 端点
+- 审计：可导出的运行日志与出站连接记录
+
+## 已知限制
+
+- 云同步未启用（Phase 2 路线图）
+- 部分小语种 UI 翻译缺失
+- Linux ARM64 包仅有 AppImage，暂未提供 deb / rpm
+
+## 升级路径
+
+首个版本，无需升级。
