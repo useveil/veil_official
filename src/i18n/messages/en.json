@@ -1,7 +1,8 @@
 {
   "common": {
     "download": "Download",
-    "viewSource": "View Source",
+    "buy": "Buy now",
+    "viewPricing": "View pricing",
     "skeleton": "Skeleton placeholder"
   },
   "nav": {
@@ -9,14 +10,14 @@
     "useCases": "Use Cases",
     "compare": "Compare",
     "automation": "Automation",
+    "pricing": "Pricing",
     "changelog": "Changelog",
     "download": "Download",
     "faq": "FAQ",
-    "source": "Source",
-    "issues": "Report Issue"
+    "contact": "Contact"
   },
   "footer": {
-    "tagline": "Open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data encrypted locally, network behavior visible, fingerprint generated from controlled profiles.",
+    "tagline": "Self-hostable fingerprint browser. We sell software, not data hosting — your data lives only on your device.",
     "groups": {
       "product": "Product",
       "developers": "Developers",
@@ -25,14 +26,15 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "v0.1.0 RC · Open source · Zero-knowledge",
+      "eyebrow": "v0.1.0 RC · Self-hostable · No data retention",
       "title": "Trust nothing. Verify everything.",
-      "subtitle": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
-      "description": "Veil is an open-source, self-hosted, zero-knowledge encrypted fingerprint browser. Data is encrypted locally, network behavior is visible, and fingerprints come from controlled profiles — for high-value multi-account operations, Web3, e-commerce, and automation teams.",
-      "primaryCta": "Download v0.1 RC",
-      "secondaryCta": "View Source",
+      "subtitle": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
+      "description": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
+      "primaryCta": "View pricing",
+      "secondaryCta": "See security design",
       "badges": {
-        "license": "AGPL-3.0",
+        "selfHostable": "Self-hostable",
+        "noDataRetention": "No data retention",
         "sqlcipher": "SQLCipher",
         "platforms": "macOS · Windows · Linux"
       }
@@ -49,19 +51,23 @@
     },
     "roadmap": {
       "eyebrow": "Roadmap",
-      "title": "From local security to zero-knowledge collaboration"
+      "title": "From single-device complete to desktop source release"
     },
-    "openSource": {
-      "eyebrow": "Open source",
-      "title": "Make security promises visible, auditable, and rebuildable",
-      "body": "Veil's core engine is AGPL-3.0 licensed. You can audit the code, build it yourself, self-host it, and verify every security claim we make.",
-      "repoCta": "Open on GitHub",
-      "contributeCta": "Contribute"
+    "pricingPreview": {
+      "eyebrow": "Pricing",
+      "title": "Three tiers, identical features",
+      "description": "Only duration and average monthly cost differ. Every tier ships with unlimited profiles, self-hosting, and zero data retention on our side.",
+      "shared": {
+        "unlimitedProfiles": "Unlimited profiles",
+        "selfHostable": "Self-hostable",
+        "noDataRetention": "No data retention"
+      },
+      "cta": "See full pricing"
     },
     "finalCta": {
       "title": "You don't need to trust us.",
-      "body": "You just need the ability to verify us. Download Veil and turn security promises into checkable engineering facts.",
-      "cta": "Download now"
+      "body": "You just need the ability to verify us. Veil runs self-hosted — there is nothing for an attacker to take from us. It's design, not a promise.",
+      "cta": "View pricing"
     },
     "gallery": {
       "eyebrow": "Visualized",
@@ -69,10 +75,21 @@
       "description": "Three visual slices of the core mechanisms — fingerprint consistency, outbound connection audit, and hard isolation between profiles. Each one corresponds to a promise the code can verify."
     }
   },
+  "pricing": {
+    "tiers": {
+      "eyebrow": "Pricing",
+      "title": "Choose your subscription duration",
+      "description": "Identical feature set across all tiers — only the duration and average monthly cost differ. Every update and new release is included during the subscription period.",
+      "monthlyEquivalent": "≈ ${value}/mo",
+      "mostPopular": "Most popular",
+      "cta": "Buy {duration}",
+      "footnote": "* Full refund within 7 days if not activated. Expired subscriptions don't lock local data, but stop receiving updates and patches."
+    }
+  },
   "faq": {
     "eyebrow": "FAQ",
     "title": "Before you decide",
-    "description": "If your question isn't covered, please open a GitHub issue."
+    "description": "If your question isn't covered below, please email hi@useveil.xyz."
   },
   "compare": {
     "eyebrow": "Compare",
@@ -84,12 +101,12 @@
   "download": {
     "eyebrow": "Download",
     "title": "Choose your platform",
-    "description": "Every release ships with SHA-256 checksums and GitHub-signed artifacts. Please verify before installing.",
+    "description": "After purchasing a license, download the installer for your platform here. Every release ships with SHA-256 checksums.",
     "downloadFor": "Download for {platform}",
     "copyHash": "Copy checksum",
     "verification": {
       "title": "How to verify your download",
-      "body": "Compute the hash with shasum -a 256 FILENAME and compare to the SHA-256 above. You can also verify cosign signatures on the GitHub Releases page."
+      "body": "Compute the hash with shasum -a 256 FILENAME and compare to the SHA-256 above to ensure the file hasn't been tampered with."
     }
   },
   "useCases": {
@@ -124,7 +141,7 @@
       "title": "API keys are fully decoupled from the master password",
       "body": "Automation access is separated from human access by design. API keys live independently, scope-limited, and revocable on demand — they never touch the master password or recovery phrase.",
       "shellLabel": "Header",
-      "docsCta": "Read full docs"
+      "docsCta": "View pricing"
     }
   },
   "changelog": {

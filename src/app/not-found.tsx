@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { SITE } from '@/content/constants';
-import { ArrowLeft, Github } from 'lucide-react';
+import { ArrowLeft, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -18,12 +17,9 @@ export default function NotFound() {
           <ArrowLeft className="h-4 w-4" />
           返回首页
         </Button>
-        <Button
-          variant="outline"
-          render={<a href={`${SITE.repoUrl}/issues`} target="_blank" rel="noreferrer" />}
-        >
-          <Github className="h-4 w-4" />
-          报告问题
+        <Button variant="outline" render={<a href="mailto:hi@useveil.xyz" />}>
+          <Mail className="h-4 w-4" />
+          联系我们
         </Button>
       </div>
     </main>

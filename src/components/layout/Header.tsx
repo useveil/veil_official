@@ -1,8 +1,7 @@
 import { buttonVariants } from '@/components/ui/button';
-import { SITE } from '@/content/constants';
 import { primaryNav } from '@/content/nav';
 import { cn } from '@/lib/utils';
-import { ArrowDownToLine } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { LanguageSwitch } from './LanguageSwitch';
@@ -35,15 +34,13 @@ export function Header() {
             <ThemeToggle />
             <LanguageSwitch />
           </div>
-          <a
-            href={SITE.releaseUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/pricing"
             className={cn(buttonVariants({ size: 'sm' }), 'hidden md:inline-flex')}
           >
-            <ArrowDownToLine className="h-4 w-4" />
-            {t('common.download')}
-          </a>
+            <Sparkles className="h-4 w-4" />
+            {t('common.buy')}
+          </Link>
           <MobileNav />
         </div>
       </div>

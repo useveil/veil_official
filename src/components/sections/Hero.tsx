@@ -1,15 +1,15 @@
 import { Reveal } from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
-import { SITE } from '@/content/constants';
 import { getLocalizedText } from '@/content/features';
 import { heroPoster } from '@/content/posters';
 import type { Locale } from '@/i18n/routing';
-import { ArrowDownToLine, GitBranch, LockKeyhole, MonitorCheck, Shield } from 'lucide-react';
+import { ArrowRight, LockKeyhole, MonitorCheck, ServerCog, Shield, Sparkles } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const trustBadges = [
-  { icon: Shield, key: 'license' },
+  { icon: ServerCog, key: 'selfHostable' },
+  { icon: Shield, key: 'noDataRetention' },
   { icon: LockKeyhole, key: 'sqlcipher' },
   { icon: MonitorCheck, key: 'platforms' },
 ] as const;
@@ -38,20 +38,13 @@ export function Hero() {
             {t('subtitle')}
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button
-              render={<a href={SITE.releaseUrl} target="_blank" rel="noreferrer" />}
-              size="lg"
-            >
-              <ArrowDownToLine className="h-4 w-4" />
+            <Button render={<a href="/pricing" />} size="lg">
+              <Sparkles className="h-4 w-4" />
               {t('primaryCta')}
             </Button>
-            <Button
-              render={<a href={SITE.repoUrl} target="_blank" rel="noreferrer" />}
-              size="lg"
-              variant="outline"
-            >
-              <GitBranch className="h-4 w-4" />
+            <Button render={<a href="/security" />} size="lg" variant="outline">
               {t('secondaryCta')}
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
           <ul className="mt-10 flex flex-wrap gap-3">
@@ -61,7 +54,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-3 py-2 text-xs font-medium text-foreground-muted"
               >
                 <Icon className="h-3.5 w-3.5" />
-                {t(`badges.${key}` as 'badges.license')}
+                {t(`badges.${key}` as 'badges.selfHostable')}
               </li>
             ))}
           </ul>

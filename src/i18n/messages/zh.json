@@ -1,7 +1,8 @@
 {
   "common": {
     "download": "下载",
-    "viewSource": "查看源码",
+    "buy": "立即购买",
+    "viewPricing": "查看价格",
     "skeleton": "骨架占位"
   },
   "nav": {
@@ -9,14 +10,14 @@
     "useCases": "应用场景",
     "compare": "对比",
     "automation": "自动化",
+    "pricing": "价格",
     "changelog": "更新日志",
     "download": "下载",
     "faq": "常见问题",
-    "source": "源代码",
-    "issues": "提交问题"
+    "contact": "联系我们"
   },
   "footer": {
-    "tagline": "开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成。",
+    "tagline": "可自托管的指纹浏览器。我们卖软件，不卖数据托管——所有数据只在你的设备上。",
     "groups": {
       "product": "产品",
       "developers": "开发者",
@@ -25,14 +26,15 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "v0.1.0 RC · 开源 · 零知识加密",
+      "eyebrow": "v0.1.0 RC · 自托管 · 不存数据",
       "title": "把\"相信平台\"换成\"验证系统\"",
-      "subtitle": "Veil 是一个开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成——面向高价值多账号、Web3、电商和自动化团队。",
-      "description": "Veil 是一个开源、自托管、零知识加密的指纹浏览器。数据在本机加密，网络行为可见，指纹画像由受控 Profile 生成——面向高价值多账号、Web3、电商和自动化团队。",
-      "primaryCta": "下载 v0.1 RC",
-      "secondaryCta": "查看源码",
+      "subtitle": "Veil 是给高价值多账号、Web3、电商和自动化团队的指纹浏览器。数据只在你的设备上，软件可自托管——我们卖软件本身，不卖数据托管。",
+      "description": "Veil 是给高价值多账号、Web3、电商和自动化团队的指纹浏览器。数据只在你的设备上，软件可自托管——我们卖软件本身，不卖数据托管。",
+      "primaryCta": "查看价格",
+      "secondaryCta": "了解安全设计",
       "badges": {
-        "license": "AGPL-3.0",
+        "selfHostable": "可自托管",
+        "noDataRetention": "厂商不存数据",
         "sqlcipher": "SQLCipher",
         "platforms": "macOS · Windows · Linux"
       }
@@ -49,19 +51,23 @@
     },
     "roadmap": {
       "eyebrow": "路线图",
-      "title": "从本地安全，到零知识协作"
+      "title": "从单机完整版，到桌面端源码开放"
     },
-    "openSource": {
-      "eyebrow": "开源",
-      "title": "让安全承诺能被看见、被审计、被重新构建",
-      "body": "Veil 核心引擎采用 AGPL-3.0 开源协议。你可以审计代码、独立编译、自托管运行，并验证我们的所有安全承诺。",
-      "repoCta": "前往 GitHub",
-      "contributeCta": "参与贡献"
+    "pricingPreview": {
+      "eyebrow": "价格",
+      "title": "三档订阅，功能完全一致",
+      "description": "区别只是订阅时长与平均月成本。所有档都支持无限 Profile · 自托管 · 厂商不存你的数据。",
+      "shared": {
+        "unlimitedProfiles": "无限 Profile",
+        "selfHostable": "可自托管",
+        "noDataRetention": "厂商不存数据"
+      },
+      "cta": "查看完整定价"
     },
     "finalCta": {
       "title": "你不需要相信我们。",
-      "body": "你只需要让自己有能力验证我们。下载 Veil，把安全承诺变成可被检查的工程事实。",
-      "cta": "前往下载"
+      "body": "你只需要让自己有能力验证我们。Veil 自托管即可运行，我们这边没东西可拿——这是设计，不是承诺。",
+      "cta": "查看价格"
     },
     "gallery": {
       "eyebrow": "可视化",
@@ -69,10 +75,21 @@
       "description": "三个核心机制的视觉切片——指纹一致性、出站连接审计、Profile 之间的硬隔离。每一张都对应一个可被代码验证的承诺。"
     }
   },
+  "pricing": {
+    "tiers": {
+      "eyebrow": "价格",
+      "title": "选择你的订阅时长",
+      "description": "三档订阅功能完全一致，只是时长和平均月成本不同。订阅期内全部更新与新版本免费获取。",
+      "monthlyEquivalent": "≈ ${value}/月",
+      "mostPopular": "最受欢迎",
+      "cta": "购买 {duration}",
+      "footnote": "* 7 天内未激活可全额退款。订阅过期不会锁定本地数据，但停止接收更新与补丁。"
+    }
+  },
   "faq": {
     "eyebrow": "常见问题",
     "title": "在你决定使用之前",
-    "description": "如果下面没有覆盖你的问题，欢迎在 GitHub Issues 直接提问。"
+    "description": "如果下面没有覆盖你的问题，欢迎邮件联系 hi@useveil.xyz。"
   },
   "compare": {
     "eyebrow": "对比",
@@ -84,12 +101,12 @@
   "download": {
     "eyebrow": "下载",
     "title": "选择你的平台",
-    "description": "所有发布都附带 SHA-256 校验和与 GitHub 签名。建议在安装前先校验。",
+    "description": "购买许可证后，可从这里下载对应平台安装包。所有发布都附带 SHA-256 校验和。",
     "downloadFor": "下载 {platform}",
     "copyHash": "复制校验和",
     "verification": {
       "title": "如何验证下载文件",
-      "body": "用 shasum -a 256 FILENAME 计算下载文件的哈希，与上面的 SHA-256 对比。也可以在 GitHub Releases 页查看 cosign 签名。"
+      "body": "用 shasum -a 256 FILENAME 计算下载文件的哈希，与上面的 SHA-256 对比，确保文件未被篡改。"
     }
   },
   "useCases": {
@@ -124,7 +141,7 @@
       "title": "API Key 与主密码完全解耦",
       "body": "自动化访问从设计上就和人类访问分开。API Key 单独持久化、可按 scope 限权、随时吊销——不会触碰主密码或恢复短语。",
       "shellLabel": "请求头",
-      "docsCta": "查看完整文档"
+      "docsCta": "查看价格"
     }
   },
   "changelog": {

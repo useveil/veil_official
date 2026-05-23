@@ -3,10 +3,9 @@
 import { Button } from '@/components/ui/button';
 import { buttonVariants } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { SITE } from '@/content/constants';
 import { primaryNav } from '@/content/nav';
 import { cn } from '@/lib/utils';
-import { ArrowDownToLine, Menu } from 'lucide-react';
+import { Menu, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -44,15 +43,14 @@ export function MobileNav() {
           <ThemeToggle />
           <LanguageSwitch />
         </div>
-        <a
-          href={SITE.releaseUrl}
-          target="_blank"
-          rel="noreferrer"
+        <Link
+          href="/pricing"
+          onClick={() => setOpen(false)}
           className={cn(buttonVariants(), 'mt-4 w-full')}
         >
-          <ArrowDownToLine className="h-4 w-4" />
-          {t('common.download')}
-        </a>
+          <Sparkles className="h-4 w-4" />
+          {t('common.buy')}
+        </Link>
       </SheetContent>
     </Sheet>
   );

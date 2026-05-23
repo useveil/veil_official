@@ -1,134 +1,175 @@
 {
   "common": {
-    "download": "ダウンロード",
-    "viewSource": "ソースを見る",
-    "skeleton": "スケルトンプレースホルダー"
+    "download": "Download",
+    "buy": "Buy now",
+    "viewPricing": "View pricing",
+    "skeleton": "Skeleton placeholder"
   },
   "nav": {
-    "security": "セキュリティ",
-    "useCases": "ユースケース",
-    "compare": "比較",
-    "automation": "自動化",
-    "changelog": "変更履歴",
-    "download": "ダウンロード",
+    "security": "Security",
+    "useCases": "Use Cases",
+    "compare": "Compare",
+    "automation": "Automation",
+    "pricing": "Pricing",
+    "changelog": "Changelog",
+    "download": "Download",
     "faq": "FAQ",
-    "source": "ソース",
-    "issues": "問題を報告"
+    "contact": "Contact"
   },
   "footer": {
-    "tagline": "オープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザ。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。",
+    "tagline": "Self-hostable fingerprint browser. We sell software, not data hosting — your data lives only on your device.",
     "groups": {
-      "product": "プロダクト",
-      "developers": "開発者",
-      "community": "コミュニティ"
+      "product": "Product",
+      "developers": "Developers",
+      "community": "Community"
     }
   },
   "home": {
     "hero": {
-      "eyebrow": "v0.1.0 RC · オープンソース · ゼロ知識",
-      "title": "信頼ではなく、検証を。",
-      "subtitle": "Veil はオープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザです。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。高価値の複数アカウント運用、Web3、EC、自動化チーム向けです。",
-      "description": "Veil はオープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザです。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。高価値の複数アカウント運用、Web3、EC、自動化チーム向けです。",
-      "primaryCta": "v0.1 RC をダウンロード",
-      "secondaryCta": "ソースを見る",
+      "eyebrow": "v0.1.0 RC · Self-hostable · No data retention",
+      "title": "Trust nothing. Verify everything.",
+      "subtitle": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
+      "description": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
+      "primaryCta": "View pricing",
+      "secondaryCta": "See security design",
       "badges": {
-        "license": "AGPL-3.0",
+        "selfHostable": "Self-hostable",
+        "noDataRetention": "No data retention",
         "sqlcipher": "SQLCipher",
         "platforms": "macOS · Windows · Linux"
       }
     },
     "features": {
-      "eyebrow": "Veil を選ぶ理由",
-      "title": "プラットフォームへの信頼を、システムの検証へ",
-      "description": "Veil を他のフィンガープリントブラウザと分ける 6 つの中核機能。"
+      "eyebrow": "Why Veil",
+      "title": "Replace \"trust the platform\" with \"verify the system\"",
+      "description": "Six core features that set Veil apart from other fingerprint browsers."
     },
     "useCases": {
-      "eyebrow": "ユースケース",
-      "title": "高価値 ID の分離のために設計",
-      "description": "複数アカウント、ウォレット分離、EC 運用、自動化チームまで。Veil は「分離」を検証可能なエンジニアリング課題にします。"
+      "eyebrow": "Use cases",
+      "title": "Built for high-value identity isolation",
+      "description": "Multi-account, wallet isolation, storefront operations, automation teams — Veil turns \"isolation\" into a verifiable engineering concern."
     },
     "roadmap": {
-      "eyebrow": "ロードマップ",
-      "title": "ローカルセキュリティからゼロ知識コラボレーションへ"
+      "eyebrow": "Roadmap",
+      "title": "From single-device complete to desktop source release"
     },
-    "openSource": {
-      "eyebrow": "オープンソース",
-      "title": "セキュリティの約束を見える化し、監査し、再構築可能に",
-      "body": "Veil のコアエンジンは AGPL-3.0 ライセンスです。コードを監査し、自分でビルドし、セルフホストし、すべてのセキュリティ主張を検証できます。",
-      "repoCta": "GitHub を開く",
-      "contributeCta": "コントリビュート"
+    "pricingPreview": {
+      "eyebrow": "Pricing",
+      "title": "Three tiers, identical features",
+      "description": "Only duration and average monthly cost differ. Every tier ships with unlimited profiles, self-hosting, and zero data retention on our side.",
+      "shared": {
+        "unlimitedProfiles": "Unlimited profiles",
+        "selfHostable": "Self-hostable",
+        "noDataRetention": "No data retention"
+      },
+      "cta": "See full pricing"
     },
     "finalCta": {
-      "title": "私たちを信頼する必要はありません。",
-      "body": "必要なのは、検証できる状態にすることだけです。Veil をダウンロードし、セキュリティの約束を確認可能なエンジニアリング事実に変えましょう。",
-      "cta": "ダウンロードへ"
+      "title": "You don't need to trust us.",
+      "body": "You just need the ability to verify us. Veil runs self-hosted — there is nothing for an attacker to take from us. It's design, not a promise.",
+      "cta": "View pricing"
     },
     "gallery": {
-      "eyebrow": "可視化",
-      "title": "見えないセキュリティを指し示せる詳細へ",
-      "description": "フィンガープリントの一貫性、アウトバウンド接続監査、Profile 間の強い分離という 3 つの中核機構の視覚的な切り口です。それぞれがコードで検証できる約束に対応します。"
+      "eyebrow": "Visualized",
+      "title": "Turn invisible security into pointable details",
+      "description": "Three visual slices of the core mechanisms — fingerprint consistency, outbound connection audit, and hard isolation between profiles. Each one corresponds to a promise the code can verify."
+    }
+  },
+  "pricing": {
+    "tiers": {
+      "eyebrow": "Pricing",
+      "title": "Choose your subscription duration",
+      "description": "Identical feature set across all tiers — only the duration and average monthly cost differ. Every update and new release is included during the subscription period.",
+      "monthlyEquivalent": "≈ ${value}/mo",
+      "mostPopular": "Most popular",
+      "cta": "Buy {duration}",
+      "footnote": "* Full refund within 7 days if not activated. Expired subscriptions don't lock local data, but stop receiving updates and patches."
     }
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "利用を決める前に",
-    "description": "ここで扱っていない質問は、GitHub Issues でお気軽にお知らせください。"
+    "title": "Before you decide",
+    "description": "If your question isn't covered below, please email hi@useveil.xyz."
   },
   "compare": {
-    "eyebrow": "比較",
-    "title": "Veil と類似ツールの主な違い",
-    "description": "独立して検証できる事実だけを掲載しています。価格情報は 2026 年 5 月時点の公開ページに基づきます。",
-    "featureColumn": "機能",
-    "footnote": "* 価格と機能は製品更新により変わる可能性があります。購入前に各ベンダーの公式サイトを確認してください。"
+    "eyebrow": "Compare",
+    "title": "How Veil differs from comparable tools",
+    "description": "We only list independently verifiable facts. Pricing reflects public pages as of May 2026.",
+    "featureColumn": "Feature",
+    "footnote": "* Pricing and feature sets may change. Confirm vendor websites before purchasing."
   },
   "download": {
-    "eyebrow": "ダウンロード",
-    "title": "プラットフォームを選択",
-    "description": "すべてのリリースには SHA-256 チェックサムと GitHub 署名付きアーティファクトが含まれます。インストール前に確認してください。",
-    "downloadFor": "{platform} をダウンロード",
-    "copyHash": "チェックサムをコピー",
+    "eyebrow": "Download",
+    "title": "Choose your platform",
+    "description": "After purchasing a license, download the installer for your platform here. Every release ships with SHA-256 checksums.",
+    "downloadFor": "Download for {platform}",
+    "copyHash": "Copy checksum",
     "verification": {
-      "title": "ダウンロードファイルの検証方法",
-      "body": "shasum -a 256 FILENAME でファイルのハッシュを計算し、上記の SHA-256 と比較します。GitHub Releases ページで cosign 署名も確認できます。"
+      "title": "How to verify your download",
+      "body": "Compute the hash with shasum -a 256 FILENAME and compare to the SHA-256 above to ensure the file hasn't been tampered with."
     }
   },
   "useCases": {
-    "eyebrow": "ユースケース",
-    "title": "対象は違っても、目的は同じ: 検証可能な分離",
-    "description": "4 つの実際のワークフロー。どの場面でも Veil が重視するのは、セキュアに見えることではなく、セキュアであると証明できることです。",
-    "capabilitiesTitle": "主な機能"
+    "eyebrow": "Use cases",
+    "title": "Different audiences, same job: verifiable isolation",
+    "description": "Four real workflow scenarios. In each one, Veil cares not about looking secure, but about being provably secure.",
+    "capabilitiesTitle": "Key capabilities"
   },
   "automation": {
-    "eyebrow": "自動化",
-    "title": "Profile を呼び出し可能なリソースとして扱う",
-    "description": "Veil はローカル HTTP API (ライフサイクル管理) と標準 CDP エンドポイント (ページ操作) を提供します。Playwright、Puppeteer、Selenium から直接接続できます。"
+    "eyebrow": "Automation",
+    "title": "Profiles as callable resources",
+    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly.",
+    "channels": {
+      "eyebrow": "Dual channel",
+      "title": "Two endpoints, two responsibilities",
+      "description": "HTTP API handles lifecycle. CDP handles page behavior. Separate auth, separate ports, zero contamination between them."
+    },
+    "quickStart": {
+      "eyebrow": "Quick start",
+      "title": "Three steps from zero to a scriptable profile",
+      "description": "Generate an API key in the desktop app, start a profile over HTTP, connect via any CDP framework. The master password is never involved."
+    },
+    "code": {
+      "eyebrow": "Framework code",
+      "title": "Pick your framework — drop in the snippet",
+      "description": "Switch tabs to see the shortest working snippet per framework. All snippets are end-to-end runnable; copy and ship.",
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "auth": {
+      "eyebrow": "Authentication",
+      "title": "API keys are fully decoupled from the master password",
+      "body": "Automation access is separated from human access by design. API keys live independently, scope-limited, and revocable on demand — they never touch the master password or recovery phrase.",
+      "shellLabel": "Header",
+      "docsCta": "View pricing"
+    }
   },
   "changelog": {
-    "eyebrow": "変更履歴",
-    "title": "すべてのリリースを記録",
-    "description": "新機能、変更点、修正、既知の制限、アップグレード手順をまとめています。"
+    "eyebrow": "Changelog",
+    "title": "Every release, recorded",
+    "description": "What's new, what changed, what was fixed, known limits, and upgrade paths."
   },
   "security": {
     "stack": {
-      "eyebrow": "暗号化スタック",
-      "title": "マスターパスワードからディスク上の暗号文まで",
-      "description": "各層は業界標準アルゴリズムを使い、独立して置き換え可能です。1 つの層が侵害されても、次の層へのアクセスは得られません。"
+      "eyebrow": "Encryption stack",
+      "title": "From master password to ciphertext on disk",
+      "description": "Each layer uses industry-standard algorithms and is independently replaceable. Compromising one layer doesn't grant access to the next."
     },
     "trust": {
-      "eyebrow": "信頼できる理由",
-      "title": "4 つの具体的な約束、それぞれ検証可能"
+      "eyebrow": "Why trust this",
+      "title": "Four specific promises, each one verifiable"
     },
     "threats": {
-      "eyebrow": "脅威モデル",
-      "title": "Veil が守るもの、守らないもの",
-      "description": "対象となる脅威と対象外の脅威を正直に示します。どんなセキュリティ製品も、脅威モデルの外にある攻撃には有効ではありません。",
+      "eyebrow": "Threat model",
+      "title": "What Veil protects against — and what it doesn't",
+      "description": "We honestly list both the threats we cover and the ones we don't. No security product is effective against attacks outside its threat model.",
       "headers": {
-        "threat": "脅威",
-        "protected": "保護",
-        "reasoning": "理由"
+        "threat": "Threat",
+        "protected": "Protected",
+        "reasoning": "Reasoning"
       },
-      "protectedYes": "保護対象",
-      "protectedNo": "脅威モデル外"
+      "protectedYes": "Protected",
+      "protectedNo": "Outside threat model"
     }
   }
 }

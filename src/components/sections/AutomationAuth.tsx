@@ -1,12 +1,10 @@
 import { Reveal } from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { authFeatures } from '@/content/automation';
-import { SITE } from '@/content/constants';
 import { getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
-import { ArrowUpRight, Lock } from 'lucide-react';
+import { ArrowRight, Lock } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { SectionHeading } from './SectionHeading';
 
 export function AutomationAuth() {
   const t = useTranslations('automation.auth');
@@ -34,19 +32,9 @@ export function AutomationAuth() {
               </pre>
             </div>
 
-            <Button
-              render={
-                <a
-                  href={`${SITE.repoUrl}#%E9%80%9A%E8%BF%87-api-%E8%87%AA%E5%8A%A8%E5%8C%96`}
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              }
-              variant="outline"
-              className="mt-8"
-            >
+            <Button render={<a href="/pricing" />} variant="outline" className="mt-8">
               {t('docsCta')}
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </Reveal>
 

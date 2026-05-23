@@ -2,6 +2,7 @@ import { SITE } from '@/content/constants';
 import { footerGroups } from '@/content/nav';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import type { Route } from 'next';
 import { Logo } from './Logo';
 
 export function Footer() {
@@ -16,7 +17,7 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-foreground-muted">
               {t('footer.tagline')}
             </p>
-            <p className="mt-3 text-xs text-foreground-subtle font-mono">{SITE.license}</p>
+            <p className="mt-3 text-xs text-foreground-subtle font-mono">{SITE.licenseLabel}</p>
           </div>
           {footerGroups.map((group) => (
             <div key={group.titleKey}>
@@ -26,18 +27,19 @@ export function Footer() {
               <ul className="mt-4 flex flex-col gap-2">
                 {group.items.map((item) => (
                   <li key={item.key}>
-                    {item.href.startsWith('http') ? (
+                    {item.href.startsWith('http') || item.href.startsWith('mailto:') ? (
                       <a
                         href={item.href}
-                        target="_blank"
-                        rel="noreferrer"
+                        {...(item.href.startsWith('http')
+                          ? { target: '_blank', rel: 'noreferrer' }
+                          : {})}
                         className="text-sm text-foreground-muted hover:text-foreground transition-colors"
                       >
                         {t(item.labelKey as 'nav.security')}
                       </a>
                     ) : (
                       <Link
-                        href={item.href}
+                        href={item.href as Route}
                         className="text-sm text-foreground-muted hover:text-foreground transition-colors"
                       >
                         {t(item.labelKey as 'nav.security')}

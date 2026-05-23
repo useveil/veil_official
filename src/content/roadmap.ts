@@ -15,28 +15,28 @@ export const roadmap: RoadmapPhase[] = [
     status: { zh: 'v0.1.0 RC', en: 'v0.1.0 RC' },
     statusVariant: 'active',
     body: {
-      zh: '桌面端、Profile、代理、指纹引擎、审计日志和自动化 API 已形成闭环。',
-      en: 'Desktop app, profiles, proxy, fingerprint engine, audit log, and automation API form a complete loop.',
+      zh: '桌面端、Profile、代理、指纹引擎、运行审计与自动化 API 已形成闭环。',
+      en: 'Desktop app, profiles, proxy, fingerprint engine, runtime audit log, and automation API form a complete loop.',
     },
   },
   {
     phase: 'Phase 2',
-    title: { zh: '零知识云同步', en: 'Zero-knowledge cloud sync' },
+    title: { zh: '企业自托管 · 团队协作', en: 'Enterprise self-hosting · team collaboration' },
     status: { zh: '计划中', en: 'Planned' },
     statusVariant: 'planned',
     body: {
-      zh: '服务端只保存密文，密钥继续由用户持有，用订阅服务换取多设备便利。',
-      en: 'Server only stores ciphertext; keys stay with users. Subscription unlocks multi-device convenience.',
+      zh: '私有部署、SSO、组级权限、批量运营与审计交付。仍然不留存任何客户数据，所有运行时在你自己的基础设施里。',
+      en: 'Private deployment, SSO, group permissions, batch operations and audit handoff. Still zero customer-data retention — every runtime piece lives on your own infrastructure.',
     },
   },
   {
     phase: 'Phase 3',
-    title: { zh: '企业版与更多终端', en: 'Enterprise & more endpoints' },
+    title: { zh: '桌面端源码开放', en: 'Desktop source release' },
     status: { zh: '未来', en: 'Future' },
     statusVariant: 'planned',
     body: {
-      zh: '面向团队协作、权限治理、批量运营和更复杂的安全审计场景。',
-      en: 'Team collaboration, permission governance, batch operations, and advanced security audit scenarios.',
+      zh: '桌面端核心源码将在产品达到稳定里程碑时公开，便于独立审计。指纹引擎、补丁分发与企业版自动化等模块仍保留为闭源商业部分。',
+      en: 'The desktop core source will be made public once the product hits a stable milestone, enabling independent audit. The fingerprint engine, patch distribution, and enterprise automation will remain closed commercial components.',
     },
   },
 ];

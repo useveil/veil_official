@@ -1,6 +1,6 @@
 import type { Locale } from '@/i18n/routing';
 import type { LucideIcon } from 'lucide-react';
-import { Blocks, Fingerprint, Gauge, LockKeyhole, Network, Workflow } from 'lucide-react';
+import { Fingerprint, Gauge, LockKeyhole, Network, ServerCog, Workflow } from 'lucide-react';
 
 export type LocalizedText = Partial<Record<Locale, string>> & { zh: string; en: string };
 
@@ -18,15 +18,15 @@ export type Feature = {
 
 export const features: Feature[] = [
   {
-    key: 'zero-knowledge',
+    key: 'no-data-retention',
     icon: LockKeyhole,
     title: {
-      zh: '零知识加密',
-      en: 'Zero-knowledge encryption',
+      zh: '我们不存你的数据',
+      en: "We don't store your data",
     },
     body: {
-      zh: '主密码只留在本机，敏感数据经客户端加密后落库，云同步也只处理密文。',
-      en: 'Master password stays on your device. Sensitive data is client-side encrypted before storage; cloud sync only handles ciphertext.',
+      zh: '主密码与加密密钥只留在你的设备上。我们卖软件，不提供数据托管，没有任何上传通道，攻不破我们也救不了我们——因为我们这里没东西可拿。',
+      en: 'Master password and encryption keys live only on your device. We sell software, not data hosting — there is no upload channel and nothing for an attacker to take from us.',
     },
     highlight: true,
   },
@@ -80,15 +80,15 @@ export const features: Feature[] = [
     },
   },
   {
-    key: 'open-auditable',
-    icon: Blocks,
+    key: 'self-hostable',
+    icon: ServerCog,
     title: {
-      zh: '开源可审计',
-      en: 'Open and auditable',
+      zh: '完全可自托管',
+      en: 'Fully self-hostable',
     },
     body: {
-      zh: '核心引擎 AGPL-3.0 开源，用户可以审计、编译、自托管和独立验证承诺。',
-      en: 'Core engine is AGPL-3.0 licensed. Users can audit, compile, self-host, and independently verify our promises.',
+      zh: '个人版和企业版都支持私有部署。所有运行时（数据库、密钥、自动化端点）只跑在你自己的机器或服务器上，从不经过我们的基础设施。',
+      en: 'Both personal and enterprise editions support private deployment. Every runtime piece — database, keys, automation endpoints — runs on your own machine or server, never on our infrastructure.',
     },
     highlight: true,
   },
