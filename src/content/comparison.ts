@@ -29,15 +29,6 @@ export const comparisonLabels = {
 
 export const comparisonRows: ComparisonRow[] = [
   {
-    key: 'open-source',
-    feature: { zh: '开源', en: 'Open source' },
-    veil: { value: 'yes' },
-    multilogin: { value: 'no' },
-    adspower: { value: 'no' },
-    bitbrowser: { value: 'no' },
-    vmlogin: { value: 'no' },
-  },
-  {
     key: 'self-hosted',
     feature: { zh: '可自托管', en: 'Self-hostable' },
     veil: { value: 'yes' },
@@ -81,15 +72,6 @@ export const comparisonRows: ComparisonRow[] = [
     adspower: { value: 'yes' },
     bitbrowser: { value: 'yes' },
     vmlogin: { value: 'partial' },
-  },
-  {
-    key: 'audit-log',
-    feature: { zh: '可导出审计日志', en: 'Exportable audit log' },
-    veil: { value: 'yes' },
-    multilogin: { value: 'partial' },
-    adspower: { value: 'no' },
-    bitbrowser: { value: 'no' },
-    vmlogin: { value: 'no' },
   },
   {
     key: 'price',
