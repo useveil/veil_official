@@ -62,6 +62,11 @@
       "title": "You don't need to trust us.",
       "body": "You just need the ability to verify us. Download Veil and turn security promises into checkable engineering facts.",
       "cta": "Download now"
+    },
+    "gallery": {
+      "eyebrow": "Visualized",
+      "title": "Turn invisible security into pointable details",
+      "description": "Three visual slices of the core mechanisms — fingerprint consistency, outbound connection audit, and hard isolation between profiles. Each one corresponds to a promise the code can verify."
     }
   },
   "faq": {

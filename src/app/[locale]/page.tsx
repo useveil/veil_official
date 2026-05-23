@@ -2,6 +2,7 @@ import { FeatureGrid } from '@/components/sections/FeatureGrid';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 import { Hero } from '@/components/sections/Hero';
 import { OpenSourceCallout } from '@/components/sections/OpenSourceCallout';
+import { PosterGallery } from '@/components/sections/PosterGallery';
 import { RoadmapList } from '@/components/sections/RoadmapList';
 import { UseCaseGrid } from '@/components/sections/UseCaseGrid';
 import { type Locale, routing } from '@/i18n/routing';
@@ -33,6 +34,7 @@ export default async function HomePage({
   return (
     <>
       <Hero />
+      <PosterGallery />
       <FeatureGrid variant="highlight" />
       <UseCaseGrid />
       <RoadmapList compact />

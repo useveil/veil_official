@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Multi-profile isolation poster placeholder">
+  <defs>
+    <linearGradient id="bg-iso" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fafbfc" />
+      <stop offset="100%" stop-color="#eef1f5" />
+    </linearGradient>
+    <pattern id="grid-iso" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(10,14,26,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#bg-iso)"/>
+  <rect width="640" height="400" fill="url(#grid-iso)"/>
+
+  <!-- Top-left header -->
+  <g>
+    <text x="40" y="48" font-family="ui-monospace" font-size="10" fill="#168a7e" letter-spacing="2">// PROFILE ISOLATION</text>
+    <text x="40" y="78" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="#0a0e1a" letter-spacing="-0.5">Four worlds.</text>
+    <text x="40" y="104" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="700" fill="#0a0e1a" letter-spacing="-0.5">Zero crossover.</text>
+  </g>
+
+  <!-- 4 chambers -->
+  <g font-family="ui-monospace, SF Mono, Menlo, monospace">
+    <!-- Profile A -->
+    <g transform="translate(40, 160)">
+      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
+      <circle cx="65" cy="56" r="14" fill="rgba(20,184,166,0.18)" stroke="#14b8a6" stroke-width="1.4"/>
+      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#168a7e" font-weight="700">A</text>
+      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">VAULT</text>
+      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
+      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 142</text>
+      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 38 MB</text>
+      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · sg-01</text>
+      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+    </g>
+    <!-- Profile B -->
+    <g transform="translate(190, 160)">
+      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
+      <circle cx="65" cy="56" r="14" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#0369a1" font-weight="700">B</text>
+      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">WALLET</text>
+      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
+      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 5</text>
+      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 4 MB</text>
+      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · us-02</text>
+      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+    </g>
+    <!-- Profile C -->
+    <g transform="translate(340, 160)">
+      <rect width="130" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
+      <circle cx="65" cy="56" r="14" fill="rgba(244,184,96,0.2)" stroke="#f4b860" stroke-width="1.4"/>
+      <text x="65" y="60" text-anchor="middle" font-size="11" fill="#92400e" font-weight="700">C</text>
+      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">SHOP</text>
+      <line x1="14" y1="116" x2="116" y2="116" stroke="#dfe5ec"/>
+      <text x="14" y="136" font-size="9" fill="#4a5564">cookies · 318</text>
+      <text x="14" y="152" font-size="9" fill="#4a5564">cache  · 124 MB</text>
+      <text x="14" y="168" font-size="9" fill="#4a5564">proxy  · jp-03</text>
+      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+    </g>
+    <!-- Profile D -->
+    <g transform="translate(490, 160)">
+      <rect width="110" height="200" rx="8" fill="#ffffff" stroke="#c4cdd9" stroke-width="1.2"/>
+      <circle cx="55" cy="56" r="14" fill="rgba(232,121,139,0.2)" stroke="#e8798b" stroke-width="1.4"/>
+      <text x="55" y="60" text-anchor="middle" font-size="11" fill="#9f1239" font-weight="700">D</text>
+      <text x="14" y="100" font-size="10" fill="#0a0e1a" font-weight="700" letter-spacing="0.6">BOT</text>
+      <line x1="14" y1="116" x2="96" y2="116" stroke="#dfe5ec"/>
+      <text x="14" y="136" font-size="9" fill="#4a5564">api  · v0.1</text>
+      <text x="14" y="152" font-size="9" fill="#4a5564">cdp  · :9222</text>
+      <text x="14" y="168" font-size="9" fill="#4a5564">tasks · 47</text>
+      <text x="14" y="184" font-size="9" fill="#168a7e">encrypted · ✓</text>
+    </g>
+  </g>
+
+  <text x="40" y="382" font-family="ui-monospace" font-size="9" fill="#6b7787" letter-spacing="1.4">VEIL · NO CROSS-CONTEXT RESIDUE · PER-PROFILE PROXY / DNS</text>
+</svg>
