@@ -1,3 +1,4 @@
+import { getLocalizedText } from '@/content/features';
 import { trustPoints } from '@/content/trust-points';
 import type { Locale } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
@@ -19,9 +20,11 @@ export function TrustList() {
                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-ink-100 text-ink dark:bg-ink-800 dark:text-ink-50">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 text-lg font-semibold tracking-tight">{item.title[locale]}</h3>
+                <h3 className="mt-5 text-lg font-semibold tracking-tight">
+                  {getLocalizedText(item.title, locale)}
+                </h3>
                 <p className="mt-2 text-sm text-foreground-muted leading-relaxed">
-                  {item.body[locale]}
+                  {getLocalizedText(item.body, locale)}
                 </p>
               </li>
             );

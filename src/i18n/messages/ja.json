@@ -1,0 +1,134 @@
+{
+  "common": {
+    "download": "ダウンロード",
+    "viewSource": "ソースを見る",
+    "skeleton": "スケルトンプレースホルダー"
+  },
+  "nav": {
+    "security": "セキュリティ",
+    "useCases": "ユースケース",
+    "compare": "比較",
+    "automation": "自動化",
+    "changelog": "変更履歴",
+    "download": "ダウンロード",
+    "faq": "FAQ",
+    "source": "ソース",
+    "issues": "問題を報告"
+  },
+  "footer": {
+    "tagline": "オープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザ。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。",
+    "groups": {
+      "product": "プロダクト",
+      "developers": "開発者",
+      "community": "コミュニティ"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "v0.1.0 RC · オープンソース · ゼロ知識",
+      "title": "信頼ではなく、検証を。",
+      "subtitle": "Veil はオープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザです。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。高価値の複数アカウント運用、Web3、EC、自動化チーム向けです。",
+      "description": "Veil はオープンソース、セルフホスト可能、ゼロ知識暗号化のフィンガープリントブラウザです。データはローカルで暗号化され、ネットワーク動作は可視化され、フィンガープリントは管理された Profile から生成されます。高価値の複数アカウント運用、Web3、EC、自動化チーム向けです。",
+      "primaryCta": "v0.1 RC をダウンロード",
+      "secondaryCta": "ソースを見る",
+      "badges": {
+        "license": "AGPL-3.0",
+        "sqlcipher": "SQLCipher",
+        "platforms": "macOS · Windows · Linux"
+      }
+    },
+    "features": {
+      "eyebrow": "Veil を選ぶ理由",
+      "title": "プラットフォームへの信頼を、システムの検証へ",
+      "description": "Veil を他のフィンガープリントブラウザと分ける 6 つの中核機能。"
+    },
+    "useCases": {
+      "eyebrow": "ユースケース",
+      "title": "高価値 ID の分離のために設計",
+      "description": "複数アカウント、ウォレット分離、EC 運用、自動化チームまで。Veil は「分離」を検証可能なエンジニアリング課題にします。"
+    },
+    "roadmap": {
+      "eyebrow": "ロードマップ",
+      "title": "ローカルセキュリティからゼロ知識コラボレーションへ"
+    },
+    "openSource": {
+      "eyebrow": "オープンソース",
+      "title": "セキュリティの約束を見える化し、監査し、再構築可能に",
+      "body": "Veil のコアエンジンは AGPL-3.0 ライセンスです。コードを監査し、自分でビルドし、セルフホストし、すべてのセキュリティ主張を検証できます。",
+      "repoCta": "GitHub を開く",
+      "contributeCta": "コントリビュート"
+    },
+    "finalCta": {
+      "title": "私たちを信頼する必要はありません。",
+      "body": "必要なのは、検証できる状態にすることだけです。Veil をダウンロードし、セキュリティの約束を確認可能なエンジニアリング事実に変えましょう。",
+      "cta": "ダウンロードへ"
+    },
+    "gallery": {
+      "eyebrow": "可視化",
+      "title": "見えないセキュリティを指し示せる詳細へ",
+      "description": "フィンガープリントの一貫性、アウトバウンド接続監査、Profile 間の強い分離という 3 つの中核機構の視覚的な切り口です。それぞれがコードで検証できる約束に対応します。"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "利用を決める前に",
+    "description": "ここで扱っていない質問は、GitHub Issues でお気軽にお知らせください。"
+  },
+  "compare": {
+    "eyebrow": "比較",
+    "title": "Veil と類似ツールの主な違い",
+    "description": "独立して検証できる事実だけを掲載しています。価格情報は 2026 年 5 月時点の公開ページに基づきます。",
+    "featureColumn": "機能",
+    "footnote": "* 価格と機能は製品更新により変わる可能性があります。購入前に各ベンダーの公式サイトを確認してください。"
+  },
+  "download": {
+    "eyebrow": "ダウンロード",
+    "title": "プラットフォームを選択",
+    "description": "すべてのリリースには SHA-256 チェックサムと GitHub 署名付きアーティファクトが含まれます。インストール前に確認してください。",
+    "downloadFor": "{platform} をダウンロード",
+    "copyHash": "チェックサムをコピー",
+    "verification": {
+      "title": "ダウンロードファイルの検証方法",
+      "body": "shasum -a 256 FILENAME でファイルのハッシュを計算し、上記の SHA-256 と比較します。GitHub Releases ページで cosign 署名も確認できます。"
+    }
+  },
+  "useCases": {
+    "eyebrow": "ユースケース",
+    "title": "対象は違っても、目的は同じ: 検証可能な分離",
+    "description": "4 つの実際のワークフロー。どの場面でも Veil が重視するのは、セキュアに見えることではなく、セキュアであると証明できることです。",
+    "capabilitiesTitle": "主な機能"
+  },
+  "automation": {
+    "eyebrow": "自動化",
+    "title": "Profile を呼び出し可能なリソースとして扱う",
+    "description": "Veil はローカル HTTP API (ライフサイクル管理) と標準 CDP エンドポイント (ページ操作) を提供します。Playwright、Puppeteer、Selenium から直接接続できます。"
+  },
+  "changelog": {
+    "eyebrow": "変更履歴",
+    "title": "すべてのリリースを記録",
+    "description": "新機能、変更点、修正、既知の制限、アップグレード手順をまとめています。"
+  },
+  "security": {
+    "stack": {
+      "eyebrow": "暗号化スタック",
+      "title": "マスターパスワードからディスク上の暗号文まで",
+      "description": "各層は業界標準アルゴリズムを使い、独立して置き換え可能です。1 つの層が侵害されても、次の層へのアクセスは得られません。"
+    },
+    "trust": {
+      "eyebrow": "信頼できる理由",
+      "title": "4 つの具体的な約束、それぞれ検証可能"
+    },
+    "threats": {
+      "eyebrow": "脅威モデル",
+      "title": "Veil が守るもの、守らないもの",
+      "description": "対象となる脅威と対象外の脅威を正直に示します。どんなセキュリティ製品も、脅威モデルの外にある攻撃には有効ではありません。",
+      "headers": {
+        "threat": "脅威",
+        "protected": "保護",
+        "reasoning": "理由"
+      },
+      "protectedYes": "保護対象",
+      "protectedNo": "脅威モデル外"
+    }
+  }
+}

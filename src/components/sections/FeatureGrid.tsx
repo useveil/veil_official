@@ -1,5 +1,5 @@
 import { StaggerChildren, StaggerItem } from '@/components/motion/StaggerChildren';
-import { features } from '@/content/features';
+import { features, getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
 import { SectionHeading } from './SectionHeading';
@@ -28,9 +28,11 @@ export function FeatureGrid({ variant = 'all' }: FeatureGridProps) {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-lg font-semibold tracking-tight">{feature.title[locale]}</h3>
+              <h3 className="mt-5 text-lg font-semibold tracking-tight">
+                {getLocalizedText(feature.title, locale)}
+              </h3>
               <p className="mt-2 text-sm text-foreground-muted leading-relaxed">
-                {feature.body[locale]}
+                {getLocalizedText(feature.body, locale)}
               </p>
             </StaggerItem>
           );

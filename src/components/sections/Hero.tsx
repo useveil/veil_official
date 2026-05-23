@@ -1,6 +1,7 @@
 import { Reveal } from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { SITE } from '@/content/constants';
+import { getLocalizedText } from '@/content/features';
 import { heroPoster } from '@/content/posters';
 import type { Locale } from '@/i18n/routing';
 import { ArrowDownToLine, GitBranch, LockKeyhole, MonitorCheck, Shield } from 'lucide-react';
@@ -71,7 +72,7 @@ export function Hero() {
           <figure className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-border bg-surface-elevated shadow-md lg:max-w-none">
             <Image
               src={heroPoster.src}
-              alt={heroPoster.alt[locale]}
+              alt={getLocalizedText(heroPoster.alt, locale)}
               width={heroPoster.width}
               height={heroPoster.height}
               priority
@@ -79,10 +80,10 @@ export function Hero() {
             />
             <figcaption className="absolute inset-x-0 bottom-0 flex items-baseline justify-between gap-3 bg-gradient-to-t from-ink/85 via-ink/55 to-transparent px-5 py-4 text-ink-50">
               <span className="text-sm font-semibold tracking-tight">
-                {heroPoster.title[locale]}
+                {getLocalizedText(heroPoster.title, locale)}
               </span>
               <span className="font-mono text-[10px] uppercase tracking-wider text-ink-300">
-                {heroPoster.caption[locale]}
+                {getLocalizedText(heroPoster.caption, locale)}
               </span>
             </figcaption>
           </figure>

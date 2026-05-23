@@ -101,7 +101,43 @@
   "automation": {
     "eyebrow": "Automation",
     "title": "Profiles as callable resources",
-    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly."
+    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly.",
+    "channels": {
+      "eyebrow": "Dual channel",
+      "title": "Two endpoints, two responsibilities",
+      "description": "HTTP API handles lifecycle. CDP handles page behavior. Separate auth, separate ports, zero contamination between them."
+    },
+    "quickStart": {
+      "eyebrow": "Quick start",
+      "title": "Three steps from zero to a scriptable profile",
+      "description": "Generate an API key in the desktop app, start a profile over HTTP, connect via any CDP framework. The master password is never involved."
+    },
+    "code": {
+      "eyebrow": "Framework code",
+      "title": "Pick your framework — drop in the snippet",
+      "description": "Switch tabs to see the shortest working snippet per framework. All snippets are end-to-end runnable; copy and ship.",
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "reference": {
+      "eyebrow": "API reference",
+      "title": "Complete endpoint cheatsheet",
+      "description": "The core paths exposed by the Veil local HTTP API. Every write requires a Bearer API key; /health is the only unauthenticated endpoint.",
+      "columns": {
+        "method": "Method",
+        "path": "Path",
+        "description": "Purpose",
+        "auth": "Auth"
+      },
+      "footnote": "* Defaults to 127.0.0.1:7733, local-only. Never expose this port to the public internet in production."
+    },
+    "auth": {
+      "eyebrow": "Authentication",
+      "title": "API keys are fully decoupled from the master password",
+      "body": "Automation access is separated from human access by design. API keys live independently, scope-limited, and revocable on demand — they never touch the master password or recovery phrase.",
+      "shellLabel": "Header",
+      "docsCta": "Read full docs"
+    }
   },
   "changelog": {
     "eyebrow": "Changelog",

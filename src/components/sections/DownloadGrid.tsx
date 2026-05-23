@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { type Platform, platforms } from '@/content/download';
+import { getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { ArrowDownToLine, Copy, ShieldCheck } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -52,7 +53,9 @@ function PlatformCard({
     <div className="flex h-full flex-col rounded-lg border border-border bg-surface-elevated p-7">
       <div className="text-3xl font-mono font-bold tracking-tight">{platform.label}</div>
       <p className="mt-2 text-xs text-foreground-subtle">{platform.archs.join(' · ')}</p>
-      <p className="mt-6 font-mono text-sm text-foreground">{platform.filename[locale]}</p>
+      <p className="mt-6 font-mono text-sm text-foreground">
+        {getLocalizedText(platform.filename, locale)}
+      </p>
       <div className="mt-2 flex items-center gap-1.5 text-xs text-foreground-subtle">
         <code className="truncate font-mono">SHA-256: {platform.sha256.slice(0, 12)}…</code>
         <Button variant="ghost" size="icon" className="h-5 w-5" aria-label={t('copyHash')}>

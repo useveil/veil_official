@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import type { LocalizedText } from '@/content/features';
 import matter from 'gray-matter';
 
 const CHANGELOG_DIR = path.join(process.cwd(), 'src/content/changelog');
@@ -7,8 +8,8 @@ const CHANGELOG_DIR = path.join(process.cwd(), 'src/content/changelog');
 export type ChangelogFrontmatter = {
   version: string;
   date: string;
-  title: { zh: string; en: string };
-  summary: { zh: string; en: string };
+  title: LocalizedText;
+  summary: LocalizedText;
   channel: 'stable' | 'rc' | 'beta';
 };
 

@@ -1,4 +1,8 @@
 import { AutomationApi } from '@/components/sections/AutomationApi';
+import { AutomationAuth } from '@/components/sections/AutomationAuth';
+import { AutomationChannels } from '@/components/sections/AutomationChannels';
+import { AutomationQuickStart } from '@/components/sections/AutomationQuickStart';
+import { AutomationReference } from '@/components/sections/AutomationReference';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -24,5 +28,14 @@ export default async function AutomationPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <AutomationApi />;
+
+  return (
+    <>
+      <AutomationChannels />
+      <AutomationQuickStart />
+      <AutomationApi />
+      <AutomationReference />
+      <AutomationAuth />
+    </>
+  );
 }

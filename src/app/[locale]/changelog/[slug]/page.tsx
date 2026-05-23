@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { getLocalizedText } from '@/content/features';
 import { type Locale, routing } from '@/i18n/routing';
 import { getAllChangelogs, getChangelogBySlug } from '@/lib/changelog';
 import { cn } from '@/lib/utils';
@@ -50,9 +51,9 @@ export default async function ChangelogDetailPage({
           <Badge className={cn(channelClasses[entry.channel])}>{entry.channel.toUpperCase()}</Badge>
           <time className="font-mono text-xs text-foreground-subtle">{entry.date}</time>
         </div>
-        <p className="mt-3 text-xl font-medium">{entry.title[locale]}</p>
+        <p className="mt-3 text-xl font-medium">{getLocalizedText(entry.title, locale)}</p>
         <p className="mt-3 text-base text-foreground-muted leading-relaxed">
-          {entry.summary[locale]}
+          {getLocalizedText(entry.summary, locale)}
         </p>
       </header>
       <div className="mt-10">

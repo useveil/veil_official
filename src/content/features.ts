@@ -1,7 +1,12 @@
+import type { Locale } from '@/i18n/routing';
 import type { LucideIcon } from 'lucide-react';
 import { Blocks, Fingerprint, Gauge, LockKeyhole, Network, Workflow } from 'lucide-react';
 
-export type LocalizedText = { zh: string; en: string };
+export type LocalizedText = Partial<Record<Locale, string>> & { zh: string; en: string };
+
+export function getLocalizedText(text: LocalizedText, locale: Locale) {
+  return text[locale] ?? text.en;
+}
 
 export type Feature = {
   key: string;

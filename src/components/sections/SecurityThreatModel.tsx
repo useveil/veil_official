@@ -1,4 +1,4 @@
-import type { LocalizedText } from '@/content/features';
+import { type LocalizedText, getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { Check, X } from 'lucide-react';
@@ -97,7 +97,7 @@ export function SecurityThreatModel() {
           <tbody className="divide-y divide-border bg-background text-sm">
             {threats.map((row) => (
               <tr key={row.key}>
-                <td className="px-5 py-4 font-medium">{row.threat[locale]}</td>
+                <td className="px-5 py-4 font-medium">{getLocalizedText(row.threat, locale)}</td>
                 <td className="px-5 py-4">
                   <span
                     className={cn(
@@ -115,7 +115,9 @@ export function SecurityThreatModel() {
                     )}
                   </span>
                 </td>
-                <td className="px-5 py-4 text-foreground-muted">{row.reasoning[locale]}</td>
+                <td className="px-5 py-4 text-foreground-muted">
+                  {getLocalizedText(row.reasoning, locale)}
+                </td>
               </tr>
             ))}
           </tbody>

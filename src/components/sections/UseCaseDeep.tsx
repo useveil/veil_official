@@ -1,3 +1,4 @@
+import { getLocalizedText } from '@/content/features';
 import { useCases } from '@/content/use-cases';
 import type { Locale } from '@/i18n/routing';
 import { CheckCircle2 } from 'lucide-react';
@@ -28,15 +29,15 @@ export function UseCaseDeep() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <h2 className="mt-5 text-2xl font-bold tracking-tight">
-                    {useCase.title[locale]}
+                    {getLocalizedText(useCase.title, locale)}
                   </h2>
                   <p className="mt-2 text-sm font-medium text-foreground-muted">
-                    {useCase.tagline[locale]}
+                    {getLocalizedText(useCase.tagline, locale)}
                   </p>
                 </header>
                 <div>
                   <p className="text-base leading-relaxed text-foreground">
-                    {useCase.narrative[locale]}
+                    {getLocalizedText(useCase.narrative, locale)}
                   </p>
                   <h3 className="mt-8 text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
                     {t('capabilitiesTitle')}
@@ -48,7 +49,7 @@ export function UseCaseDeep() {
                         className="flex items-start gap-3 text-sm text-foreground-muted"
                       >
                         <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500 dark:text-teal-400" />
-                        <span>{cap[locale]}</span>
+                        <span>{getLocalizedText(cap, locale)}</span>
                       </li>
                     ))}
                   </ul>

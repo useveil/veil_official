@@ -4,6 +4,7 @@ import {
   comparisonLabels,
   comparisonRows,
 } from '@/content/comparison';
+import { getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { Check, Minus, X } from 'lucide-react';
@@ -20,7 +21,11 @@ function renderCell(cell: ComparisonCell, locale: Locale, isVeil: boolean) {
     const { Icon, className } = config[cell.value];
     return <Icon className={cn('h-4 w-4', className)} />;
   }
-  return <span className={cn('text-sm', isVeil && 'font-semibold')}>{cell[locale]}</span>;
+  return (
+    <span className={cn('text-sm', isVeil && 'font-semibold')}>
+      {getLocalizedText(cell, locale)}
+    </span>
+  );
 }
 
 export function ComparisonTable() {
@@ -54,7 +59,7 @@ export function ComparisonTable() {
           <tbody className="divide-y divide-border bg-background text-sm">
             {comparisonRows.map((row) => (
               <tr key={row.key}>
-                <td className="px-5 py-4 font-medium">{row.feature[locale]}</td>
+                <td className="px-5 py-4 font-medium">{getLocalizedText(row.feature, locale)}</td>
                 {comparisonColumns.map((col) => (
                   <td
                     key={col}

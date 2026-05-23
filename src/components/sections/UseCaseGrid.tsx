@@ -1,3 +1,4 @@
+import { getLocalizedText } from '@/content/features';
 import { useCases } from '@/content/use-cases';
 import type { Locale } from '@/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
@@ -29,10 +30,10 @@ export function UseCaseGrid() {
                     <ArrowUpRight className="h-4 w-4 text-foreground-subtle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold tracking-tight">
-                    {useCase.title[locale]}
+                    {getLocalizedText(useCase.title, locale)}
                   </h3>
                   <p className="mt-2 text-sm font-medium text-foreground-muted">
-                    {useCase.tagline[locale]}
+                    {getLocalizedText(useCase.tagline, locale)}
                   </p>
                 </Link>
               </li>

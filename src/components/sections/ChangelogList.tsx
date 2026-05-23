@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import type { ChangelogEntry } from '@/lib/changelog';
 import { cn } from '@/lib/utils';
@@ -33,9 +34,9 @@ export function ChangelogList({ entries }: { entries: ChangelogEntry[] }) {
                 </Badge>
                 <time className="font-mono text-xs text-foreground-subtle">{entry.date}</time>
               </div>
-              <p className="mt-2 text-base font-medium">{entry.title[locale]}</p>
+              <p className="mt-2 text-base font-medium">{getLocalizedText(entry.title, locale)}</p>
               <p className="mt-2 text-sm text-foreground-muted leading-relaxed">
-                {entry.summary[locale]}
+                {getLocalizedText(entry.summary, locale)}
               </p>
             </Link>
           </li>

@@ -1,4 +1,4 @@
-import type { LocalizedText } from '@/content/features';
+import { type LocalizedText, getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
 import { ArrowDown, Database, FileLock2, KeyRound, Lock } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -65,9 +65,11 @@ export function SecurityStack() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-sm font-mono font-semibold tracking-tight">
-                    {layer.label[locale]}
+                    {getLocalizedText(layer.label, locale)}
                   </h3>
-                  <p className="mt-1 text-sm text-foreground-muted">{layer.detail[locale]}</p>
+                  <p className="mt-1 text-sm text-foreground-muted">
+                    {getLocalizedText(layer.detail, locale)}
+                  </p>
                 </div>
               </div>
               {index < layers.length - 1 && (

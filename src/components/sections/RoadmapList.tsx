@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { getLocalizedText } from '@/content/features';
 import { type RoadmapPhase, roadmap } from '@/content/roadmap';
 import type { Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
@@ -28,10 +29,14 @@ export function RoadmapList({ compact = false }: { compact?: boolean }) {
               <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
                 {item.phase}
               </p>
-              <h3 className="mt-1 text-lg font-semibold tracking-tight">{item.title[locale]}</h3>
+              <h3 className="mt-1 text-lg font-semibold tracking-tight">
+                {getLocalizedText(item.title, locale)}
+              </h3>
             </div>
             {!compact && (
-              <p className="text-sm text-foreground-muted leading-relaxed">{item.body[locale]}</p>
+              <p className="text-sm text-foreground-muted leading-relaxed">
+                {getLocalizedText(item.body, locale)}
+              </p>
             )}
             <Badge
               className={cn(
@@ -39,7 +44,7 @@ export function RoadmapList({ compact = false }: { compact?: boolean }) {
                 variantClasses[item.statusVariant],
               )}
             >
-              {item.status[locale]}
+              {getLocalizedText(item.status, locale)}
             </Badge>
           </li>
         ))}

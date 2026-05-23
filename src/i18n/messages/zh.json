@@ -101,7 +101,43 @@
   "automation": {
     "eyebrow": "自动化",
     "title": "把 Profile 当作可调用的资源",
-    "description": "Veil 提供本地 HTTP API（生命周期管理）+ 标准 CDP 端点（页面操作）。Playwright / Puppeteer / Selenium 都能直接接入。"
+    "description": "Veil 提供本地 HTTP API（生命周期管理）+ 标准 CDP 端点（页面操作）。Playwright / Puppeteer / Selenium 都能直接接入。",
+    "channels": {
+      "eyebrow": "双通道",
+      "title": "Profile 通过两个端点对外暴露",
+      "description": "HTTP API 管生命周期，CDP 管页面行为。各自鉴权、各自端口，互不污染。"
+    },
+    "quickStart": {
+      "eyebrow": "快速开始",
+      "title": "三步从 0 到一个可被自动化的 Profile",
+      "description": "API Key 在桌面端生成 → HTTP 启动 Profile → CDP 框架接入。整个流程不需要主密码。"
+    },
+    "code": {
+      "eyebrow": "框架代码",
+      "title": "选你顺手的框架，直接接入",
+      "description": "切换 Tab 看不同框架对接 Veil 的最短代码。代码就是端到端可运行的，复制即用。",
+      "copy": "复制",
+      "copied": "已复制"
+    },
+    "reference": {
+      "eyebrow": "API 参考",
+      "title": "完整端点速查",
+      "description": "Veil 本地 HTTP API 的关键路径。所有写操作都要 Bearer API Key；/health 是唯一无需鉴权的端点。",
+      "columns": {
+        "method": "方法",
+        "path": "路径",
+        "description": "用途",
+        "auth": "鉴权"
+      },
+      "footnote": "* 默认监听 127.0.0.1:7733，仅本地可访问。生产部署中不要将端口暴露到公网。"
+    },
+    "auth": {
+      "eyebrow": "鉴权",
+      "title": "API Key 与主密码完全解耦",
+      "body": "自动化访问从设计上就和人类访问分开。API Key 单独持久化、可按 scope 限权、随时吊销——不会触碰主密码或恢复短语。",
+      "shellLabel": "请求头",
+      "docsCta": "查看完整文档"
+    }
   },
   "changelog": {
     "eyebrow": "更新日志",
