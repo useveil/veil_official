@@ -119,18 +119,6 @@
       "copy": "复制",
       "copied": "已复制"
     },
-    "reference": {
-      "eyebrow": "API 参考",
-      "title": "完整端点速查",
-      "description": "Veil 本地 HTTP API 的关键路径。所有写操作都要 Bearer API Key；/health 是唯一无需鉴权的端点。",
-      "columns": {
-        "method": "方法",
-        "path": "路径",
-        "description": "用途",
-        "auth": "鉴权"
-      },
-      "footnote": "* 默认监听 127.0.0.1:7733，仅本地可访问。生产部署中不要将端口暴露到公网。"
-    },
     "auth": {
       "eyebrow": "鉴权",
       "title": "API Key 与主密码完全解耦",

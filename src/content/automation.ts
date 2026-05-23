@@ -193,68 +193,6 @@ export const quickStartSteps: QuickStartStep[] = [
 ];
 
 // =================================================
-// API endpoint reference
-// =================================================
-
-export type ApiEndpoint = {
-  method: 'GET' | 'POST' | 'DELETE' | 'PATCH';
-  path: string;
-  description: LocalizedText;
-  auth: 'bearer' | 'none';
-};
-
-export const apiEndpoints: ApiEndpoint[] = [
-  {
-    method: 'GET',
-    path: '/health',
-    description: { zh: '健康检查（无需鉴权）', en: 'Health check (no auth)' },
-    auth: 'none',
-  },
-  {
-    method: 'GET',
-    path: '/profiles',
-    description: { zh: '列出所有 Profile', en: 'List all profiles' },
-    auth: 'bearer',
-  },
-  {
-    method: 'POST',
-    path: '/profiles',
-    description: { zh: '创建新 Profile（指纹种子由系统生成）', en: 'Create profile (fingerprint seed auto-generated)' },
-    auth: 'bearer',
-  },
-  {
-    method: 'GET',
-    path: '/profiles/:id',
-    description: { zh: '获取 Profile 详情与运行状态', en: 'Get profile details and runtime status' },
-    auth: 'bearer',
-  },
-  {
-    method: 'POST',
-    path: '/profiles/:id/start',
-    description: { zh: '启动 Profile，返回 CDP 端点', en: 'Start profile, returns CDP endpoint' },
-    auth: 'bearer',
-  },
-  {
-    method: 'POST',
-    path: '/profiles/:id/stop',
-    description: { zh: '停止 Profile，清理会话', en: 'Stop profile, clean session' },
-    auth: 'bearer',
-  },
-  {
-    method: 'DELETE',
-    path: '/profiles/:id',
-    description: { zh: '销毁 Profile（密文与本地副本均删除）', en: 'Destroy profile (ciphertext + local copy removed)' },
-    auth: 'bearer',
-  },
-  {
-    method: 'GET',
-    path: '/profiles/:id/audit',
-    description: { zh: '导出 Profile 出站连接审计日志', en: 'Export outbound audit log for profile' },
-    auth: 'bearer',
-  },
-];
-
-// =================================================
 // Auth callout
 // =================================================
 

@@ -119,18 +119,6 @@
       "copy": "Copy",
       "copied": "Copied"
     },
-    "reference": {
-      "eyebrow": "API reference",
-      "title": "Complete endpoint cheatsheet",
-      "description": "The core paths exposed by the Veil local HTTP API. Every write requires a Bearer API key; /health is the only unauthenticated endpoint.",
-      "columns": {
-        "method": "Method",
-        "path": "Path",
-        "description": "Purpose",
-        "auth": "Auth"
-      },
-      "footnote": "* Defaults to 127.0.0.1:7733, local-only. Never expose this port to the public internet in production."
-    },
     "auth": {
       "eyebrow": "Authentication",
       "title": "API keys are fully decoupled from the master password",
