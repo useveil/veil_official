@@ -5,6 +5,9 @@ export const config: VercelConfig = {
   framework: 'nextjs',
   buildCommand: 'pnpm build',
   installCommand: 'pnpm install --frozen-lockfile',
+  // 显式清除旧 Vite 项目遗留的 Output Directory = "dist" 设置；
+  // Next.js 默认输出到 .next/，由 framework 自动识别
+  outputDirectory: null,
   redirects: [
     // routes.redirect 运行时返回 Redirect 对象，类型签名为宽联合类型，需断言收窄
     routes.redirect('/index.html', '/', { permanent: true }) as Redirect,
