@@ -1,69 +1,272 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Abstract deterministic fingerprint poster">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-label="Abstract deterministic fingerprint poster">
   <defs>
-    <linearGradient id="fp-bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#fafbfc"/>
-      <stop offset="1" stop-color="#eef2f4"/>
+      <stop offset="1" stop-color="#e6eaee"/>
     </linearGradient>
-    <radialGradient id="fp-wash" cx="28%" cy="50%" r="48%">
-      <stop offset="0" stop-color="#5eead4" stop-opacity="0.12"/>
-      <stop offset="0.54" stop-color="#5eead4" stop-opacity="0.04"/>
+    <radialGradient id="wash-l" cx="32%" cy="50%" r="44%">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#5eead4" stop-opacity="0.03"/>
       <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="fp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M20 0H0V20" fill="none" stroke="#07111f" stroke-opacity="0.045" stroke-width="1"/>
+    <radialGradient id="wash-r" cx="78%" cy="50%" r="32%">
+      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="68%">
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.08"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#07111f" stroke-opacity="0.04" stroke-width="1"/>
     </pattern>
-    <filter id="fp-soft" x="-8%" y="-8%" width="116%" height="116%">
-      <feGaussianBlur stdDeviation="0.15"/>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.8" fill="#07111f" fill-opacity="0.12"/>
+    </pattern>
+    <linearGradient id="ridge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="0.5" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <linearGradient id="ridge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14b8a6" stop-opacity="1"/>
+      <stop offset="0.78" stop-color="#14b8a6" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
     </filter>
+
+    <mask id="left-mask">
+      <rect width="800" height="800" fill="white"/>
+    </mask>
   </defs>
 
-  <rect width="640" height="400" fill="url(#fp-bg)"/>
-  <rect width="640" height="400" fill="url(#fp-grid)"/>
-  <rect width="640" height="400" fill="url(#fp-wash)"/>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#grid)"/>
+  <rect width="1280" height="800" fill="url(#wash-l)"/>
+  <rect width="1280" height="800" fill="url(#wash-r)"/>
 
-  <g transform="translate(184 205)" fill="none" stroke="#14b8a6" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" filter="url(#fp-soft)">
-    <path d="M-130 56c-8-56 8-106 51-135 51-35 127-36 179 1 44 31 66 80 58 135"/>
-    <path d="M-109 46c-6-46 7-87 43-112 44-30 108-30 152 1 36 26 55 66 49 111"/>
-    <path d="M-88 36c-4-36 8-68 35-88 37-27 91-25 125 1 29 22 44 52 41 86"/>
-    <path d="M-67 25c-2-25 8-50 29-65 27-20 69-20 96 0 21 16 32 39 31 64"/>
-    <path d="M-45 14c0-16 7-32 20-42 19-14 48-13 66 0 14 11 21 25 21 41"/>
-    <path d="M-22 4c3-11 10-18 21-21 16-3 30 6 35 21"/>
-    <path d="M-136 91c21 3 37-3 50-16 18-18 16-43 21-67 6-29 25-51 53-61"/>
-    <path d="M-113 111c33 2 59-9 78-33 22-28 13-63 34-89 16-19 43-24 67-13"/>
-    <path d="M-74 126c36-9 58-30 69-62 9-29 7-64 44-73 29-7 55 12 59 42"/>
-    <path d="M-27 130c24-16 37-37 40-66 2-20 7-38 28-45 16-5 34 2 43 17"/>
-    <path d="M28 123c15-17 20-38 17-62-1-10 2-20 12-25 11-5 24 1 29 11"/>
-    <path d="M84 100c25-12 40-32 45-59 5-29-4-55-25-75"/>
-    <path d="M112 76c33-15 51-42 53-78 2-45-22-83-62-103"/>
-    <path d="M-154 21c10-57 44-101 96-121"/>
-    <path d="M-151-23c22-56 68-92 128-100 61-9 120 13 157 59"/>
+  <!-- Corner registration marks -->
+  <g fill="none" stroke="#14b8a6" stroke-width="1.2" stroke-linecap="square" opacity="0.32">
+    <path d="M50 60H110M50 60V120"/>
+    <path d="M1230 60H1170M1230 60V120"/>
+    <path d="M50 740H110M50 740V680"/>
+    <path d="M1230 740H1170M1230 740V680"/>
   </g>
 
+  <!-- Tick marks along top edge -->
+  <g stroke="#07111f" stroke-width="0.6" opacity="0.18">
+    <path d="M180 50V62M260 50V62M340 50V62M420 50V62M500 50V62M580 50V62M660 50V62M740 50V62"/>
+    <path d="M180 750V738M260 750V738M340 750V738M420 750V738M500 750V738M580 750V738M660 750V738M740 750V738"/>
+  </g>
+
+  <!-- ============ LEFT: Fingerprint pattern ============ -->
+  <g transform="translate(380 400)" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer halo ring -->
+    <circle cx="0" cy="0" r="290" stroke="#14b8a6" stroke-opacity="0.06" stroke-width="1"/>
+    <circle cx="0" cy="0" r="248" stroke="#14b8a6" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Main fingerprint ridges -->
+    <g stroke="url(#ridge)">
+      <path d="M-260 112c-16-112 16-212 102-270 102-70 254-72 358 2 88 62 132 160 116 270"/>
+      <path d="M-218 92c-12-92 14-174 86-224 88-60 216-60 304 2 72 52 110 132 98 222"/>
+      <path d="M-176 72c-8-72 16-136 70-176 74-54 182-50 250 2 58 44 88 104 82 172"/>
+      <path d="M-134 50c-4-50 16-100 58-130 54-40 138-40 192 0 42 32 64 78 62 128"/>
+      <path d="M-90 28c0-32 14-64 40-84 38-28 96-26 132 0 28 22 42 50 42 82"/>
+      <path d="M-44 8c6-22 20-36 42-42 32-6 60 12 70 42"/>
+    </g>
+
+    <!-- Inner spirals (loops) -->
+    <g stroke="#14b8a6" opacity="0.85">
+      <path d="M-272 182c42 6 74-6 100-32 36-36 32-86 42-134 12-58 50-102 106-122"/>
+      <path d="M-226 222c66 4 118-18 156-66 44-56 26-126 68-178 32-38 86-48 134-26"/>
+      <path d="M-148 252c72-18 116-60 138-124 18-58 14-128 88-146 58-14 110 24 118 84"/>
+    </g>
+
+    <!-- Mid spirals fading -->
+    <g stroke="#14b8a6" opacity="0.6">
+      <path d="M-54 260c48-32 74-74 80-132 4-40 14-76 56-90 32-10 68 4 86 34"/>
+      <path d="M56 246c30-34 40-76 34-124-2-20 4-40 24-50 22-10 48 2 58 22"/>
+      <path d="M168 200c50-24 80-64 90-118 10-58-8-110-50-150"/>
+      <path d="M224 152c66-30 102-84 106-156 4-90-44-166-124-206"/>
+    </g>
+
+    <!-- Outer arcs -->
+    <g stroke="#14b8a6" opacity="0.5">
+      <path d="M-308 42c20-114 88-202 192-242"/>
+      <path d="M-302-46c44-112 136-184 256-200 122-18 240 26 314 118"/>
+    </g>
+
+    <!-- Bottom curve -->
+    <g stroke="url(#ridge-fade)" opacity="0.62">
+      <path d="M-280 224c44 18 88 18 130 0 50-22 92-50 152-58"/>
+      <path d="M-242 268c66 26 130 22 192-12 56-30 102-60 168-66"/>
+    </g>
+  </g>
+
+  <!-- Signature endpoint dots -->
   <g fill="#07111f">
-    <circle cx="50" cy="260" r="3.4"/>
-    <circle cx="318" cy="141" r="3.4"/>
-    <circle cx="117" cy="92" r="3.4"/>
+    <circle cx="100" cy="520" r="4.2"/>
+    <circle cx="636" cy="282" r="4.2"/>
+    <circle cx="234" cy="184" r="4.2"/>
+    <circle cx="566" cy="638" r="4.2"/>
+  </g>
+  <g fill="#14b8a6">
+    <circle cx="100" cy="520" r="9" opacity="0.18"/>
+    <circle cx="636" cy="282" r="9" opacity="0.18"/>
+    <circle cx="234" cy="184" r="9" opacity="0.18"/>
+    <circle cx="566" cy="638" r="9" opacity="0.18"/>
   </g>
 
-  <g fill="#14b8a6" opacity="0.22">
-    <circle cx="432" cy="124" r="2"/>
-    <circle cx="486" cy="124" r="2"/>
-    <circle cx="540" cy="124" r="2"/>
-    <circle cx="432" cy="178" r="2"/>
-    <circle cx="486" cy="178" r="2"/>
-    <circle cx="540" cy="178" r="2"/>
-    <circle cx="432" cy="232" r="2"/>
-    <circle cx="486" cy="232" r="2"/>
-    <circle cx="540" cy="232" r="2"/>
+  <!-- ============ RIGHT: Data sheet ============ -->
+  <g transform="translate(840 130)">
+    <!-- Outer frame -->
+    <rect x="0" y="0" width="340" height="540" fill="none" stroke="#07111f" stroke-opacity="0.1" stroke-width="1"/>
+    <rect x="0" y="0" width="340" height="40" fill="#07111f" fill-opacity="0.045"/>
+
+    <!-- Header row tick marks -->
+    <g stroke="#14b8a6" stroke-width="1.4" opacity="0.5">
+      <path d="M20 20H46M58 20H82M94 20H118"/>
+      <circle cx="316" cy="20" r="3"/>
+    </g>
+
+    <!-- 8 row data bars -->
+    <g>
+      <!-- Row 1 -->
+      <g transform="translate(20 64)">
+        <rect width="60" height="6" rx="2" fill="#14b8a6" opacity="0.42"/>
+        <rect x="68" width="120" height="6" rx="2" fill="#07111f" opacity="0.08"/>
+        <rect x="200" width="40" height="6" rx="2" fill="#5eead4" opacity="0.6"/>
+        <text x="262" y="6" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" opacity="0.7">✓</text>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(20 88)">
+        <rect width="60" height="6" rx="2" fill="#14b8a6" opacity="0.42"/>
+        <rect x="68" width="140" height="6" rx="2" fill="#07111f" opacity="0.08"/>
+        <rect x="220" width="50" height="6" rx="2" fill="#5eead4" opacity="0.6"/>
+        <text x="290" y="6" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" opacity="0.7">✓</text>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(20 112)">
+        <rect width="60" height="6" rx="2" fill="#14b8a6" opacity="0.42"/>
+        <rect x="68" width="100" height="6" rx="2" fill="#07111f" opacity="0.08"/>
+        <rect x="180" width="60" height="6" rx="2" fill="#5eead4" opacity="0.6"/>
+        <text x="262" y="6" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" opacity="0.7">✓</text>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(20 136)">
+        <rect width="60" height="6" rx="2" fill="#14b8a6" opacity="0.42"/>
+        <rect x="68" width="130" height="6" rx="2" fill="#07111f" opacity="0.08"/>
+        <rect x="210" width="44" height="6" rx="2" fill="#5eead4" opacity="0.6"/>
+        <text x="276" y="6" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" opacity="0.7">✓</text>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(20 160)">
+        <rect width="60" height="6" rx="2" fill="#14b8a6" opacity="0.42"/>
+        <rect x="68" width="116" height="6" rx="2" fill="#07111f" opacity="0.08"/>
+        <rect x="196" width="34" height="6" rx="2" fill="#5eead4" opacity="0.6"/>
+        <text x="252" y="6" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" opacity="0.7">✓</text>
+      </g>
+    </g>
+
+    <!-- Divider -->
+    <path d="M20 196H320" stroke="#07111f" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Hex data block (3x3 grid of hex cells) -->
+    <g transform="translate(20 216)">
+      <g fill="#07111f" opacity="0.06">
+        <rect width="44" height="44" rx="3"/>
+        <rect x="52" width="44" height="44" rx="3"/>
+        <rect x="104" width="44" height="44" rx="3"/>
+        <rect x="156" width="44" height="44" rx="3"/>
+        <rect x="208" width="44" height="44" rx="3"/>
+        <rect x="260" width="44" height="44" rx="3"/>
+        <rect y="52" width="44" height="44" rx="3"/>
+        <rect x="52" y="52" width="44" height="44" rx="3"/>
+        <rect x="104" y="52" width="44" height="44" rx="3"/>
+        <rect x="156" y="52" width="44" height="44" rx="3"/>
+        <rect x="208" y="52" width="44" height="44" rx="3"/>
+        <rect x="260" y="52" width="44" height="44" rx="3"/>
+        <rect y="104" width="44" height="44" rx="3"/>
+        <rect x="52" y="104" width="44" height="44" rx="3"/>
+        <rect x="104" y="104" width="44" height="44" rx="3"/>
+        <rect x="156" y="104" width="44" height="44" rx="3"/>
+        <rect x="208" y="104" width="44" height="44" rx="3"/>
+        <rect x="260" y="104" width="44" height="44" rx="3"/>
+      </g>
+      <!-- Highlighted cells (signature points) -->
+      <g fill="#14b8a6">
+        <rect x="52" width="44" height="44" rx="3" opacity="0.42"/>
+        <rect x="208" y="52" width="44" height="44" rx="3" opacity="0.55"/>
+        <rect x="104" y="104" width="44" height="44" rx="3" opacity="0.36"/>
+      </g>
+      <!-- Cell corner ticks -->
+      <g fill="#5eead4" opacity="0.7">
+        <circle cx="72" cy="22" r="2"/>
+        <circle cx="228" cy="74" r="2"/>
+        <circle cx="124" cy="126" r="2"/>
+      </g>
+    </g>
+
+    <!-- Divider 2 -->
+    <path d="M20 384H320" stroke="#07111f" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Bottom signature waveform -->
+    <g transform="translate(20 400)">
+      <path d="M0 48 Q14 24 28 42 T56 38 T84 26 T112 50 T140 32 T168 44 T196 22 T224 40 T252 30 T280 42 T300 32"
+            fill="none" stroke="#14b8a6" stroke-width="1.6" opacity="0.7" stroke-linecap="round"/>
+      <path d="M0 48 Q14 24 28 42 T56 38 T84 26 T112 50 T140 32 T168 44 T196 22 T224 40 T252 30 T280 42 T300 32"
+            fill="none" stroke="#5eead4" stroke-width="3.5" opacity="0.18" stroke-linecap="round"/>
+      <!-- 3 dot markers along waveform -->
+      <circle cx="56" cy="38" r="3" fill="#07111f"/>
+      <circle cx="140" cy="32" r="3" fill="#07111f"/>
+      <circle cx="252" cy="30" r="3" fill="#07111f"/>
+    </g>
+
+    <!-- Bottom 3x9 dot grid -->
+    <g fill="#14b8a6" opacity="0.5" transform="translate(20 480)">
+      <g>
+        <circle cx="0" cy="0" r="1.8"/>
+        <circle cx="36" cy="0" r="1.8"/>
+        <circle cx="72" cy="0" r="1.8"/>
+        <circle cx="108" cy="0" r="1.8"/>
+        <circle cx="144" cy="0" r="1.8"/>
+        <circle cx="180" cy="0" r="1.8"/>
+        <circle cx="216" cy="0" r="1.8"/>
+        <circle cx="252" cy="0" r="1.8"/>
+        <circle cx="288" cy="0" r="1.8"/>
+      </g>
+      <g transform="translate(0 16)">
+        <circle cx="0" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="36" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="72" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="108" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="144" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="180" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="216" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="252" cy="0" r="1.8" opacity="0.6"/>
+        <circle cx="288" cy="0" r="1.8" opacity="0.6"/>
+      </g>
+      <g transform="translate(0 32)">
+        <circle cx="0" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="36" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="72" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="108" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="144" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="180" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="216" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="252" cy="0" r="1.8" opacity="0.3"/>
+        <circle cx="288" cy="0" r="1.8" opacity="0.3"/>
+      </g>
+    </g>
   </g>
 
-  <g stroke="#07111f" stroke-width="1" opacity="0.07">
-    <path d="M388 92H568"/>
-    <path d="M388 146H568"/>
-    <path d="M388 200H568"/>
-    <path d="M388 254H568"/>
-    <path d="M416 72V286"/>
-    <path d="M470 72V286"/>
-    <path d="M524 72V286"/>
-  </g>
+  <!-- Vignette overlay -->
+  <rect width="1280" height="800" fill="url(#vignette)"/>
+
+  <!-- Film grain -->
+  <rect width="1280" height="800" fill="white" filter="url(#grain)" opacity="0.55" style="mix-blend-mode:multiply"/>
 </svg>

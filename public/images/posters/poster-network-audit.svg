@@ -1,80 +1,286 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Abstract outbound network audit poster">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-label="Abstract outbound network audit poster">
   <defs>
-    <linearGradient id="net-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="1" stop-color="#050b14"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1525"/>
+      <stop offset="1" stop-color="#03060d"/>
     </linearGradient>
-    <radialGradient id="net-origin-glow" cx="20%" cy="50%" r="48%">
-      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.24"/>
-      <stop offset="0.45" stop-color="#14b8a6" stop-opacity="0.08"/>
+    <radialGradient id="origin-glow" cx="22%" cy="50%" r="38%">
+      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.32"/>
+      <stop offset="0.4" stop-color="#5eead4" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="net-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" fill="none" stroke="#fafbfc" stroke-opacity="0.04" stroke-width="1"/>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="68%">
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.35"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#fafbfc" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <filter id="net-teal-glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <pattern id="micro" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#fafbfc" stroke-opacity="0.025" stroke-width="0.4"/>
+    </pattern>
+
+    <radialGradient id="node-teal">
+      <stop offset="0" stop-color="#7ef0dc"/>
+      <stop offset="0.5" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </radialGradient>
+    <radialGradient id="node-amber">
+      <stop offset="0" stop-color="#fbd99c"/>
+      <stop offset="0.5" stop-color="#f4b860"/>
+      <stop offset="1" stop-color="#d18d2c"/>
+    </radialGradient>
+
+    <linearGradient id="line-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0.32"/>
+    </linearGradient>
+    <linearGradient id="line-amber-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4b860" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f4b860" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <filter id="glow-teal" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
     </filter>
-    <filter id="net-amber-glow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glow-amber" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="1.0" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
     </filter>
   </defs>
 
-  <rect width="640" height="400" fill="url(#net-bg)"/>
-  <rect width="640" height="400" fill="url(#net-grid)"/>
-  <rect width="640" height="400" fill="url(#net-origin-glow)"/>
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#grid)"/>
+  <rect width="1280" height="800" fill="url(#origin-glow)"/>
 
-  <g fill="none" stroke-linecap="round">
-    <path d="M152 200C218 120 287 84 362 82" stroke="#5eead4" stroke-opacity="0.54" stroke-width="1.4"/>
-    <path d="M152 200C236 162 312 145 430 145" stroke="#5eead4" stroke-opacity="0.48" stroke-width="1.4"/>
-    <path d="M152 200C242 218 310 238 388 238" stroke="#f4b860" stroke-opacity="0.64" stroke-width="1.55" stroke-dasharray="7 8"/>
-    <path d="M152 200C233 278 319 314 452 310" stroke="#5eead4" stroke-opacity="0.48" stroke-width="1.4"/>
-  </g>
+  <!-- Distant cosmic particles -->
+  <g fill="#5eead4">
+    <circle cx="120" cy="120" r="1" opacity="0.4"/>
+    <circle cx="220" cy="80" r="0.8" opacity="0.36"/>
+    <circle cx="320" cy="160" r="1.2" opacity="0.5"/>
+    <circle cx="540" cy="140" r="0.7" opacity="0.32"/>
+    <circle cx="680" cy="100" r="1" opacity="0.4"/>
+    <circle cx="820" cy="180" r="0.9" opacity="0.38"/>
+    <circle cx="980" cy="120" r="1.1" opacity="0.46"/>
+    <circle cx="1120" cy="80" r="0.7" opacity="0.3"/>
+    <circle cx="1180" cy="160" r="1" opacity="0.42"/>
 
-  <g transform="translate(118 200)" filter="url(#net-teal-glow)">
-    <circle r="42" fill="#14b8a6" fill-opacity="0.08" stroke="#5eead4" stroke-opacity="0.32" stroke-width="1.2"/>
-    <circle r="28" fill="#14b8a6" fill-opacity="0.12" stroke="#5eead4" stroke-opacity="0.72" stroke-width="1.6"/>
-    <circle r="9" fill="#5eead4"/>
-  </g>
-
-  <g filter="url(#net-teal-glow)">
-    <g transform="translate(362 82)">
-      <circle r="17" fill="#14b8a6" fill-opacity="0.08" stroke="#5eead4" stroke-opacity="0.58" stroke-width="1.25"/>
-      <circle r="5.5" fill="#5eead4"/>
-    </g>
-    <g transform="translate(430 145)">
-      <circle r="17" fill="#14b8a6" fill-opacity="0.08" stroke="#5eead4" stroke-opacity="0.58" stroke-width="1.25"/>
-      <circle r="5.5" fill="#5eead4"/>
-    </g>
-    <g transform="translate(452 310)">
-      <circle r="17" fill="#14b8a6" fill-opacity="0.08" stroke="#5eead4" stroke-opacity="0.58" stroke-width="1.25"/>
-      <circle r="5.5" fill="#5eead4"/>
-    </g>
-  </g>
-
-  <g transform="translate(388 238)" filter="url(#net-amber-glow)">
-    <circle r="18" fill="#f4b860" fill-opacity="0.09" stroke="#f4b860" stroke-opacity="0.72" stroke-width="1.25"/>
-    <circle r="6" fill="#f4b860"/>
-  </g>
-
-  <g opacity="0.22" stroke="#5eead4" stroke-width="1" fill="none">
-    <circle cx="118" cy="200" r="76"/>
-    <circle cx="118" cy="200" r="108"/>
-    <path d="M72 88h128M440 64h88M484 332h84M64 320h102"/>
+    <circle cx="180" cy="700" r="0.9" opacity="0.38"/>
+    <circle cx="340" cy="660" r="1.1" opacity="0.45"/>
+    <circle cx="520" cy="700" r="0.8" opacity="0.34"/>
+    <circle cx="700" cy="660" r="1" opacity="0.4"/>
+    <circle cx="880" cy="720" r="1.2" opacity="0.5"/>
+    <circle cx="1060" cy="680" r="0.9" opacity="0.36"/>
+    <circle cx="1200" cy="720" r="1" opacity="0.42"/>
   </g>
 
   <g fill="#fafbfc" opacity="0.12">
-    <circle cx="268" cy="111" r="1.6"/>
-    <circle cx="311" cy="151" r="1.6"/>
-    <circle cx="278" cy="228" r="1.6"/>
-    <circle cx="336" cy="285" r="1.6"/>
+    <circle cx="420" cy="380" r="0.8"/>
+    <circle cx="500" cy="440" r="0.7"/>
+    <circle cx="600" cy="320" r="0.8"/>
+    <circle cx="700" cy="500" r="0.7"/>
+    <circle cx="780" cy="380" r="0.9"/>
+    <circle cx="850" cy="280" r="0.7"/>
+    <circle cx="920" cy="420" r="0.8"/>
+    <circle cx="1000" cy="500" r="0.7"/>
   </g>
+
+  <!-- Corner registration marks -->
+  <g fill="none" stroke="#5eead4" stroke-width="1.2" stroke-linecap="square" opacity="0.22">
+    <path d="M50 60H110M50 60V120"/>
+    <path d="M1230 60H1170M1230 60V120"/>
+    <path d="M50 740H110M50 740V680"/>
+    <path d="M1230 740H1170M1230 740V680"/>
+  </g>
+
+  <!-- Tick marks -->
+  <g stroke="#5eead4" stroke-width="0.6" opacity="0.18">
+    <path d="M180 50V62M260 50V62M340 50V62M420 50V62M500 50V62M580 50V62M660 50V62M740 50V62M820 50V62M900 50V62M980 50V62M1060 50V62M1140 50V62"/>
+    <path d="M180 750V738M260 750V738M340 750V738M420 750V738M500 750V738M580 750V738M660 750V738M740 750V738M820 750V738M900 750V738M980 750V738M1060 750V738M1140 750V738"/>
+  </g>
+
+  <!-- Radar rings around origin -->
+  <g transform="translate(280 400)" fill="none" stroke="#5eead4" stroke-width="1">
+    <circle r="80" opacity="0.18"/>
+    <circle r="140" opacity="0.14"/>
+    <circle r="210" opacity="0.1"/>
+    <circle r="290" opacity="0.07"/>
+    <circle r="380" opacity="0.05"/>
+  </g>
+
+  <!-- Radar sweep wedge -->
+  <g transform="translate(280 400)" opacity="0.18">
+    <path d="M0 0 L 380 -90 A 390 390 0 0 1 380 90 Z" fill="url(#origin-glow)" opacity="0.6"/>
+  </g>
+
+  <!-- Connections -->
+  <g fill="none">
+    <!-- Connection 1: trusted - top right -->
+    <path d="M308 384 C 480 280, 640 200, 800 184" stroke="url(#line-fade)" stroke-width="1.4" opacity="0.7"/>
+    <!-- Connection 2: trusted - upper right -->
+    <path d="M312 396 C 500 360, 700 320, 920 296" stroke="url(#line-fade)" stroke-width="1.4" opacity="0.62"/>
+    <!-- Connection 3: trusted - middle right -->
+    <path d="M316 408 C 520 420, 720 416, 1020 416" stroke="url(#line-fade)" stroke-width="1.4" opacity="0.7"/>
+    <!-- Connection 4: FLAGGED - lower right -->
+    <path d="M314 418 C 500 480, 660 510, 850 528" stroke="url(#line-amber-fade)" stroke-width="1.7" stroke-dasharray="8 6" opacity="0.85" stroke-linecap="round"/>
+    <!-- Connection 5: trusted - bottom right -->
+    <path d="M310 426 C 460 540, 660 600, 940 624" stroke="url(#line-fade)" stroke-width="1.4" opacity="0.6"/>
+    <!-- Connection 6: trusted - far bottom -->
+    <path d="M308 432 C 420 580, 600 660, 760 686" stroke="url(#line-fade)" stroke-width="1.2" opacity="0.5"/>
+  </g>
+
+  <!-- Packet flow indicators (small moving dots represented statically along lines) -->
+  <g fill="#5eead4" opacity="0.8">
+    <circle cx="620" cy="232" r="2"/>
+    <circle cx="660" cy="338" r="2"/>
+    <circle cx="668" cy="416" r="2"/>
+    <circle cx="620" cy="630" r="2"/>
+  </g>
+  <g fill="#f4b860">
+    <circle cx="592" cy="498" r="2.2"/>
+  </g>
+
+  <!-- Origin node (large, pulsing) -->
+  <g transform="translate(280 400)">
+    <!-- Outer halo -->
+    <circle r="78" fill="#14b8a6" fill-opacity="0.06" filter="url(#glow-teal)"/>
+    <!-- Outer ring -->
+    <circle r="62" fill="none" stroke="#5eead4" stroke-opacity="0.32" stroke-width="1.2"/>
+    <!-- Middle ring -->
+    <circle r="42" fill="#14b8a6" fill-opacity="0.12" stroke="#5eead4" stroke-opacity="0.75" stroke-width="1.6"/>
+    <!-- Inner core -->
+    <circle r="14" fill="url(#node-teal)"/>
+    <circle r="8" fill="#cffff8" fill-opacity="0.5"/>
+    <!-- Compass ticks -->
+    <g stroke="#5eead4" stroke-width="1.2" opacity="0.42">
+      <path d="M0 -78 V -70"/>
+      <path d="M0 70 V 78"/>
+      <path d="M-78 0 H -70"/>
+      <path d="M70 0 H 78"/>
+    </g>
+  </g>
+
+  <!-- Destination nodes (right side) -->
+  <g>
+    <!-- Node 1: top -->
+    <g transform="translate(800 184)" filter="url(#glow-teal)">
+      <circle r="22" fill="#14b8a6" fill-opacity="0.08"/>
+    </g>
+    <g transform="translate(800 184)">
+      <circle r="18" fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2"/>
+      <circle r="10" fill="#14b8a6" fill-opacity="0.16" stroke="#5eead4" stroke-opacity="0.7" stroke-width="1"/>
+      <circle r="5.5" fill="url(#node-teal)"/>
+    </g>
+    <!-- bracket label -->
+    <g stroke="#5eead4" stroke-width="1" opacity="0.4">
+      <path d="M820 160H856L856 175"/>
+    </g>
+
+    <!-- Node 2 -->
+    <g transform="translate(920 296)" filter="url(#glow-teal)">
+      <circle r="22" fill="#14b8a6" fill-opacity="0.08"/>
+    </g>
+    <g transform="translate(920 296)">
+      <circle r="18" fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2"/>
+      <circle r="10" fill="#14b8a6" fill-opacity="0.16" stroke="#5eead4" stroke-opacity="0.7" stroke-width="1"/>
+      <circle r="5.5" fill="url(#node-teal)"/>
+    </g>
+    <g stroke="#5eead4" stroke-width="1" opacity="0.4">
+      <path d="M940 272H1010V286"/>
+    </g>
+
+    <!-- Node 3 -->
+    <g transform="translate(1020 416)" filter="url(#glow-teal)">
+      <circle r="22" fill="#14b8a6" fill-opacity="0.08"/>
+    </g>
+    <g transform="translate(1020 416)">
+      <circle r="18" fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2"/>
+      <circle r="10" fill="#14b8a6" fill-opacity="0.16" stroke="#5eead4" stroke-opacity="0.7" stroke-width="1"/>
+      <circle r="5.5" fill="url(#node-teal)"/>
+    </g>
+    <g stroke="#5eead4" stroke-width="1" opacity="0.4">
+      <path d="M1040 392H1110V406"/>
+    </g>
+
+    <!-- Node 4: FLAGGED (amber) -->
+    <g transform="translate(850 528)" filter="url(#glow-amber)">
+      <circle r="28" fill="#f4b860" fill-opacity="0.12"/>
+    </g>
+    <g transform="translate(850 528)">
+      <circle r="22" fill="none" stroke="#f4b860" stroke-opacity="0.7" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <circle r="13" fill="#f4b860" fill-opacity="0.2" stroke="#f4b860" stroke-opacity="0.85" stroke-width="1.4"/>
+      <circle r="6.5" fill="url(#node-amber)"/>
+      <!-- warning marker -->
+      <g stroke="#f4b860" stroke-width="1.4" opacity="0.85">
+        <path d="M-30 0 L -22 -5 L -22 5 Z" fill="#f4b860"/>
+      </g>
+    </g>
+    <g stroke="#f4b860" stroke-width="1" opacity="0.45">
+      <path d="M872 504H944V518"/>
+    </g>
+
+    <!-- Node 5 -->
+    <g transform="translate(940 624)" filter="url(#glow-teal)">
+      <circle r="22" fill="#14b8a6" fill-opacity="0.08"/>
+    </g>
+    <g transform="translate(940 624)">
+      <circle r="18" fill="none" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2"/>
+      <circle r="10" fill="#14b8a6" fill-opacity="0.16" stroke="#5eead4" stroke-opacity="0.7" stroke-width="1"/>
+      <circle r="5.5" fill="url(#node-teal)"/>
+    </g>
+    <g stroke="#5eead4" stroke-width="1" opacity="0.4">
+      <path d="M960 600H1030V614"/>
+    </g>
+
+    <!-- Node 6 -->
+    <g transform="translate(760 686)" filter="url(#glow-teal)">
+      <circle r="18" fill="#14b8a6" fill-opacity="0.08"/>
+    </g>
+    <g transform="translate(760 686)">
+      <circle r="14" fill="none" stroke="#5eead4" stroke-opacity="0.48" stroke-width="1.2"/>
+      <circle r="8" fill="#14b8a6" fill-opacity="0.14" stroke="#5eead4" stroke-opacity="0.6" stroke-width="1"/>
+      <circle r="4" fill="url(#node-teal)"/>
+    </g>
+    <g stroke="#5eead4" stroke-width="1" opacity="0.36">
+      <path d="M774 668H840V680"/>
+    </g>
+  </g>
+
+  <!-- Left side metadata column -->
+  <g transform="translate(80 130)" opacity="0.65" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2">
+    <text y="0" fill="#5eead4">VEIL · NETWORK AUDIT</text>
+    <g fill="#97a3b3" font-size="9">
+      <text y="34">OUTBOUND</text>
+      <text y="50" fill="#5eead4">06 CONNECTIONS</text>
+      <text y="76">FLAGGED</text>
+      <text y="92" fill="#f4b860">01 PROFILE.UNKNOWN</text>
+      <text y="118">DNS LEAK</text>
+      <text y="134" fill="#5eead4">00 BLOCKED</text>
+      <text y="160">WEBRTC</text>
+      <text y="176" fill="#5eead4">CLAMPED</text>
+    </g>
+  </g>
+
+  <!-- Bottom metadata bar -->
+  <g transform="translate(80 700)" opacity="0.5">
+    <path d="M0 0H1120" stroke="#5eead4" stroke-width="0.6"/>
+    <g fill="#5eead4" font-family="ui-monospace, Menlo, monospace" font-size="9" letter-spacing="2">
+      <text x="0" y="20">TS · 1779452342</text>
+      <text x="380" y="20">CLAMP · WEBRTC / DNS</text>
+      <text x="780" y="20">PROXY · HEALTHY</text>
+    </g>
+    <g stroke="#5eead4" opacity="0.6" stroke-width="0.6">
+      <path d="M0 -6V0M150 -6V0M300 -6V0M450 -6V0M600 -6V0M750 -6V0M900 -6V0M1050 -6V0"/>
+    </g>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1280" height="800" fill="url(#vignette)"/>
+
+  <!-- Grain -->
+  <rect width="1280" height="800" fill="white" filter="url(#grain)" opacity="0.55" style="mix-blend-mode:overlay"/>
 </svg>

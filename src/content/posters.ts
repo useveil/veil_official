@@ -13,8 +13,8 @@ export type PosterAsset = {
 export const heroPoster: PosterAsset = {
   key: 'encryption-stack',
   src: '/images/posters/poster-encryption-stack.svg',
-  width: 600,
-  height: 750,
+  width: 1200,
+  height: 1500,
   alt: {
     zh: 'Veil 加密栈：从主密码到 SQLCipher 整库加密的四层结构示意图',
     en: 'Veil encryption stack: four-layer diagram from master password to SQLCipher full-database encryption',
@@ -33,8 +33,8 @@ export const galleryPosters: PosterAsset[] = [
   {
     key: 'fingerprint',
     src: '/images/posters/poster-fingerprint.svg',
-    width: 640,
-    height: 400,
+    width: 1280,
+    height: 800,
     alt: {
       zh: '抽象指纹纹路与种子稳定性可视化',
       en: 'Abstract fingerprint pattern with deterministic seed metadata',
@@ -51,8 +51,8 @@ export const galleryPosters: PosterAsset[] = [
   {
     key: 'network-audit',
     src: '/images/posters/poster-network-audit.svg',
-    width: 640,
-    height: 400,
+    width: 1280,
+    height: 800,
     alt: {
       zh: '出站连接审计示意图：本机 Profile 与外部节点的连接关系',
       en: 'Outbound audit diagram: connections between the local profile and external nodes',
@@ -69,8 +69,8 @@ export const galleryPosters: PosterAsset[] = [
   {
     key: 'isolation',
     src: '/images/posters/poster-isolation.svg',
-    width: 640,
-    height: 400,
+    width: 1280,
+    height: 800,
     alt: {
       zh: '四个 Profile 隔离卡片：Vault / Wallet / Shop / Bot',
       en: 'Four isolated profile cards: Vault / Wallet / Shop / Bot',

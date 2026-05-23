@@ -6,7 +6,7 @@
 
 ---
 
-## 1 · `poster-encryption-stack` · 600×750（4:5 竖向，Hero 右侧）
+## 1 · `poster-encryption-stack` · 1200×1500（4:5 竖向，Hero 右侧）
 
 ```
 A minimalist vertical poster in 4:5 aspect ratio (export at 1200x1500 px PNG or WebP for retina, no JPG to avoid gradient banding). The poster depicts an abstract layered encryption stack — four horizontal isometric panels stacked vertically with slight 3D perspective, the largest panel at the bottom and progressively smaller panels above forming a pyramid silhouette. The bottom three panels are deep navy gradients (#1a2533 to #15202e to #101b29) with subtle inner shadows. The topmost smallest panel is filled with a muted teal-to-cyan gradient (#14b8a6 to #5eead4). Each panel has a hairline edge highlight in soft cream (#fafbfc at ~12% opacity). Thin teal connector arrows (#5eead4) flow downward between adjacent panels along the central vertical axis to indicate data direction. Background: a deep navy gradient (#07111f at top to #050b14 at bottom) with a barely-visible 30px square technical grid overlay (1px lines at ~3.5% opacity) and a soft teal radial glow concentrated at the top. Four small registration corner marks in soft teal at very low opacity. Generous negative space around the entire stack.

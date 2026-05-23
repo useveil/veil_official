@@ -1,65 +1,287 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Abstract multi-profile isolation poster">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-label="Abstract multi-profile isolation poster">
   <defs>
-    <linearGradient id="iso-bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#fafbfc"/>
-      <stop offset="1" stop-color="#eef2f4"/>
+      <stop offset="1" stop-color="#e6eaee"/>
     </linearGradient>
-    <pattern id="iso-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M20 0H0V20" fill="none" stroke="#07111f" stroke-opacity="0.045" stroke-width="1"/>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.1"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#07111f" stroke-opacity="0.04" stroke-width="1"/>
     </pattern>
-    <filter id="iso-shadow" x="-20%" y="-30%" width="140%" height="170%">
-      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#07111f" flood-opacity="0.09"/>
+
+    <linearGradient id="ch-teal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6faf3"/>
+      <stop offset="1" stop-color="#d2f0e7"/>
+    </linearGradient>
+    <linearGradient id="ch-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7f4fb"/>
+      <stop offset="1" stop-color="#d2e9f6"/>
+    </linearGradient>
+    <linearGradient id="ch-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbecd1"/>
+      <stop offset="1" stop-color="#f3dfb5"/>
+    </linearGradient>
+    <linearGradient id="ch-rose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e2e8"/>
+      <stop offset="1" stop-color="#efced8"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#07111f" flood-opacity="0.1"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#07111f" flood-opacity="0.06"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.07 0"/>
     </filter>
   </defs>
 
-  <rect width="640" height="400" fill="url(#iso-bg)"/>
-  <rect width="640" height="400" fill="url(#iso-grid)"/>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#grid)"/>
 
-  <g fill="none" stroke="#07111f" stroke-opacity="0.07" stroke-width="1">
-    <path d="M44 72H596"/>
-    <path d="M44 328H596"/>
-    <path d="M44 72V328"/>
-    <path d="M596 72V328"/>
+  <!-- Corner registration marks -->
+  <g fill="none" stroke="#0d9488" stroke-width="1.2" stroke-linecap="square" opacity="0.32">
+    <path d="M50 60H110M50 60V120"/>
+    <path d="M1230 60H1170M1230 60V120"/>
+    <path d="M50 740H110M50 740V680"/>
+    <path d="M1230 740H1170M1230 740V680"/>
   </g>
 
-  <g filter="url(#iso-shadow)">
-    <g transform="translate(54 94)">
-      <rect width="112" height="212" rx="8" fill="#d8f4ef" stroke="#14b8a6" stroke-opacity="0.48" stroke-width="1.25"/>
-      <rect x="18" y="26" width="76" height="42" rx="5" fill="#14b8a6" fill-opacity="0.2"/>
-      <circle cx="36" cy="112" r="6" fill="#14b8a6" fill-opacity="0.56"/>
-      <circle cx="78" cy="112" r="6" fill="#14b8a6" fill-opacity="0.32"/>
-      <path d="M28 150h56M28 172h36" stroke="#14b8a6" stroke-opacity="0.48" stroke-width="2" stroke-linecap="round"/>
-      <rect x="46" y="28" width="20" height="38" rx="3" fill="#14b8a6" fill-opacity="0.42"/>
-    </g>
+  <!-- Top tick marks -->
+  <g stroke="#07111f" stroke-width="0.5" opacity="0.18">
+    <path d="M180 50V62M260 50V62M340 50V62M420 50V62M500 50V62M580 50V62M660 50V62M740 50V62M820 50V62M900 50V62M980 50V62M1060 50V62M1140 50V62"/>
+  </g>
 
-    <g transform="translate(194 94)">
-      <rect width="112" height="212" rx="8" fill="#d9eff8" stroke="#38bdf8" stroke-opacity="0.48" stroke-width="1.25"/>
-      <circle cx="56" cy="48" r="22" fill="#38bdf8" fill-opacity="0.2"/>
-      <path d="M32 112h48M56 88v48" stroke="#38bdf8" stroke-opacity="0.48" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="36" cy="170" r="5" fill="#38bdf8" fill-opacity="0.52"/>
-      <circle cx="56" cy="170" r="5" fill="#38bdf8" fill-opacity="0.34"/>
-      <circle cx="76" cy="170" r="5" fill="#38bdf8" fill-opacity="0.22"/>
-    </g>
+  <!-- Header bar (subtle) -->
+  <g opacity="0.7" font-family="ui-monospace, Menlo, monospace">
+    <text x="80" y="118" font-size="11" fill="#0d9488" letter-spacing="3">VEIL · PROFILE ISOLATION</text>
+    <text x="80" y="140" font-size="10" fill="#4a5564" letter-spacing="2">04 CHAMBERS · ZERO CROSSOVER</text>
+  </g>
 
-    <g transform="translate(334 94)">
-      <rect width="112" height="212" rx="8" fill="#f7e5c5" stroke="#f4b860" stroke-opacity="0.55" stroke-width="1.25"/>
-      <path d="M28 48h56l-28 46Z" fill="#f4b860" fill-opacity="0.28" stroke="#f4b860" stroke-opacity="0.5" stroke-width="1.5" stroke-linejoin="round"/>
-      <rect x="30" y="128" width="52" height="14" rx="4" fill="#f4b860" fill-opacity="0.32"/>
-      <rect x="30" y="158" width="34" height="14" rx="4" fill="#f4b860" fill-opacity="0.22"/>
-      <circle cx="82" cy="165" r="6" fill="#f4b860" fill-opacity="0.45"/>
-    </g>
+  <!-- Right side meta -->
+  <g opacity="0.65" font-family="ui-monospace, Menlo, monospace" font-size="9" letter-spacing="2" text-anchor="end">
+    <text x="1200" y="118" fill="#4a5564">LAYOUT · 1×4</text>
+    <text x="1200" y="134" fill="#4a5564">ENCRYPTION · AES-256</text>
+    <text x="1200" y="150" fill="#0d9488">STATE · SEALED</text>
+  </g>
 
-    <g transform="translate(474 94)">
-      <rect width="112" height="212" rx="8" fill="#f5dce2" stroke="#e8798b" stroke-opacity="0.5" stroke-width="1.25"/>
-      <rect x="28" y="36" width="56" height="56" rx="7" fill="#e8798b" fill-opacity="0.24"/>
-      <circle cx="56" cy="64" r="12" fill="#e8798b" fill-opacity="0.42"/>
-      <path d="M30 130h52M30 154h52M30 178h30" stroke="#e8798b" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+  <!-- Outer architectural frame -->
+  <g fill="none" stroke="#07111f" stroke-opacity="0.08" stroke-width="1">
+    <path d="M64 188H1216"/>
+    <path d="M64 692H1216"/>
+  </g>
+
+  <!-- 4 chambers -->
+  <!-- Chamber A: Teal / VAULT -->
+  <g transform="translate(96 220)" filter="url(#shadow)">
+    <rect width="248" height="440" rx="14" fill="url(#ch-teal)" stroke="#14b8a6" stroke-opacity="0.45" stroke-width="1.4"/>
+    <!-- Chamber top bar -->
+    <rect x="14" y="14" width="220" height="50" rx="8" fill="#14b8a6" fill-opacity="0.22"/>
+    <circle cx="38" cy="39" r="9" fill="#14b8a6" fill-opacity="0.85"/>
+    <rect x="60" y="35" width="80" height="3.5" rx="1.6" fill="#14b8a6" fill-opacity="0.55"/>
+    <rect x="60" y="44" width="50" height="3" rx="1.5" fill="#14b8a6" fill-opacity="0.32"/>
+    <!-- Interior key icon (abstract) -->
+    <g transform="translate(124 156)">
+      <circle r="32" fill="none" stroke="#14b8a6" stroke-opacity="0.32" stroke-width="1.4"/>
+      <circle r="22" fill="#14b8a6" fill-opacity="0.16" stroke="#14b8a6" stroke-opacity="0.55" stroke-width="1.4"/>
+      <circle r="10" fill="#14b8a6" fill-opacity="0.62"/>
+      <path d="M0 22V44M-6 36H6M-6 42H4" stroke="#14b8a6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <!-- Data rows -->
+    <g transform="translate(28 250)">
+      <rect width="120" height="4" rx="2" fill="#14b8a6" fill-opacity="0.5"/>
+      <rect y="14" width="184" height="4" rx="2" fill="#0a0e1a" fill-opacity="0.1"/>
+      <rect y="28" width="148" height="4" rx="2" fill="#0a0e1a" fill-opacity="0.08"/>
+      <rect y="42" width="172" height="4" rx="2" fill="#0a0e1a" fill-opacity="0.08"/>
+      <rect y="56" width="120" height="4" rx="2" fill="#0a0e1a" fill-opacity="0.06"/>
+      <rect y="70" width="148" height="4" rx="2" fill="#14b8a6" fill-opacity="0.35"/>
+    </g>
+    <!-- Bottom indicator -->
+    <g transform="translate(28 360)">
+      <circle cx="6" cy="6" r="4.5" fill="#14b8a6" fill-opacity="0.85"/>
+      <rect x="18" y="3" width="100" height="6" rx="3" fill="#14b8a6" fill-opacity="0.45"/>
+      <text x="178" y="9" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" letter-spacing="1.5">A · VAULT</text>
+    </g>
+    <!-- Bottom meta -->
+    <g transform="translate(28 392)" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#4a5564" opacity="0.7" letter-spacing="1.2">
+      <text>COOKIES · 142</text>
+      <text y="14">PROXY · SG-01</text>
+      <text y="28">ENCRYPTED ✓</text>
     </g>
   </g>
 
-  <g stroke="#07111f" stroke-opacity="0.09" stroke-width="1">
-    <path d="M180 88v224"/>
-    <path d="M320 88v224"/>
-    <path d="M460 88v224"/>
+  <!-- Chamber B: Sky-blue / WALLET -->
+  <g transform="translate(388 220)" filter="url(#shadow)">
+    <rect width="248" height="440" rx="14" fill="url(#ch-blue)" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.4"/>
+    <rect x="14" y="14" width="220" height="50" rx="8" fill="#38bdf8" fill-opacity="0.18"/>
+    <circle cx="38" cy="39" r="9" fill="#38bdf8" fill-opacity="0.78"/>
+    <rect x="60" y="35" width="80" height="3.5" rx="1.6" fill="#38bdf8" fill-opacity="0.5"/>
+    <rect x="60" y="44" width="50" height="3" rx="1.5" fill="#38bdf8" fill-opacity="0.3"/>
+    <!-- Interior wallet icon (abstract) -->
+    <g transform="translate(124 156)">
+      <rect x="-44" y="-30" width="88" height="60" rx="6" fill="#38bdf8" fill-opacity="0.16" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.4"/>
+      <rect x="-44" y="-12" width="88" height="42" rx="6" fill="#38bdf8" fill-opacity="0.22"/>
+      <circle cx="22" cy="12" r="6" fill="#38bdf8" fill-opacity="0.62"/>
+      <rect x="-32" y="-22" width="36" height="3" rx="1.5" fill="#38bdf8" fill-opacity="0.55"/>
+    </g>
+    <!-- Hex pattern (wallet seed grid) -->
+    <g transform="translate(36 240)">
+      <g fill="#38bdf8" opacity="0.7">
+        <rect width="20" height="20" rx="3" opacity="0.42"/>
+        <rect x="28" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="56" width="20" height="20" rx="3" opacity="0.5"/>
+        <rect x="84" width="20" height="20" rx="3" opacity="0.32"/>
+        <rect x="112" width="20" height="20" rx="3" opacity="0.4"/>
+        <rect x="140" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="168" width="20" height="20" rx="3" opacity="0.5"/>
+        <rect y="28" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="28" y="28" width="20" height="20" rx="3" opacity="0.5"/>
+        <rect x="56" y="28" width="20" height="20" rx="3" opacity="0.36"/>
+        <rect x="84" y="28" width="20" height="20" rx="3" opacity="0.44"/>
+        <rect x="112" y="28" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="140" y="28" width="20" height="20" rx="3" opacity="0.4"/>
+        <rect x="168" y="28" width="20" height="20" rx="3" opacity="0.32"/>
+        <rect y="56" width="20" height="20" rx="3" opacity="0.5"/>
+        <rect x="28" y="56" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="56" y="56" width="20" height="20" rx="3" opacity="0.42"/>
+        <rect x="84" y="56" width="20" height="20" rx="3" opacity="0.34"/>
+        <rect x="112" y="56" width="20" height="20" rx="3" opacity="0.46"/>
+        <rect x="140" y="56" width="20" height="20" rx="3" opacity="0.3"/>
+        <rect x="168" y="56" width="20" height="20" rx="3" opacity="0.42"/>
+      </g>
+    </g>
+    <g transform="translate(28 360)">
+      <circle cx="6" cy="6" r="4.5" fill="#38bdf8" fill-opacity="0.85"/>
+      <rect x="18" y="3" width="100" height="6" rx="3" fill="#38bdf8" fill-opacity="0.45"/>
+      <text x="178" y="9" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0369a1" letter-spacing="1.5">B · WALLET</text>
+    </g>
+    <g transform="translate(28 392)" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#4a5564" opacity="0.7" letter-spacing="1.2">
+      <text>BIP39 · 24 WORDS</text>
+      <text y="14">PROXY · US-02</text>
+      <text y="28">ENCRYPTED ✓</text>
+    </g>
   </g>
+
+  <!-- Chamber C: Amber / SHOP -->
+  <g transform="translate(680 220)" filter="url(#shadow)">
+    <rect width="248" height="440" rx="14" fill="url(#ch-amber)" stroke="#f4b860" stroke-opacity="0.55" stroke-width="1.4"/>
+    <rect x="14" y="14" width="220" height="50" rx="8" fill="#f4b860" fill-opacity="0.2"/>
+    <circle cx="38" cy="39" r="9" fill="#f4b860" fill-opacity="0.85"/>
+    <rect x="60" y="35" width="80" height="3.5" rx="1.6" fill="#f4b860" fill-opacity="0.55"/>
+    <rect x="60" y="44" width="50" height="3" rx="1.5" fill="#f4b860" fill-opacity="0.32"/>
+    <!-- Interior shop icon (storefront abstract) -->
+    <g transform="translate(124 156)">
+      <path d="M-44 -20H44L36 -32H-36Z" fill="#f4b860" fill-opacity="0.32" stroke="#f4b860" stroke-opacity="0.55" stroke-width="1.4"/>
+      <rect x="-44" y="-20" width="88" height="56" rx="3" fill="#f4b860" fill-opacity="0.14" stroke="#f4b860" stroke-opacity="0.55" stroke-width="1.4"/>
+      <rect x="-30" y="-6" width="22" height="42" fill="#f4b860" fill-opacity="0.32"/>
+      <rect x="8" y="-6" width="22" height="22" fill="#f4b860" fill-opacity="0.32"/>
+    </g>
+    <!-- Bar chart -->
+    <g transform="translate(34 240)">
+      <rect width="12" height="76" rx="2" fill="#f4b860" fill-opacity="0.32"/>
+      <rect x="20" y="30" width="12" height="46" rx="2" fill="#f4b860" fill-opacity="0.42"/>
+      <rect x="40" y="14" width="12" height="62" rx="2" fill="#f4b860" fill-opacity="0.55"/>
+      <rect x="60" y="46" width="12" height="30" rx="2" fill="#f4b860" fill-opacity="0.36"/>
+      <rect x="80" y="22" width="12" height="54" rx="2" fill="#f4b860" fill-opacity="0.5"/>
+      <rect x="100" y="6" width="12" height="70" rx="2" fill="#f4b860" fill-opacity="0.7"/>
+      <rect x="120" y="38" width="12" height="38" rx="2" fill="#f4b860" fill-opacity="0.42"/>
+      <rect x="140" y="24" width="12" height="52" rx="2" fill="#f4b860" fill-opacity="0.55"/>
+      <rect x="160" y="48" width="12" height="28" rx="2" fill="#f4b860" fill-opacity="0.34"/>
+      <rect x="180" y="32" width="12" height="44" rx="2" fill="#f4b860" fill-opacity="0.46"/>
+      <!-- baseline -->
+      <path d="M0 80H198" stroke="#f4b860" stroke-opacity="0.4" stroke-width="1"/>
+    </g>
+    <g transform="translate(28 360)">
+      <circle cx="6" cy="6" r="4.5" fill="#f4b860" fill-opacity="0.9"/>
+      <rect x="18" y="3" width="100" height="6" rx="3" fill="#f4b860" fill-opacity="0.55"/>
+      <text x="178" y="9" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#92400e" letter-spacing="1.5">C · SHOP</text>
+    </g>
+    <g transform="translate(28 392)" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#4a5564" opacity="0.7" letter-spacing="1.2">
+      <text>COOKIES · 318</text>
+      <text y="14">PROXY · JP-03</text>
+      <text y="28">ENCRYPTED ✓</text>
+    </g>
+  </g>
+
+  <!-- Chamber D: Rose / BOT -->
+  <g transform="translate(972 220)" filter="url(#shadow)">
+    <rect width="220" height="440" rx="14" fill="url(#ch-rose)" stroke="#e8798b" stroke-opacity="0.5" stroke-width="1.4"/>
+    <rect x="14" y="14" width="192" height="50" rx="8" fill="#e8798b" fill-opacity="0.18"/>
+    <circle cx="38" cy="39" r="9" fill="#e8798b" fill-opacity="0.8"/>
+    <rect x="60" y="35" width="80" height="3.5" rx="1.6" fill="#e8798b" fill-opacity="0.5"/>
+    <rect x="60" y="44" width="40" height="3" rx="1.5" fill="#e8798b" fill-opacity="0.3"/>
+    <!-- Interior bot icon -->
+    <g transform="translate(110 156)">
+      <rect x="-40" y="-28" width="80" height="60" rx="10" fill="#e8798b" fill-opacity="0.14" stroke="#e8798b" stroke-opacity="0.55" stroke-width="1.4"/>
+      <circle cx="-16" cy="-6" r="6" fill="#e8798b" fill-opacity="0.65"/>
+      <circle cx="16" cy="-6" r="6" fill="#e8798b" fill-opacity="0.65"/>
+      <rect x="-22" y="16" width="44" height="3" rx="1.5" fill="#e8798b" fill-opacity="0.55"/>
+      <rect x="-12" y="32" width="24" height="6" rx="2" fill="#e8798b" fill-opacity="0.4"/>
+      <!-- antenna -->
+      <path d="M0 -28V-40M0 -40H-6M0 -40H6" stroke="#e8798b" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>
+    </g>
+    <!-- Terminal lines -->
+    <g transform="translate(28 250)" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#e8798b" opacity="0.6" letter-spacing="1">
+      <text y="0">&gt; init profile</text>
+      <text y="14">&gt; cdp :9222</text>
+      <text y="28">&gt; task.run</text>
+      <text y="42">&gt; ✓ ok 047</text>
+    </g>
+    <!-- Pulse meter -->
+    <g transform="translate(28 320)">
+      <path d="M0 12 L 24 12 L 32 4 L 48 22 L 64 8 L 80 16 L 100 6 L 124 14 L 160 12"
+            fill="none" stroke="#e8798b" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+    </g>
+    <g transform="translate(28 360)">
+      <circle cx="6" cy="6" r="4.5" fill="#e8798b" fill-opacity="0.9"/>
+      <rect x="18" y="3" width="100" height="6" rx="3" fill="#e8798b" fill-opacity="0.45"/>
+      <text x="150" y="9" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#9f1239" letter-spacing="1.5">D · BOT</text>
+    </g>
+    <g transform="translate(28 392)" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#4a5564" opacity="0.7" letter-spacing="1.2">
+      <text>API · V0.1</text>
+      <text y="14">CDP · :9222</text>
+      <text y="28">ENCRYPTED ✓</text>
+    </g>
+  </g>
+
+  <!-- Inter-chamber dividers (vertical hairlines indicating isolation walls) -->
+  <g opacity="0.16">
+    <path d="M366 200V680" stroke="#07111f" stroke-width="1" stroke-dasharray="2 4"/>
+    <path d="M658 200V680" stroke="#07111f" stroke-width="1" stroke-dasharray="2 4"/>
+    <path d="M950 200V680" stroke="#07111f" stroke-width="1" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- No-crossover indicators (X marks between chambers) -->
+  <g stroke="#07111f" stroke-opacity="0.2" stroke-width="1" stroke-linecap="round">
+    <g transform="translate(366 440)">
+      <path d="M-6 -6L6 6M-6 6L6 -6"/>
+      <circle r="11" fill="none" stroke-dasharray="2 3"/>
+    </g>
+    <g transform="translate(658 440)">
+      <path d="M-6 -6L6 6M-6 6L6 -6"/>
+      <circle r="11" fill="none" stroke-dasharray="2 3"/>
+    </g>
+    <g transform="translate(950 440)">
+      <path d="M-6 -6L6 6M-6 6L6 -6"/>
+      <circle r="11" fill="none" stroke-dasharray="2 3"/>
+    </g>
+  </g>
+
+  <!-- Bottom horizon line -->
+  <g opacity="0.4">
+    <path d="M80 720H1200" stroke="#0d9488" stroke-width="0.5"/>
+    <g stroke="#0d9488" stroke-width="0.5">
+      <path d="M220 720V728M460 720V728M700 720V728M940 720V728M1180 720V728"/>
+    </g>
+    <text x="80" y="742" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0d9488" letter-spacing="2">NO CROSS-CONTEXT RESIDUE · PER-PROFILE PROXY / DNS</text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1280" height="800" fill="url(#vignette)"/>
+
+  <!-- Grain -->
+  <rect width="1280" height="800" fill="white" filter="url(#grain)" opacity="0.55" style="mix-blend-mode:multiply"/>
 </svg>

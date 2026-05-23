@@ -1,102 +1,317 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Abstract layered encryption stack poster">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Abstract layered encryption stack poster">
   <defs>
-    <linearGradient id="enc-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="1" stop-color="#050b14"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a1525"/>
+      <stop offset="0.42" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#03060d"/>
     </linearGradient>
-    <radialGradient id="enc-glow" cx="50%" cy="20%" r="72%">
-      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.22"/>
-      <stop offset="0.42" stop-color="#14b8a6" stop-opacity="0.08"/>
+    <radialGradient id="aurora" cx="600" cy="180" r="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.28"/>
+      <stop offset="0.32" stop-color="#5eead4" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="enc-panel-a" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2f3845" stop-opacity="0.78"/>
-      <stop offset="1" stop-color="#151f2d" stop-opacity="0.84"/>
+    <radialGradient id="vignette" cx="600" cy="750" r="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="enc-panel-b" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#263241" stop-opacity="0.72"/>
-      <stop offset="1" stop-color="#101927" stop-opacity="0.86"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#fafbfc" stroke-opacity="0.025" stroke-width="1"/>
+    </pattern>
+    <pattern id="micro-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#fafbfc" stroke-opacity="0.025" stroke-width="0.6"/>
+    </pattern>
+
+    <linearGradient id="panel-1-top" x1="210" y1="955" x2="990" y2="1137" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f2a3a"/>
+      <stop offset="0.5" stop-color="#15202e"/>
+      <stop offset="1" stop-color="#0b1422"/>
     </linearGradient>
-    <linearGradient id="enc-panel-c" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1a2533" stop-opacity="0.76"/>
-      <stop offset="1" stop-color="#0d1724" stop-opacity="0.9"/>
+    <linearGradient id="panel-1-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2533"/>
+      <stop offset="1" stop-color="#0e1825"/>
     </linearGradient>
-    <linearGradient id="enc-panel-teal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5eead4" stop-opacity="0.92"/>
-      <stop offset="1" stop-color="#14b8a6" stop-opacity="0.74"/>
+    <linearGradient id="panel-1-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e1825"/>
+      <stop offset="1" stop-color="#050b14"/>
     </linearGradient>
-    <filter id="enc-shadow" x="-20%" y="-40%" width="140%" height="190%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020713" flood-opacity="0.45"/>
-      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#14b8a6" flood-opacity="0.06"/>
+
+    <linearGradient id="panel-2-top" x1="275" y1="735" x2="925" y2="893" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22303f"/>
+      <stop offset="0.5" stop-color="#162232"/>
+      <stop offset="1" stop-color="#0c1624"/>
+    </linearGradient>
+    <linearGradient id="panel-2-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2735"/>
+      <stop offset="1" stop-color="#0f1a28"/>
+    </linearGradient>
+    <linearGradient id="panel-2-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f1a28"/>
+      <stop offset="1" stop-color="#060d18"/>
+    </linearGradient>
+
+    <linearGradient id="panel-3-top" x1="340" y1="515" x2="860" y2="651" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#283546"/>
+      <stop offset="0.5" stop-color="#192638"/>
+      <stop offset="1" stop-color="#0e1928"/>
+    </linearGradient>
+    <linearGradient id="panel-3-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2a39"/>
+      <stop offset="1" stop-color="#101c2c"/>
+    </linearGradient>
+    <linearGradient id="panel-3-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101c2c"/>
+      <stop offset="1" stop-color="#070f1c"/>
+    </linearGradient>
+
+    <linearGradient id="crown-top" x1="420" y1="295" x2="780" y2="407" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7ef0dc"/>
+      <stop offset="0.5" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="crown-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="crown-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#0a6e65"/>
+    </linearGradient>
+    <radialGradient id="crown-glow" cx="600" cy="350" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.62"/>
+      <stop offset="0.6" stop-color="#14b8a6" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="inner-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="edge-highlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fafbfc" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#fafbfc" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
     </filter>
-    <pattern id="enc-grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M30 0H0V30" fill="none" stroke="#fafbfc" stroke-opacity="0.035" stroke-width="1"/>
-    </pattern>
-    <pattern id="enc-micro-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-      <path d="M10 0H0V10" fill="none" stroke="#fafbfc" stroke-opacity="0.035" stroke-width="0.8"/>
-    </pattern>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.08 0"/>
+    </filter>
   </defs>
 
-  <rect width="600" height="750" fill="url(#enc-bg)"/>
-  <rect width="600" height="750" fill="url(#enc-grid)"/>
-  <rect width="600" height="750" fill="url(#enc-glow)"/>
+  <!-- Atmosphere -->
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#grid)"/>
+  <rect width="1200" height="1500" fill="url(#aurora)"/>
+  <rect width="1200" height="1500" fill="url(#vignette)"/>
 
-  <g opacity="0.26" stroke="#5eead4" stroke-width="1">
-    <path d="M84 125H218M382 125H516"/>
-    <path d="M84 625H218M382 625H516"/>
-    <path d="M96 92V212M504 538V658"/>
-    <path d="M504 92V212M96 538V658"/>
+  <!-- Light beams from above -->
+  <g opacity="0.6">
+    <path d="M540 0L568 1500H612L580 0Z" fill="url(#beam)"/>
+    <path d="M620 0L632 1500H668L648 0Z" fill="url(#beam)" opacity="0.7"/>
+    <path d="M580 0L600 1500L620 0Z" fill="url(#beam)" opacity="0.5"/>
   </g>
 
-  <g filter="url(#enc-shadow)">
-    <g transform="translate(48 504)">
-      <path d="M0 28 44 0h508l-44 28H0Z" fill="url(#enc-panel-a)" stroke="#fafbfc" stroke-opacity="0.12"/>
-      <path d="M0 28h508v74H0Z" fill="#1a2533" fill-opacity="0.64" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <path d="M508 28 552 0v74l-44 28V28Z" fill="#101927" fill-opacity="0.82" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <rect x="38" y="44" width="410" height="1.2" fill="#5eead4" opacity="0.18"/>
-      <rect x="38" y="68" width="310" height="1.2" fill="#fafbfc" opacity="0.08"/>
-      <circle cx="454" cy="66" r="4" fill="#5eead4" opacity="0.42"/>
-    </g>
+  <!-- Distant particle dust -->
+  <g fill="#5eead4">
+    <circle cx="180" cy="220" r="1.2" opacity="0.65"/>
+    <circle cx="240" cy="380" r="0.9" opacity="0.42"/>
+    <circle cx="120" cy="540" r="1.4" opacity="0.5"/>
+    <circle cx="280" cy="720" r="0.8" opacity="0.38"/>
+    <circle cx="160" cy="900" r="1" opacity="0.45"/>
+    <circle cx="220" cy="1120" r="1.2" opacity="0.55"/>
+    <circle cx="140" cy="1300" r="0.9" opacity="0.32"/>
+    <circle cx="980" cy="180" r="1.1" opacity="0.5"/>
+    <circle cx="1040" cy="340" r="0.9" opacity="0.4"/>
+    <circle cx="960" cy="500" r="1.3" opacity="0.55"/>
+    <circle cx="1060" cy="680" r="0.8" opacity="0.36"/>
+    <circle cx="1000" cy="860" r="1.1" opacity="0.46"/>
+    <circle cx="950" cy="1080" r="0.9" opacity="0.34"/>
+    <circle cx="1040" cy="1260" r="1.2" opacity="0.48"/>
+  </g>
+  <g fill="#fafbfc">
+    <circle cx="380" cy="160" r="0.7" opacity="0.18"/>
+    <circle cx="820" cy="220" r="0.6" opacity="0.16"/>
+    <circle cx="460" cy="1340" r="0.7" opacity="0.2"/>
+    <circle cx="740" cy="1380" r="0.8" opacity="0.22"/>
+  </g>
 
-    <g transform="translate(82 382)">
-      <path d="M0 26 40 0h440l-40 26H0Z" fill="url(#enc-panel-b)" stroke="#fafbfc" stroke-opacity="0.12"/>
-      <path d="M0 26h440v70H0Z" fill="#15202e" fill-opacity="0.68" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <path d="M440 26 480 0v70l-40 26V26Z" fill="#0f1927" fill-opacity="0.84" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <rect x="34" y="41" width="350" height="1.2" fill="#5eead4" opacity="0.18"/>
-      <rect x="34" y="64" width="258" height="1.2" fill="#fafbfc" opacity="0.08"/>
-      <circle cx="394" cy="62" r="4" fill="#5eead4" opacity="0.38"/>
-    </g>
+  <!-- Corner registration marks -->
+  <g fill="none" stroke="#5eead4" stroke-width="1.2" stroke-linecap="square" opacity="0.18">
+    <path d="M70 130H148M70 130V208"/>
+    <path d="M1130 130H1052M1130 130V208"/>
+    <path d="M70 1370H148M70 1370V1292"/>
+    <path d="M1130 1370H1052M1130 1370V1292"/>
+  </g>
 
-    <g transform="translate(116 260)">
-      <path d="M0 24 36 0h372l-36 24H0Z" fill="url(#enc-panel-c)" stroke="#fafbfc" stroke-opacity="0.12"/>
-      <path d="M0 24h372v66H0Z" fill="#101b29" fill-opacity="0.74" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <path d="M372 24 408 0v66l-36 24V24Z" fill="#0b1624" fill-opacity="0.86" stroke="#fafbfc" stroke-opacity="0.08"/>
-      <rect x="30" y="38" width="294" height="1.2" fill="#5eead4" opacity="0.18"/>
-      <rect x="30" y="60" width="210" height="1.2" fill="#fafbfc" opacity="0.08"/>
-      <circle cx="330" cy="58" r="4" fill="#5eead4" opacity="0.35"/>
-    </g>
+  <!-- Tick marks along sides -->
+  <g stroke="#5eead4" stroke-width="0.8" opacity="0.16">
+    <path d="M88 320H72M88 480H72M88 640H72M88 800H76M88 960H72M88 1120H72"/>
+    <path d="M1112 320H1128M1112 480H1128M1112 640H1128M1112 800H1124M1112 960H1128M1112 1120H1128"/>
+  </g>
 
-    <g transform="translate(150 138)">
-      <path d="M0 22 32 0h304l-32 22H0Z" fill="url(#enc-panel-teal)" stroke="#cffff8" stroke-opacity="0.38"/>
-      <path d="M0 22h304v62H0Z" fill="#14b8a6" fill-opacity="0.72" stroke="#cffff8" stroke-opacity="0.18"/>
-      <path d="M304 22 336 0v62l-32 22V22Z" fill="#0f8f82" fill-opacity="0.8" stroke="#cffff8" stroke-opacity="0.18"/>
-      <rect x="26" y="35" width="238" height="1.2" fill="#07111f" opacity="0.24"/>
-      <rect x="26" y="56" width="164" height="1.2" fill="#07111f" opacity="0.18"/>
-      <circle cx="268" cy="54" r="4" fill="#07111f" opacity="0.35"/>
+  <!-- Crown glow halo (behind top panel) -->
+  <rect x="280" y="120" width="640" height="460" fill="url(#crown-glow)"/>
+
+  <!-- Layer 4 (bottom, widest): SQLCipher -->
+  <g>
+    <!-- top face -->
+    <path d="M210 1033 314 955H990L886 1033Z" fill="url(#panel-1-top)"/>
+    <!-- front face -->
+    <path d="M210 1033H886V1137H210Z" fill="url(#panel-1-front)"/>
+    <!-- side face -->
+    <path d="M886 1033 990 955V1059L886 1137Z" fill="url(#panel-1-side)"/>
+    <!-- inner top shadow -->
+    <path d="M210 1033H886V1075H210Z" fill="url(#inner-shadow)" opacity="0.6"/>
+    <!-- side darkening -->
+    <path d="M886 1033 990 955V995L886 1073Z" fill="#000" opacity="0.22"/>
+    <!-- edge highlights -->
+    <path d="M210 1033 314 955H990L886 1033H210Z" fill="url(#edge-highlight)"/>
+    <!-- outlines -->
+    <g fill="none" stroke="#5eead4" stroke-opacity="0.18" stroke-width="0.8">
+      <path d="M210 1033 314 955H990L886 1033Z"/>
+      <path d="M210 1033H886V1137H210Z"/>
+      <path d="M886 1033 990 955V1059L886 1137Z"/>
+    </g>
+    <!-- horizontal accent strokes inside front face -->
+    <g opacity="0.4">
+      <rect x="240" y="1060" width="420" height="1" fill="#5eead4" opacity="0.32"/>
+      <rect x="240" y="1080" width="320" height="1" fill="#fafbfc" opacity="0.12"/>
+      <rect x="240" y="1100" width="280" height="1" fill="#fafbfc" opacity="0.08"/>
+      <circle cx="820" cy="1095" r="3.5" fill="#5eead4" opacity="0.5"/>
     </g>
   </g>
 
-  <g stroke="#5eead4" stroke-width="1.25" stroke-linecap="round" opacity="0.42">
-    <path d="M300 222V252"/>
-    <path d="M300 344V374"/>
-    <path d="M300 466V496"/>
-    <path d="M292 250l8 8 8-8"/>
-    <path d="M292 372l8 8 8-8"/>
-    <path d="M292 494l8 8 8-8"/>
+  <!-- Layer 3: AES-256-GCM -->
+  <g>
+    <path d="M275 803 363 735H925L837 803Z" fill="url(#panel-2-top)"/>
+    <path d="M275 803H837V893H275Z" fill="url(#panel-2-front)"/>
+    <path d="M837 803 925 735V825L837 893Z" fill="url(#panel-2-side)"/>
+    <path d="M275 803H837V839H275Z" fill="url(#inner-shadow)" opacity="0.6"/>
+    <path d="M837 803 925 735V771L837 839Z" fill="#000" opacity="0.2"/>
+    <path d="M275 803 363 735H925L837 803H275Z" fill="url(#edge-highlight)"/>
+    <g fill="none" stroke="#5eead4" stroke-opacity="0.2" stroke-width="0.8">
+      <path d="M275 803 363 735H925L837 803Z"/>
+      <path d="M275 803H837V893H275Z"/>
+      <path d="M837 803 925 735V825L837 893Z"/>
+    </g>
+    <g opacity="0.42">
+      <rect x="302" y="828" width="360" height="1" fill="#5eead4" opacity="0.32"/>
+      <rect x="302" y="848" width="262" height="1" fill="#fafbfc" opacity="0.12"/>
+      <rect x="302" y="868" width="220" height="1" fill="#fafbfc" opacity="0.08"/>
+      <circle cx="780" cy="862" r="3.2" fill="#5eead4" opacity="0.46"/>
+    </g>
   </g>
 
+  <!-- Layer 2: Argon2id -->
+  <g>
+    <path d="M340 573 412 515H860L788 573Z" fill="url(#panel-3-top)"/>
+    <path d="M340 573H788V651H340Z" fill="url(#panel-3-front)"/>
+    <path d="M788 573 860 515V593L788 651Z" fill="url(#panel-3-side)"/>
+    <path d="M340 573H788V605H340Z" fill="url(#inner-shadow)" opacity="0.6"/>
+    <path d="M788 573 860 515V548L788 605Z" fill="#000" opacity="0.18"/>
+    <path d="M340 573 412 515H860L788 573H340Z" fill="url(#edge-highlight)"/>
+    <g fill="none" stroke="#5eead4" stroke-opacity="0.22" stroke-width="0.8">
+      <path d="M340 573 412 515H860L788 573Z"/>
+      <path d="M340 573H788V651H340Z"/>
+      <path d="M788 573 860 515V593L788 651Z"/>
+    </g>
+    <g opacity="0.42">
+      <rect x="367" y="596" width="304" height="1" fill="#5eead4" opacity="0.34"/>
+      <rect x="367" y="615" width="222" height="1" fill="#fafbfc" opacity="0.12"/>
+      <rect x="367" y="633" width="180" height="1" fill="#fafbfc" opacity="0.08"/>
+      <circle cx="735" cy="628" r="3" fill="#5eead4" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Layer 1 (top, smallest): Master Password — teal crown -->
+  <g>
+    <!-- Soft outer halo -->
+    <ellipse cx="600" cy="350" rx="280" ry="120" fill="#5eead4" opacity="0.06" filter="url(#soft-glow)"/>
+
+    <path d="M420 341 476 295H780L724 341Z" fill="url(#crown-top)"/>
+    <path d="M420 341H724V407H420Z" fill="url(#crown-front)"/>
+    <path d="M724 341 780 295V361L724 407Z" fill="url(#crown-side)"/>
+    <!-- inner shadow + highlights -->
+    <path d="M420 341H724V368H420Z" fill="#000" opacity="0.18"/>
+    <path d="M724 341 780 295V322L724 368Z" fill="#000" opacity="0.22"/>
+    <!-- top face center sparkle -->
+    <path d="M558 318 600 295 642 318 600 341Z" fill="#fafbfc" opacity="0.22"/>
+    <!-- edge -->
+    <g fill="none" stroke="#cffff8" stroke-opacity="0.5" stroke-width="0.8">
+      <path d="M420 341 476 295H780L724 341Z"/>
+      <path d="M420 341H724V407H420Z"/>
+      <path d="M724 341 780 295V361L724 407Z"/>
+    </g>
+    <!-- front face accents -->
+    <g>
+      <rect x="445" y="362" width="232" height="1.4" fill="#07111f" opacity="0.3"/>
+      <rect x="445" y="380" width="160" height="1.4" fill="#07111f" opacity="0.22"/>
+      <circle cx="697" cy="377" r="3.4" fill="#07111f" opacity="0.34"/>
+    </g>
+  </g>
+
+  <!-- Vertical connector arrows between layers -->
+  <g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g opacity="0.7">
+      <path d="M600 434V484"/>
+      <path d="M589 472 600 484 611 472"/>
+    </g>
+    <g opacity="0.62">
+      <path d="M600 679V710"/>
+      <path d="M589 698 600 710 611 698"/>
+    </g>
+    <g opacity="0.54">
+      <path d="M600 912V934"/>
+      <path d="M589 922 600 934 611 922"/>
+    </g>
+  </g>
+
+  <!-- Subtle data flow ticks along center column -->
+  <g fill="#5eead4" opacity="0.32">
+    <circle cx="600" cy="460" r="1.5"/>
+    <circle cx="600" cy="700" r="1.5"/>
+    <circle cx="600" cy="924" r="1.5"/>
+  </g>
+
+  <!-- Side numbered ticks -->
+  <g fill="#5eead4" opacity="0.45" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2">
+    <text x="100" y="356">01</text>
+    <text x="100" y="588">02</text>
+    <text x="100" y="820">03</text>
+    <text x="100" y="1052">04</text>
+  </g>
+
+  <!-- Right-side data lattice (decoration) -->
+  <g opacity="0.32">
+    <g fill="#5eead4">
+      <circle cx="1060" cy="356" r="1.6"/>
+      <circle cx="1080" cy="356" r="1.6"/>
+      <circle cx="1100" cy="356" r="1.6"/>
+      <circle cx="1060" cy="588" r="1.6"/>
+      <circle cx="1080" cy="588" r="1.6"/>
+      <circle cx="1100" cy="588" r="1.6"/>
+      <circle cx="1060" cy="820" r="1.6"/>
+      <circle cx="1080" cy="820" r="1.6"/>
+      <circle cx="1100" cy="820" r="1.6"/>
+      <circle cx="1060" cy="1052" r="1.6"/>
+      <circle cx="1080" cy="1052" r="1.6"/>
+      <circle cx="1100" cy="1052" r="1.6"/>
+    </g>
+  </g>
+
+  <!-- Bottom horizon line -->
   <g opacity="0.18">
-    <rect x="240" y="114" width="120" height="522" fill="url(#enc-micro-grid)"/>
-    <path d="M240 114h120v522H240Z" fill="none" stroke="#5eead4" stroke-opacity="0.12"/>
+    <path d="M80 1196H1120" stroke="#5eead4" stroke-width="0.8"/>
+    <path d="M280 1196V1208M520 1196V1208M760 1196V1208M1000 1196V1208" stroke="#5eead4" stroke-width="0.8"/>
   </g>
+
+  <!-- Film grain overlay -->
+  <rect width="1200" height="1500" fill="white" filter="url(#grain)" opacity="0.6" style="mix-blend-mode:overlay"/>
 </svg>
