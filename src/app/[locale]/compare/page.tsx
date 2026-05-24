@@ -1,4 +1,4 @@
-import { ComparisonTable } from '@/components/sections/ComparisonTable';
+import { PricingContent } from '@/components/sections/PricingContent';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -24,5 +24,6 @@ export default async function ComparePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ComparisonTable />;
+
+  return <PricingContent initialSection="compare" />;
 }

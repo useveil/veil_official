@@ -11,7 +11,7 @@ export function AutomationAuth() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="border-t border-border bg-surface">
+    <section className="bg-surface">
       <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-16">
           {/* Left: callout */}
@@ -28,7 +28,7 @@ export function AutomationAuth() {
                 {t('shellLabel')}
               </div>
               <pre className="mt-2 overflow-x-auto font-mono text-xs text-foreground">
-                <code>{`Authorization: Bearer vk_live_xxxxxxxxxxxxxxxxxxxxxxxx`}</code>
+                <code>{'Authorization: Bearer vk_live_xxxxxxxxxxxxxxxxxxxxxxxx'}</code>
               </pre>
             </div>
 

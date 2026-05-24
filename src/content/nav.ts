@@ -7,7 +7,6 @@ export type NavItem = {
 export const primaryNav: NavItem[] = [
   { key: 'security', href: '/security', labelKey: 'nav.security' },
   { key: 'useCases', href: '/use-cases', labelKey: 'nav.useCases' },
-  { key: 'compare', href: '/compare', labelKey: 'nav.compare' },
   { key: 'automation', href: '/automation', labelKey: 'nav.automation' },
   { key: 'pricing', href: '/pricing', labelKey: 'nav.pricing' },
   { key: 'changelog', href: '/changelog', labelKey: 'nav.changelog' },
@@ -19,7 +18,6 @@ export const footerGroups: { titleKey: string; items: NavItem[] }[] = [
     items: [
       { key: 'security', href: '/security', labelKey: 'nav.security' },
       { key: 'useCases', href: '/use-cases', labelKey: 'nav.useCases' },
-      { key: 'compare', href: '/compare', labelKey: 'nav.compare' },
       { key: 'pricing', href: '/pricing', labelKey: 'nav.pricing' },
       { key: 'download', href: '/download', labelKey: 'nav.download' },
     ],
@@ -32,10 +30,19 @@ export const footerGroups: { titleKey: string; items: NavItem[] }[] = [
     ],
   },
   {
-    titleKey: 'footer.groups.community',
+    titleKey: 'footer.groups.company',
     items: [
+      { key: 'team', href: '/team', labelKey: 'nav.team' },
       { key: 'faq', href: '/faq', labelKey: 'nav.faq' },
-      { key: 'contact', href: 'mailto:hi@useveil.xyz', labelKey: 'nav.contact' },
+      { key: 'contact', href: 'mailto:support@useveil.xyz', labelKey: 'nav.contact' },
+    ],
+  },
+  {
+    titleKey: 'footer.groups.legal',
+    items: [
+      { key: 'terms', href: '/terms', labelKey: 'nav.terms' },
+      { key: 'privacy', href: '/privacy', labelKey: 'nav.privacy' },
+      { key: 'refund', href: '/refund', labelKey: 'nav.refund' },
     ],
   },
 ];

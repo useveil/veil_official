@@ -14,14 +14,19 @@
     "changelog": "Changelog",
     "download": "Download",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "team": "Team",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "refund": "Refund Policy"
   },
   "footer": {
-    "tagline": "Self-hostable fingerprint browser. We sell software, not data hosting — your data lives only on your device.",
+    "tagline": "A fingerprint browser for local-first and self-hosted deployment. Core data stays on your device or owned environment; Veil does not provide data hosting.",
     "groups": {
       "product": "Product",
       "developers": "Developers",
-      "community": "Community"
+      "company": "Company",
+      "legal": "Legal"
     }
   },
   "home": {
@@ -53,20 +58,9 @@
       "eyebrow": "Roadmap",
       "title": "From single-device complete to desktop source release"
     },
-    "pricingPreview": {
-      "eyebrow": "Pricing",
-      "title": "Three tiers, identical features",
-      "description": "Only duration and average monthly cost differ. Every tier ships with unlimited profiles, self-hosting, and zero data retention on our side.",
-      "shared": {
-        "unlimitedProfiles": "Unlimited profiles",
-        "selfHostable": "Self-hostable",
-        "noDataRetention": "No data retention"
-      },
-      "cta": "See full pricing"
-    },
     "finalCta": {
       "title": "You don't need to trust us.",
-      "body": "You just need the ability to verify us. Veil runs self-hosted — there is nothing for an attacker to take from us. It's design, not a promise.",
+      "body": "Veil is built around local-first and self-hosted operation, keeping critical data and runtime boundaries under your control. Security should come from inspectable system design, not promises alone.",
       "cta": "View pricing"
     },
     "gallery": {
@@ -79,17 +73,18 @@
     "tiers": {
       "eyebrow": "Pricing",
       "title": "Choose your subscription duration",
-      "description": "Identical feature set across all tiers — only the duration and average monthly cost differ. Every update and new release is included during the subscription period.",
+      "description": "Current pricing is early-bird pricing. Identical feature set across all tiers — only the duration and average monthly cost differ. Every update and new release is included during the subscription period.",
+      "earlyBird": "Early-bird price",
       "monthlyEquivalent": "≈ ${value}/mo",
       "mostPopular": "Most popular",
       "cta": "Buy {duration}",
-      "footnote": "* Full refund within 7 days if not activated. Expired subscriptions don't lock local data, but stop receiving updates and patches."
+      "footnote": "* Full refund within 7 days if not activated."
     }
   },
   "faq": {
     "eyebrow": "FAQ",
     "title": "Before you decide",
-    "description": "If your question isn't covered below, please email hi@useveil.xyz."
+    "description": "If your question isn't covered below, please email support@useveil.xyz."
   },
   "compare": {
     "eyebrow": "Compare",

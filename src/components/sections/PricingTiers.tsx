@@ -51,6 +51,9 @@ export function PricingTiers() {
                     ${tier.priceUSD}
                   </span>
                 </div>
+                <p className="mt-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">
+                  {t('earlyBird')}
+                </p>
                 <p className="mt-1.5 text-sm text-foreground-muted">
                   {t('monthlyEquivalent', { value: tier.monthlyEquivUSD.toFixed(2) })}
                 </p>
@@ -99,9 +102,7 @@ export function PricingTiers() {
         })}
       </div>
 
-      <p className="mt-8 text-center text-xs text-foreground-subtle font-mono">
-        {t('footnote')}
-      </p>
+      <p className="mt-8 text-center text-xs text-foreground-subtle font-mono">{t('footnote')}</p>
     </section>
   );
 }

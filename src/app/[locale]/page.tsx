@@ -1,10 +1,4 @@
-import { FeatureGrid } from '@/components/sections/FeatureGrid';
-import { FinalCTA } from '@/components/sections/FinalCTA';
-import { Hero } from '@/components/sections/Hero';
-import { PosterGallery } from '@/components/sections/PosterGallery';
-import { PricingPreview } from '@/components/sections/PricingPreview';
-import { RoadmapList } from '@/components/sections/RoadmapList';
-import { UseCaseGrid } from '@/components/sections/UseCaseGrid';
+import { HomeContent } from '@/components/sections/HomeContent';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -31,15 +25,5 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return (
-    <>
-      <Hero />
-      <PosterGallery />
-      <FeatureGrid variant="highlight" />
-      <UseCaseGrid />
-      <PricingPreview />
-      <RoadmapList compact />
-      <FinalCTA />
-    </>
-  );
+  return <HomeContent />;
 }

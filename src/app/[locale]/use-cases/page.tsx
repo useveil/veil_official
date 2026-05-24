@@ -1,4 +1,4 @@
-import { UseCaseDeep } from '@/components/sections/UseCaseDeep';
+import { HomeContent } from '@/components/sections/HomeContent';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -24,5 +24,6 @@ export default async function UseCasesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <UseCaseDeep />;
+
+  return <HomeContent initialSection="use-cases" />;
 }

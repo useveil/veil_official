@@ -1,6 +1,4 @@
-import { SecurityStack } from '@/components/sections/SecurityStack';
-import { SecurityThreatModel } from '@/components/sections/SecurityThreatModel';
-import { TrustList } from '@/components/sections/TrustList';
+import { HomeContent } from '@/components/sections/HomeContent';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -27,11 +25,5 @@ export default async function SecurityPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return (
-    <>
-      <SecurityStack />
-      <TrustList />
-      <SecurityThreatModel />
-    </>
-  );
+  return <HomeContent initialSection="security" />;
 }

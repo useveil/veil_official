@@ -1,4 +1,4 @@
-import { PricingTiers } from '@/components/sections/PricingTiers';
+import { PricingContent } from '@/components/sections/PricingContent';
 import { type Locale, routing } from '@/i18n/routing';
 import { buildPageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -25,5 +25,5 @@ export default async function PricingPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <PricingTiers />;
+  return <PricingContent />;
 }

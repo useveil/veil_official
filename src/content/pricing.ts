@@ -29,7 +29,7 @@ export const pricingTiers: PricingTier[] = [
     priceUSD: 29.9,
     monthlyEquivUSD: 2.49,
     badge: { zh: '入门', en: 'Starter' },
-    buyUrl: 'mailto:hi@useveil.xyz?subject=Veil%20License%20-%201%20year',
+    buyUrl: 'mailto:support@useveil.xyz?subject=Veil%20License%20-%201%20year',
   },
   {
     key: '3y',
@@ -39,7 +39,7 @@ export const pricingTiers: PricingTier[] = [
     savePercent: 22,
     badge: { zh: '最受欢迎', en: 'Most popular' },
     highlight: { zh: '相比 1 年订阅省 22%', en: 'Save 22% vs 1-year' },
-    buyUrl: 'mailto:hi@useveil.xyz?subject=Veil%20License%20-%203%20years',
+    buyUrl: 'mailto:support@useveil.xyz?subject=Veil%20License%20-%203%20years',
     recommended: true,
   },
   {
@@ -50,7 +50,7 @@ export const pricingTiers: PricingTier[] = [
     savePercent: 33,
     badge: { zh: '长期方案', en: 'Long-term' },
     highlight: { zh: '相比 1 年订阅省 33%', en: 'Save 33% vs 1-year' },
-    buyUrl: 'mailto:hi@useveil.xyz?subject=Veil%20License%20-%205%20years',
+    buyUrl: 'mailto:support@useveil.xyz?subject=Veil%20License%20-%205%20years',
   },
 ];
 
@@ -66,7 +66,10 @@ export const pricingShared: PricingFeature[] = [
   },
   {
     key: 'no-data-retention',
-    label: { zh: '不留存你的数据，我们卖软件、不卖数据托管', en: "We don't store your data — we sell software, not data hosting" },
+    label: {
+      zh: '不留存你的数据，我们卖软件、不卖数据托管',
+      en: "We don't store your data — we sell software, not data hosting",
+    },
   },
   {
     key: 'platforms',

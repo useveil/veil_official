@@ -5,12 +5,13 @@ import type { MetadataRoute } from 'next';
 const PROD_URL = 'https://veil.app';
 const STATIC_PATHS = [
   '/',
-  '/security',
-  '/use-cases',
-  '/compare',
-  '/automation',
+  '/pricing',
   '/download',
   '/faq',
+  '/team',
+  '/terms',
+  '/privacy',
+  '/refund',
   '/changelog',
 ];
 

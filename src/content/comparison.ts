@@ -85,7 +85,7 @@ export const comparisonRows: ComparisonRow[] = [
   {
     key: 'price',
     feature: { zh: '本体价格', en: 'Core pricing' },
-    veil: { zh: '$29.9/年 · 无限 Profile', en: '$29.9/yr · unlimited profiles' },
+    veil: { zh: '早鸟价 $29.9/年 · 无限 Profile', en: 'Early-bird $29.9/yr · unlimited profiles' },
     multilogin: { zh: '$7.08/月 · 10 环境', en: '$7.08/mo · 10 profiles' },
     adspower: { zh: '$7.2/月 · 10 环境', en: '$7.2/mo · 10 profiles' },
     bitbrowser: { zh: '$10/月 · 50 环境', en: '$10/mo · 50 profiles' },

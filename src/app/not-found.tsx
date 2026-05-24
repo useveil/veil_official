@@ -17,7 +17,7 @@ export default function NotFound() {
           <ArrowLeft className="h-4 w-4" />
           返回首页
         </Button>
-        <Button variant="outline" render={<a href="mailto:hi@useveil.xyz" />}>
+        <Button variant="outline" render={<a href="mailto:support@useveil.xyz" />}>
           <Mail className="h-4 w-4" />
           联系我们
         </Button>

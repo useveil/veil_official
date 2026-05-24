@@ -52,7 +52,7 @@ export function SecurityStack() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <section id="security" className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 md:pb-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       <ol className="mt-12 grid gap-3 md:max-w-2xl">
         {layers.map((layer, index) => {

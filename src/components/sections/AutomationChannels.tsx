@@ -11,7 +11,7 @@ export function AutomationChannels() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="mx-auto max-w-7xl px-6 pt-24 md:pt-32">
+    <section id="automation" className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 md:pb-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <div className="mt-12 grid gap-4 md:grid-cols-2">

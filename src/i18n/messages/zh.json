@@ -14,14 +14,19 @@
     "changelog": "更新日志",
     "download": "下载",
     "faq": "常见问题",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "team": "团队",
+    "terms": "服务条款",
+    "privacy": "隐私协议",
+    "refund": "退款政策"
   },
   "footer": {
-    "tagline": "可自托管的指纹浏览器。我们卖软件，不卖数据托管——所有数据只在你的设备上。",
+    "tagline": "面向本地优先与自托管部署的指纹浏览器。核心数据保存在你的设备或自有环境中，Veil 不提供数据托管服务。",
     "groups": {
       "product": "产品",
       "developers": "开发者",
-      "community": "社区"
+      "company": "公司",
+      "legal": "法务"
     }
   },
   "home": {
@@ -53,20 +58,9 @@
       "eyebrow": "路线图",
       "title": "从单机完整版，到桌面端源码开放"
     },
-    "pricingPreview": {
-      "eyebrow": "价格",
-      "title": "三档订阅，功能完全一致",
-      "description": "区别只是订阅时长与平均月成本。所有档都支持无限 Profile · 自托管 · 厂商不存你的数据。",
-      "shared": {
-        "unlimitedProfiles": "无限 Profile",
-        "selfHostable": "可自托管",
-        "noDataRetention": "厂商不存数据"
-      },
-      "cta": "查看完整定价"
-    },
     "finalCta": {
       "title": "你不需要相信我们。",
-      "body": "你只需要让自己有能力验证我们。Veil 自托管即可运行，我们这边没东西可拿——这是设计，不是承诺。",
+      "body": "Veil 以本地优先和自托管为基础，把关键数据与运行边界交还给你掌控。安全不只来自承诺，也来自可被检查的系统设计。",
       "cta": "查看价格"
     },
     "gallery": {
@@ -79,17 +73,18 @@
     "tiers": {
       "eyebrow": "价格",
       "title": "选择你的订阅时长",
-      "description": "三档订阅功能完全一致，只是时长和平均月成本不同。订阅期内全部更新与新版本免费获取。",
+      "description": "当前显示为早鸟价。三档订阅功能完全一致，只是时长和平均月成本不同。订阅期内全部更新与新版本免费获取。",
+      "earlyBird": "早鸟价",
       "monthlyEquivalent": "≈ ${value}/月",
       "mostPopular": "最受欢迎",
       "cta": "购买 {duration}",
-      "footnote": "* 7 天内未激活可全额退款。订阅过期不会锁定本地数据，但停止接收更新与补丁。"
+      "footnote": "* 7 天内未激活可全额退款。"
     }
   },
   "faq": {
     "eyebrow": "常见问题",
     "title": "在你决定使用之前",
-    "description": "如果下面没有覆盖你的问题，欢迎邮件联系 hi@useveil.xyz。"
+    "description": "如果下面没有覆盖你的问题，欢迎邮件联系 support@useveil.xyz。"
   },
   "compare": {
     "eyebrow": "对比",

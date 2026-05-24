@@ -33,7 +33,7 @@ export function ComparisonTable() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <section id="compare" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       <div className="mt-12 overflow-x-auto rounded-lg border border-border">
         <table className="w-full min-w-[720px]">

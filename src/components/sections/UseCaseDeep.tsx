@@ -11,7 +11,7 @@ export function UseCaseDeep() {
 
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 pt-24 md:pt-32">
+      <section id="use-cases" className="mx-auto max-w-7xl scroll-mt-24 px-6">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
       </section>
       <div className="mx-auto mt-16 max-w-7xl px-6 pb-24 md:pb-32">
@@ -21,7 +21,7 @@ export function UseCaseDeep() {
             return (
               <article
                 key={useCase.key}
-                id={useCase.key}
+                id={`use-case-${useCase.key}`}
                 className="grid scroll-mt-24 gap-10 py-16 md:grid-cols-[280px_1fr] md:py-20"
               >
                 <header>

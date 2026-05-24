@@ -1,17 +1,17 @@
 import { SITE } from '@/content/constants';
 import { footerGroups } from '@/content/nav';
+import type { Route } from 'next';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import type { Route } from 'next';
 import { Logo } from './Logo';
 
 export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="border-t border-border bg-surface mt-32">
+    <footer className="bg-surface mt-32">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))]">
           <div>
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-foreground-muted">

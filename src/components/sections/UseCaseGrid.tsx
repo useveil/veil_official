@@ -11,7 +11,7 @@ export function UseCaseGrid() {
   const locale = useLocale() as Locale;
 
   return (
-    <section className="border-t border-border bg-surface">
+    <section className="bg-surface">
       <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
         <ul className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -20,7 +20,7 @@ export function UseCaseGrid() {
             return (
               <li key={useCase.key}>
                 <Link
-                  href={`/use-cases#${useCase.key}`}
+                  href="/use-cases"
                   className="group block h-full rounded-lg border border-border bg-background p-7 transition-all hover:border-border-strong hover:shadow-md"
                 >
                   <div className="flex items-start justify-between">
