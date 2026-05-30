@@ -24,7 +24,7 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       '@veil/auth-pages':
-        specifier: git+https://github.com/useveil/veil_auth_pages.git#d33f1635cb5138125c32d24ce5017a87019afd2f
+        specifier: git+https://github.com/useveil/veil_auth_pages.git
         version: git+https://git@github.com:useveil/veil_auth_pages.git#d33f1635cb5138125c32d24ce5017a87019afd2f(react@19.2.6)
       '@vercel/config':
         specifier: ^0.5.0

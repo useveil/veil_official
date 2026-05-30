@@ -16,7 +16,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@veil/auth-pages": "git+https://github.com/useveil/veil_auth_pages.git#d33f1635cb5138125c32d24ce5017a87019afd2f",
+    "@veil/auth-pages": "git+https://github.com/useveil/veil_auth_pages.git",
     "@base-ui/react": "^1.5.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
