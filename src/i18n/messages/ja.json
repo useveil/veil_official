@@ -6,6 +6,7 @@
     "skeleton": "Skeleton placeholder"
   },
   "nav": {
+    "home": "Home",
     "security": "Security",
     "useCases": "Use Cases",
     "compare": "Compare",
@@ -32,11 +33,13 @@
   "home": {
     "hero": {
       "eyebrow": "v0.1.0 RC · Self-hostable · No data retention",
-      "title": "Trust nothing. Verify everything.",
-      "subtitle": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
+      "titleLine1": "All-in-one",
+      "titleLine2": "multi-account control",
+      "title": "A local-first fingerprint browser for high-value multi-account teams",
+      "subtitle": "Create, run, and automate web account profiles from one workspace, combining isolated browser environments, stable fingerprints, dedicated proxies, and local encrypted data protection.",
       "description": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
-      "primaryCta": "View pricing",
-      "secondaryCta": "See security design",
+      "primaryCta": "Download and try",
+      "secondaryCta": "Download now",
       "badges": {
         "selfHostable": "Self-hostable",
         "noDataRetention": "No data retention",
@@ -83,7 +86,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Before you decide",
+    "title": "Frequently asked questions",
     "description": "If your question isn't covered below, please email support@useveil.xyz."
   },
   "compare": {
@@ -113,11 +116,11 @@
   "automation": {
     "eyebrow": "Automation",
     "title": "Profiles as callable resources",
-    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly.",
+    "description": "Veil has one local management API: the HTTP API. After a profile starts, Veil returns a CDP WebSocket address that Playwright, Puppeteer, and Selenium use to control the page.",
     "channels": {
-      "eyebrow": "Dual channel",
-      "title": "Two endpoints, two responsibilities",
-      "description": "HTTP API handles lifecycle. CDP handles page behavior. Separate auth, separate ports, zero contamination between them."
+      "eyebrow": "Automation channel",
+      "title": "One management API, one browser connection",
+      "description": "7733 is the local Veil HTTP management API. The CDP WebSocket is the browser connection returned after a profile starts, not a second business API."
     },
     "quickStart": {
       "eyebrow": "Quick start",

@@ -35,9 +35,9 @@ export function ComparisonTable() {
   return (
     <section id="compare" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-      <div className="mt-12 overflow-x-auto rounded-lg border border-border">
+      <div className="mt-12 overflow-x-auto rounded-lg border border-border bg-background shadow-md">
         <table className="w-full min-w-[720px]">
-          <thead className="bg-surface text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
+          <thead className="bg-surface text-xs font-black uppercase text-foreground-subtle">
             <tr>
               <th scope="col" className="px-5 py-3 text-left">
                 {t('featureColumn')}
@@ -59,7 +59,7 @@ export function ComparisonTable() {
           <tbody className="divide-y divide-border bg-background text-sm">
             {comparisonRows.map((row) => (
               <tr key={row.key}>
-                <td className="px-5 py-4 font-medium">{getLocalizedText(row.feature, locale)}</td>
+                <td className="px-5 py-4 font-bold">{getLocalizedText(row.feature, locale)}</td>
                 {comparisonColumns.map((col) => (
                   <td
                     key={col}

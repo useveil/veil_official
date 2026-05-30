@@ -14,6 +14,78 @@ export type FaqGroup = {
 
 export const faqGroups: FaqGroup[] = [
   {
+    key: 'product-basics',
+    title: { zh: '指纹浏览器与 Veil 基础', en: 'Fingerprint browser & Veil basics' },
+    items: [
+      {
+        key: 'what-is-fingerprint-browser',
+        question: {
+          zh: '什么是指纹浏览器？',
+          en: 'What is a fingerprint browser?',
+        },
+        answer: {
+          zh: '指纹浏览器用于为不同账号创建彼此隔离、长期稳定的浏览器环境。网站通常会综合观察 IP、时区、语言、系统、字体、Canvas、WebGL、Cookie、扩展和本地存储等信号；如果多个账号共用同一套环境，就更容易被关联。Veil 的目标不是“随机伪装”，而是让每个 Profile 形成可持续使用的一致身份画像。',
+          en: 'A fingerprint browser creates isolated, long-lived browser environments for different accounts. Websites can correlate IP, timezone, language, OS, fonts, Canvas, WebGL, cookies, extensions, and local storage. Veil focuses on consistent per-profile identities rather than random masking.',
+        },
+      },
+      {
+        key: 'how-veil-works',
+        question: {
+          zh: 'Veil 是如何提供防关联浏览器环境的？',
+          en: 'How does Veil provide anti-linking browser environments?',
+        },
+        answer: {
+          zh: 'Veil 用 Profile 作为账号环境的基本单位。每个 Profile 可以拥有独立指纹种子、Cookie、缓存、扩展、代理配置、语言、时区和自动化会话。桌面端负责创建和运行这些环境，本地 Daemon 管理 Profile 生命周期；需要脚本接入时，再通过 HTTP API 启动 Profile 并返回 CDP WebSocket 地址。',
+          en: 'Veil uses profiles as the base unit for account environments. Each profile can have its own fingerprint seed, cookies, cache, extensions, proxy settings, language, timezone, and automation session. The desktop app and local daemon manage profile lifecycle, while the HTTP API can start a profile and return a CDP WebSocket endpoint for automation.',
+        },
+      },
+      {
+        key: 'proxy-support',
+        question: {
+          zh: 'Veil 支持哪些代理？会内置代理服务吗？',
+          en: 'Which proxies does Veil support? Does it include proxy hosting?',
+        },
+        answer: {
+          zh: 'Veil 面向按 Profile 配置代理的工作流，设计上支持常见 HTTP / HTTPS / SOCKS5 代理，并强调代理、DNS、WebRTC 泄漏风险的可见性。Veil 不售卖也不托管代理 IP；你可以接入自己购买或自建的代理服务，并把代理与 Profile 稳定绑定。',
+          en: 'Veil is built for per-profile proxy workflows and is designed around common HTTP, HTTPS, and SOCKS5 proxies, with visibility into proxy, DNS, and WebRTC leak risks. Veil does not sell or host proxy IPs. You bring your own proxy service and bind it to profiles.',
+        },
+      },
+      {
+        key: 'veil-advantages',
+        question: {
+          zh: 'Veil 和常见指纹浏览器相比，核心优势是什么？',
+          en: 'What makes Veil different from common fingerprint browsers?',
+        },
+        answer: {
+          zh: 'Veil 更强调数据主权、部署灵活性和可集成能力。Profile 数据、主密码与加密密钥默认保存在你的设备或自有环境中，团队可以根据合规与运营需求选择本地使用或私有化部署；同时，SQLCipher 整库加密、HTTP API、CDP 自动化与可审计安全边界都作为标准能力提供。换句话说，Veil 提供的是一套可控、可部署、可集成的浏览器环境管理软件，而不是额外接管你敏感数据的托管平台。',
+          en: 'Veil is local-first and self-hostable. We do not host profile data in our cloud, and we do not store your master password or encryption keys. Personal and enterprise editions are designed around local databases, SQLCipher full-database encryption, HTTP API, CDP automation, and inspectable security boundaries. In short: Veil sells software, not data hosting.',
+        },
+      },
+      {
+        key: 'is-veil-free',
+        question: {
+          zh: 'Veil 是否免费？可以先试用吗？',
+          en: 'Is Veil free? Can I try it first?',
+        },
+        answer: {
+          zh: 'Veil 是商业订阅软件，当前价格以价格页展示为准。我们不提供“永久免费云环境”，因为 Veil 的定位不是数据托管服务。你可以先查看下载页、价格页、FAQ、安全模型和对比页确认是否符合需求；购买后 7 天内、未激活或仅短暂激活的许可证支持全额退款。',
+          en: 'Veil is commercial subscription software, with current pricing shown on the pricing page. We do not provide a forever-free hosted cloud environment because Veil is not a data-hosting service. You can review the download, pricing, FAQ, security model, and comparison pages before purchase; full refund is available within 7 days if the license is not activated or only briefly activated.',
+        },
+      },
+      {
+        key: 'is-veil-safe',
+        question: {
+          zh: 'Veil 安全吗？它不能防护哪些风险？',
+          en: 'Is Veil safe? What risks does it not protect against?',
+        },
+        answer: {
+          zh: 'Veil 的安全设计包括主密码本机持有、Argon2id 密钥派生、AES-256-GCM 内容加密、SQLCipher 整库加密、API Key 与主密码分离，以及明确的威胁模型。但它不能替代你的终端安全：如果本机已被恶意软件控制、主密码泄漏、代理本身不可信，或你违反目标平台规则，Veil 不能保证账号不出问题。',
+          en: 'Veil includes local master-password handling, Argon2id key derivation, AES-256-GCM content encryption, SQLCipher full-database encryption, API keys separated from the master password, and a clear threat model. It does not replace endpoint security: if your device is compromised, your master password leaks, your proxy is untrusted, or you violate platform rules, Veil cannot guarantee account outcomes.',
+        },
+      },
+    ],
+  },
+  {
     key: 'pricing',
     title: { zh: '价格与许可', en: 'Pricing & Licensing' },
     items: [
@@ -92,7 +164,7 @@ export const faqGroups: FaqGroup[] = [
         },
         answer: {
           zh: '不会。Veil 卖的是软件而不是数据托管服务——所有 Profile 数据、Cookie、缓存、加密密钥都只存在你的设备上，我们没有任何上传通道也没有任何存储能力。',
-          en: "No. Veil sells software, not data hosting. All profile data, cookies, cache, and encryption keys live only on your device. We have no upload channel and no storage to retain them.",
+          en: 'No. Veil sells software, not data hosting. All profile data, cookies, cache, and encryption keys live only on your device. We have no upload channel and no storage to retain them.',
         },
       },
       {

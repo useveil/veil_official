@@ -14,10 +14,10 @@ export function LegalDocument({ documentKey }: { documentKey: LegalDocumentKey }
   return (
     <main className="mx-auto max-w-4xl px-6 py-24 md:py-32">
       <section>
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+        <p className="mb-3 text-xs font-semibold uppercase text-teal-600 dark:text-teal-400">
           {getLocalizedText(document.eyebrow, locale)}
         </p>
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-4xl font-bold md:text-5xl">
           {getLocalizedText(document.title, locale)}
         </h1>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-foreground-muted md:text-lg">
@@ -45,9 +45,7 @@ export function LegalDocument({ documentKey }: { documentKey: LegalDocumentKey }
       <div className="mt-14 space-y-12">
         {document.sections.map((section) => (
           <section key={section.key} className="space-y-4">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              {getLocalizedText(section.title, locale)}
-            </h2>
+            <h2 className="text-2xl font-semibold">{getLocalizedText(section.title, locale)}</h2>
             <div className="space-y-4 text-base leading-8 text-foreground-muted">
               {section.body.map((paragraph) => (
                 <p key={getLocalizedText(paragraph, locale)}>

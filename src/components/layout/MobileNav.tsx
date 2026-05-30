@@ -5,7 +5,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { primaryNav } from '@/content/nav';
 import { cn } from '@/lib/utils';
-import { Menu, Sparkles } from 'lucide-react';
+import { ArrowDownToLine, Menu, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -33,7 +33,7 @@ export function MobileNav() {
               key={item.key}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="px-3 py-3 text-base font-medium hover:bg-ink-50 rounded-md transition-colors"
+              className="rounded-md px-3 py-3 text-base font-semibold text-foreground-muted transition-colors hover:bg-muted hover:text-foreground"
             >
               {t(item.labelKey as 'nav.security')}
             </Link>
@@ -50,6 +50,14 @@ export function MobileNav() {
         >
           <Sparkles className="h-4 w-4" />
           {t('common.buy')}
+        </Link>
+        <Link
+          href="/download"
+          onClick={() => setOpen(false)}
+          className={cn(buttonVariants({ variant: 'outline' }), 'mt-3 w-full')}
+        >
+          <ArrowDownToLine className="h-4 w-4" />
+          {t('common.download')}
         </Link>
       </SheetContent>
     </Sheet>

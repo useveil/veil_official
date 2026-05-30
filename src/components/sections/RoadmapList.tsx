@@ -19,19 +19,19 @@ export function RoadmapList({ compact = false }: { compact?: boolean }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} />
-      <ol className="mt-12 divide-y divide-border border-y border-border">
+      <ol className="mt-12 grid gap-4">
         {roadmap.map((item) => (
           <li
             key={item.phase}
-            className={cn('grid gap-4 py-7 md:grid-cols-[200px_1fr_auto] md:items-center md:gap-8')}
+            className={cn(
+              'grid gap-4 rounded-lg border border-border bg-surface-elevated p-6 shadow-sm md:grid-cols-[200px_1fr_auto] md:items-center md:gap-8',
+            )}
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+              <p className="text-xs font-semibold uppercase text-teal-600 dark:text-teal-400">
                 {item.phase}
               </p>
-              <h3 className="mt-1 text-lg font-semibold tracking-tight">
-                {getLocalizedText(item.title, locale)}
-              </h3>
+              <h3 className="mt-1 text-lg font-semibold">{getLocalizedText(item.title, locale)}</h3>
             </div>
             {!compact && (
               <p className="text-sm text-foreground-muted leading-relaxed">

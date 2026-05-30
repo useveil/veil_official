@@ -6,12 +6,18 @@ export function FinalCTA() {
   const t = useTranslations('home.finalCta');
 
   return (
-    <section>
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <Sparkles className="mx-auto h-8 w-8 text-teal-500 dark:text-teal-400" />
-        <h2 className="mt-6 text-3xl font-bold tracking-tight md:text-4xl">{t('title')}</h2>
-        <p className="mt-4 text-base text-foreground-muted leading-relaxed">{t('body')}</p>
-        <Button render={<a href="/pricing" />} size="lg" className="mt-10">
+    <section className="px-6 py-10">
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-lg border border-border bg-[linear-gradient(135deg,#2f64ff,#7c5cff)] px-6 py-14 text-center text-white shadow-lg md:px-12">
+        <Sparkles className="mx-auto h-8 w-8 text-white" />
+        <h2 className="mt-6 text-3xl font-black md:text-5xl">{t('title')}</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/82">
+          {t('body')}
+        </p>
+        <Button
+          render={<a href="/pricing" />}
+          size="lg"
+          className="mt-10 bg-white text-teal-700 hover:bg-white/90"
+        >
           {t('cta')}
           <ArrowRight className="h-4 w-4" />
         </Button>

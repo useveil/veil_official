@@ -5,7 +5,9 @@ async function chooseLanguage(page: Page, name: RegExp) {
     .getByRole('button', { name: /select language/i })
     .first()
     .click();
-  await page.getByRole('menuitemradio', { name }).click();
+  const item = page.getByRole('menuitemradio', { name });
+  await expect(item).toBeVisible();
+  await item.click();
 }
 
 test('在 /en/security 点击切换：URL 与文本都应回到中文 /security', async ({ page, context }) => {
@@ -15,17 +17,18 @@ test('在 /en/security 点击切换：URL 与文本都应回到中文 /security'
   await page.goto('/en/security');
   // 等英文 H2 渲染（确认我们真的在 en 版本）
   await expect(
-    page.getByRole('heading', { name: /from master password|encryption stack/i }).first(),
+    page.getByRole('heading', { name: /advanced browser data protection|data security/i }).first(),
   ).toBeVisible();
 
   await chooseLanguage(page, /中文/);
 
   // URL 应不再以 /en 开头
-  await page.waitForURL((url) => !url.pathname.startsWith('/en/'), { timeout: 5000 });
-  expect(new URL(page.url()).pathname).toBe('/security');
+  await expect(page).toHaveURL(/^http:\/\/localhost:5173\/security$/);
 
-  // 文本应该切到中文：Section 标题用 "加密栈" 或 "完整路径"
-  await expect(page.getByRole('heading', { name: /加密栈|完整路径|可信/ }).first()).toBeVisible({
+  // 文本应该切到中文：Section 标题用新的安全区块文案
+  await expect(
+    page.getByRole('heading', { name: /数据安全|浏览器数据安全保护|可信边界/ }).first(),
+  ).toBeVisible({
     timeout: 5000,
   });
 });
@@ -34,14 +37,15 @@ test('从中文 /security 切回英文：URL 应加 /en 前缀', async ({ page, 
   await context.clearCookies();
 
   await page.goto('/security');
-  await expect(page.getByRole('heading', { name: /加密栈|完整路径/ }).first()).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: /数据安全|浏览器数据安全保护/ }).first(),
+  ).toBeVisible();
 
   await chooseLanguage(page, /English/);
 
-  await page.waitForURL((url) => url.pathname.startsWith('/en/'), { timeout: 5000 });
-  expect(new URL(page.url()).pathname).toBe('/en/security');
+  await expect(page).toHaveURL(/^http:\/\/localhost:5173\/en\/security$/);
 
   await expect(
-    page.getByRole('heading', { name: /encryption stack|from master password/i }).first(),
+    page.getByRole('heading', { name: /advanced browser data protection|data security/i }).first(),
   ).toBeVisible({ timeout: 5000 });
 });

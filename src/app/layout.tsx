@@ -25,7 +25,7 @@ const notoSansSC = Noto_Sans_SC({
 
 export const metadata: Metadata = {
   title: 'Veil',
-  description: "Self-hostable fingerprint browser. Your data never leaves your device.",
+  description: 'Self-hostable fingerprint browser. Your data never leaves your device.',
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,87 +1,85 @@
-import { Reveal } from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { getLocalizedText } from '@/content/features';
-import { heroPoster } from '@/content/posters';
+import { heroProofs } from '@/content/homepage';
 import type { Locale } from '@/i18n/routing';
-import { ArrowRight, LockKeyhole, MonitorCheck, ServerCog, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-
-const trustBadges = [
-  { icon: ServerCog, key: 'selfHostable' },
-  { icon: Shield, key: 'noDataRetention' },
-  { icon: LockKeyhole, key: 'sqlcipher' },
-  { icon: MonitorCheck, key: 'platforms' },
-] as const;
 
 export function Hero() {
   const t = useTranslations('home.hero');
   const locale = useLocale() as Locale;
 
   return (
-    <section className="relative overflow-hidden border-b border-border">
+    <section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(45,212,191,0.10),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_18%,rgba(47,100,255,0.14),transparent_30rem),linear-gradient(180deg,rgba(246,248,255,0.88),rgba(255,255,255,0.92)_68%,rgba(255,255,255,0))]"
       />
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 pt-24 pb-32 lg:grid-cols-[1.35fr_1fr] lg:items-center lg:gap-16 lg:pt-32 lg:pb-40">
-        {/* Left: text content */}
-        <Reveal>
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium uppercase tracking-wider text-foreground-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
-            {t('eyebrow')}
-          </p>
-          <h1 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            {t('title')}
+      <div className="mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-5 py-12 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12 lg:py-14">
+        <div className="max-w-xl text-left">
+          <h1 className="text-5xl font-black leading-[0.98] tracking-normal md:text-6xl lg:text-[64px]">
+            <span className="block">{t('titleLine1')}</span>
+            <span className="mt-2 block whitespace-nowrap bg-[linear-gradient(90deg,#1f48ff,#e218ff)] bg-clip-text text-transparent">
+              {t('titleLine2')}
+            </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-foreground-muted leading-relaxed">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-foreground-muted">
             {t('subtitle')}
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button render={<a href="/pricing" />} size="lg">
-              <Sparkles className="h-4 w-4" />
+          <div className="mt-7">
+            <Button
+              render={<a href="/download" />}
+              size="lg"
+              className="min-w-44 rounded-full bg-[linear-gradient(90deg,#2458ff,#e219df)] px-8 shadow-lg shadow-teal-500/20 hover:opacity-95"
+            >
               {t('primaryCta')}
-            </Button>
-            <Button render={<a href="/security" />} size="lg" variant="outline">
-              {t('secondaryCta')}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
-          <ul className="mt-10 flex flex-wrap gap-3">
-            {trustBadges.map(({ icon: Icon, key }) => (
+          <ul className="mt-7 grid gap-2.5">
+            {heroProofs.map((proof) => (
               <li
-                key={key}
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-3 py-2 text-xs font-medium text-foreground-muted"
+                key={proof.en}
+                className="flex items-start gap-3 text-[15px] font-semibold text-foreground"
               >
-                <Icon className="h-3.5 w-3.5" />
-                {t(`badges.${key}` as 'badges.selfHostable')}
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-foreground" />
+                {getLocalizedText(proof, locale)}
               </li>
             ))}
           </ul>
-        </Reveal>
-
-        {/* Right: hero poster */}
-        <Reveal delay={0.12} className="relative">
-          <figure className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-border bg-surface-elevated shadow-md lg:max-w-none">
-            <Image
-              src={heroPoster.src}
-              alt={getLocalizedText(heroPoster.alt, locale)}
-              width={heroPoster.width}
-              height={heroPoster.height}
-              priority
-              className="block h-auto w-full"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 flex items-baseline justify-between gap-3 bg-gradient-to-t from-ink/85 via-ink/55 to-transparent px-5 py-4 text-ink-50">
-              <span className="text-sm font-semibold tracking-tight">
-                {getLocalizedText(heroPoster.title, locale)}
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-ink-300">
-                {getLocalizedText(heroPoster.caption, locale)}
-              </span>
-            </figcaption>
-          </figure>
-        </Reveal>
+        </div>
+        <HeroVisual />
       </div>
     </section>
+  );
+}
+
+function HeroVisual() {
+  return (
+    <div className="relative pb-14 sm:pb-16 lg:-mr-4 lg:pb-10 lg:pl-2">
+      <figure className="overflow-hidden rounded-[22px] border border-white/70 bg-white p-2">
+        <Image
+          src="/images/veil-desktop-profile-list.png"
+          alt="Veil desktop profile management screenshot"
+          width={1280}
+          height={800}
+          priority
+          sizes="(min-width: 1024px) 58vw, 100vw"
+          className="block h-auto w-full rounded-2xl border border-border/70"
+        />
+      </figure>
+      <figure className="pointer-events-none absolute bottom-0 left-3 w-[51.7%] overflow-hidden rounded-sm border border-white/80 bg-white sm:left-6 sm:w-[47.9%] lg:-left-2 lg:w-[45.4%]">
+        <Image
+          src="/images/veil-browser-profile-open-tall.png"
+          alt="Veil opened browser profile screenshot"
+          width={1600}
+          height={1003}
+          priority
+          sizes="(min-width: 1024px) 42vw, 82vw"
+          className="block h-auto w-full rounded-sm border border-border/60"
+        />
+      </figure>
+    </div>
   );
 }

@@ -28,7 +28,7 @@ export function ChangelogList({ entries }: { entries: ChangelogEntry[] }) {
               className="block py-7 transition-colors hover:bg-surface"
             >
               <div className="flex items-baseline gap-3">
-                <h3 className="text-xl font-semibold tracking-tight">v{entry.version}</h3>
+                <h3 className="text-xl font-semibold">v{entry.version}</h3>
                 <Badge className={cn(channelClasses[entry.channel])}>
                   {entry.channel.toUpperCase()}
                 </Badge>

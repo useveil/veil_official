@@ -29,7 +29,7 @@ export function UseCaseGrid() {
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-foreground-subtle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
-                  <h3 className="mt-5 text-xl font-semibold tracking-tight">
+                  <h3 className="mt-5 text-xl font-semibold">
                     {getLocalizedText(useCase.title, locale)}
                   </h3>
                   <p className="mt-2 text-sm font-medium text-foreground-muted">

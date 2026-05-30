@@ -47,7 +47,7 @@ export default async function ChangelogDetailPage({
       </Link>
       <header className="mt-8 border-b border-border pb-8">
         <div className="flex items-baseline gap-3">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">v{entry.version}</h1>
+          <h1 className="text-3xl font-bold md:text-4xl">v{entry.version}</h1>
           <Badge className={cn(channelClasses[entry.channel])}>{entry.channel.toUpperCase()}</Badge>
           <time className="font-mono text-xs text-foreground-subtle">{entry.date}</time>
         </div>

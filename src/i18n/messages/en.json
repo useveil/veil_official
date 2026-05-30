@@ -6,8 +6,9 @@
     "skeleton": "Skeleton placeholder"
   },
   "nav": {
-    "security": "Security",
-    "useCases": "Use Cases",
+    "home": "Home",
+    "security": "Features",
+    "useCases": "Solutions",
     "compare": "Compare",
     "automation": "Automation",
     "pricing": "Pricing",
@@ -21,7 +22,7 @@
     "refund": "Refund Policy"
   },
   "footer": {
-    "tagline": "A fingerprint browser for local-first and self-hosted deployment. Core data stays on your device or owned environment; Veil does not provide data hosting.",
+    "tagline": "A local-first fingerprint browser for multi-account, Web3, e-commerce, and automation teams. Profile data stays on your device or owned environment; Veil does not provide data hosting.",
     "groups": {
       "product": "Product",
       "developers": "Developers",
@@ -32,11 +33,13 @@
   "home": {
     "hero": {
       "eyebrow": "v0.1.0 RC · Self-hostable · No data retention",
-      "title": "Trust nothing. Verify everything.",
-      "subtitle": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
-      "description": "Veil is a fingerprint browser for high-value multi-account, Web3, e-commerce, and automation teams. Your data stays on your device, and the software is self-hostable — we sell the software, not data hosting.",
-      "primaryCta": "View pricing",
-      "secondaryCta": "See security design",
+      "titleLine1": "All-in-one",
+      "titleLine2": "multi-account control",
+      "title": "A local-first fingerprint browser for high-value multi-account teams",
+      "subtitle": "Create, run, and automate web account profiles from one workspace, combining isolated browser environments, stable fingerprints, dedicated proxies, and local encrypted data protection.",
+      "description": "Veil turns account environments into durable isolated assets with stable profiles, dedicated proxies, auditable automation, and local encryption.",
+      "primaryCta": "Download and try",
+      "secondaryCta": "Download now",
       "badges": {
         "selfHostable": "Self-hostable",
         "noDataRetention": "No data retention",
@@ -45,22 +48,22 @@
       }
     },
     "features": {
-      "eyebrow": "Why Veil",
-      "title": "Replace \"trust the platform\" with \"verify the system\"",
-      "description": "Six core features that set Veil apart from other fingerprint browsers."
+      "eyebrow": "Core features",
+      "title": "Core Veil fingerprint browser features",
+      "description": "Built around multi-account safety, stable fingerprints, automation access, and local data protection."
     },
     "useCases": {
-      "eyebrow": "Use cases",
-      "title": "Built for high-value identity isolation",
-      "description": "Multi-account, wallet isolation, storefront operations, automation teams — Veil turns \"isolation\" into a verifiable engineering concern."
+      "eyebrow": "Solutions",
+      "title": "Stable profiles for outbound and automation workflows",
+      "description": "Affiliate marketing, e-commerce storefronts, social operations, Web3 wallets, and scripted work all depend on reducing browser-environment correlation."
     },
     "roadmap": {
       "eyebrow": "Roadmap",
       "title": "From single-device complete to desktop source release"
     },
     "finalCta": {
-      "title": "You don't need to trust us.",
-      "body": "Veil is built around local-first and self-hosted operation, keeping critical data and runtime boundaries under your control. Security should come from inspectable system design, not promises alone.",
+      "title": "Start verifiable multi-account management with Veil",
+      "body": "Use local-first storage, self-hosting, and auditable automation to keep critical account environments on your own devices and infrastructure.",
       "cta": "View pricing"
     },
     "gallery": {
@@ -72,8 +75,8 @@
   "pricing": {
     "tiers": {
       "eyebrow": "Pricing",
-      "title": "Choose your subscription duration",
-      "description": "Current pricing is early-bird pricing. Identical feature set across all tiers — only the duration and average monthly cost differ. Every update and new release is included during the subscription period.",
+      "title": "Choose the plan that matches your team rhythm",
+      "description": "All tiers include the same feature set: unlimited profiles, local encryption, self-hosting, and automation endpoints. Only duration and average monthly cost differ.",
       "earlyBird": "Early-bird price",
       "monthlyEquivalent": "≈ ${value}/mo",
       "mostPopular": "Most popular",
@@ -83,20 +86,20 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Before you decide",
+    "title": "Frequently asked questions",
     "description": "If your question isn't covered below, please email support@useveil.xyz."
   },
   "compare": {
     "eyebrow": "Compare",
-    "title": "How Veil differs from comparable tools",
-    "description": "We only list independently verifiable facts. Pricing reflects public pages as of May 2026.",
+    "title": "How Veil differs from common fingerprint browsers",
+    "description": "We focus on independently verifiable differences: self-hosting, data retention, local encryption, and automation capability.",
     "featureColumn": "Feature",
     "footnote": "* Pricing and feature sets may change. Confirm vendor websites before purchasing."
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Choose your platform",
-    "description": "After purchasing a license, download the installer for your platform here. Every release ships with SHA-256 checksums.",
+    "title": "Download the Veil desktop app",
+    "description": "Choose your system build. Activate it after purchasing a license; every release ships with SHA-256 checksums.",
     "downloadFor": "Download for {platform}",
     "copyHash": "Copy checksum",
     "verification": {
@@ -105,19 +108,19 @@
     }
   },
   "useCases": {
-    "eyebrow": "Use cases",
-    "title": "Different audiences, same job: verifiable isolation",
-    "description": "Four real workflow scenarios. In each one, Veil cares not about looking secure, but about being provably secure.",
+    "eyebrow": "Solutions",
+    "title": "Veil is the shared environment layer for multi-account teams",
+    "description": "Every workflow comes down to stable profiles, dedicated proxies, isolated sessions, and auditable automation.",
     "capabilitiesTitle": "Key capabilities"
   },
   "automation": {
     "eyebrow": "Automation",
-    "title": "Profiles as callable resources",
-    "description": "Veil exposes a local HTTP API (lifecycle management) and standard CDP endpoints (page operations). Playwright, Puppeteer, and Selenium all connect directly.",
+    "title": "Profiles as callable browser resources",
+    "description": "Veil has one local management API: the HTTP API. After a profile starts, Veil returns a CDP WebSocket address that Playwright, Puppeteer, and Selenium use to control the page.",
     "channels": {
-      "eyebrow": "Dual channel",
-      "title": "Two endpoints, two responsibilities",
-      "description": "HTTP API handles lifecycle. CDP handles page behavior. Separate auth, separate ports, zero contamination between them."
+      "eyebrow": "Automation channel",
+      "title": "One management API, one browser connection",
+      "description": "7733 is the local Veil HTTP management API. The CDP WebSocket is the browser connection returned after a profile starts, not a second business API."
     },
     "quickStart": {
       "eyebrow": "Quick start",
@@ -146,13 +149,13 @@
   },
   "security": {
     "stack": {
-      "eyebrow": "Encryption stack",
-      "title": "From master password to ciphertext on disk",
-      "description": "Each layer uses industry-standard algorithms and is independently replaceable. Compromising one layer doesn't grant access to the next."
+      "eyebrow": "Data security",
+      "title": "Advanced browser data protection",
+      "description": "From master password to ciphertext on disk, every layer uses auditable standard algorithms. Compromising one layer does not grant direct access to the next."
     },
     "trust": {
-      "eyebrow": "Why trust this",
-      "title": "Four specific promises, each one verifiable"
+      "eyebrow": "Trust boundaries",
+      "title": "Security is not a slogan; it is an inspectable boundary"
     },
     "threats": {
       "eyebrow": "Threat model",

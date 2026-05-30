@@ -1,13 +1,11 @@
 'use client';
 
 import { buttonVariants } from '@/components/ui/button';
-import { getPathname, usePathname, useRouter } from '@/i18n/navigation';
 import { type Locale, routing } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { Menu } from '@base-ui/react/menu';
 import { Check, ChevronDown, Languages } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { useTransition } from 'react';
 
 const languageOptions = [
   { locale: 'zh', label: '中文', nativeLabel: '简体中文', short: 'ZH' },
@@ -21,11 +19,16 @@ const languageOptions = [
   short: string;
 }>;
 
+const localeSegments = new Set<string>(routing.locales);
+
+function removeLocalePrefix(pathname: string) {
+  const parts = pathname.split('/').filter(Boolean);
+  if (parts[0] && localeSegments.has(parts[0])) parts.shift();
+  return `/${parts.join('/')}` || '/';
+}
+
 export function LanguageSwitch({ className }: { className?: string }) {
   const locale = useLocale() as Locale;
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
 
   const currentLanguage =
     languageOptions.find((option) => option.locale === locale) ?? languageOptions[0];
@@ -36,31 +39,21 @@ export function LanguageSwitch({ className }: { className?: string }) {
     document.cookie = `NEXT_LOCALE=${target};path=/;max-age=31536000;samesite=lax`;
     document.documentElement.lang = target;
 
-    const href = `${pathname}${window.location.search}${window.location.hash}`;
-    const targetHref = getPathname({ href, locale: target });
-    const currentHref = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-
-    startTransition(() => {
-      if (targetHref === currentHref) {
-        router.refresh();
-      } else {
-        router.replace(href, { locale: target, scroll: false });
-      }
-    });
+    const barePath = removeLocalePrefix(window.location.pathname);
+    const localizedPath =
+      target === routing.defaultLocale ? barePath : `/${target}${barePath === '/' ? '' : barePath}`;
+    window.location.assign(`${localizedPath}${window.location.search}${window.location.hash}`);
   }
 
   return (
     <Menu.Root modal={false}>
       <Menu.Trigger
         type="button"
-        disabled={isPending}
         className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'gap-1.5', className)}
         aria-label={`Select language, current ${currentLanguage.nativeLabel}`}
       >
         <Languages className="h-4 w-4" />
-        <span className="text-xs font-medium uppercase tracking-wider">
-          {currentLanguage.short}
-        </span>
+        <span className="text-xs font-medium uppercase">{currentLanguage.short}</span>
         <ChevronDown className="h-3.5 w-3.5 text-foreground-subtle" />
       </Menu.Trigger>
       <Menu.Portal>
@@ -78,6 +71,7 @@ export function LanguageSwitch({ className }: { className?: string }) {
                   value={option.locale}
                   label={option.nativeLabel}
                   closeOnClick
+                  onClick={() => switchTo(option.locale)}
                   className="flex cursor-default select-none items-center gap-3 rounded-md px-2.5 py-2 text-sm outline-none transition-colors data-disabled:opacity-50 data-highlighted:bg-muted"
                 >
                   <span className="w-7 font-mono text-xs font-semibold text-foreground-subtle">

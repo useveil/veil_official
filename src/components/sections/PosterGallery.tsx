@@ -29,7 +29,7 @@ export function PosterGallery() {
                     />
                   </div>
                   <figcaption className="border-t border-border px-5 py-4">
-                    <h3 className="text-base font-semibold tracking-tight">
+                    <h3 className="text-base font-semibold">
                       {getLocalizedText(poster.title, locale)}
                     </h3>
                     <p className="mt-1 text-xs text-foreground-muted">

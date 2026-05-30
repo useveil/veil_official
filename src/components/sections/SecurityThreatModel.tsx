@@ -79,9 +79,9 @@ export function SecurityThreatModel() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-      <div className="mt-12 overflow-hidden rounded-lg border border-border">
-        <table className="w-full">
-          <thead className="bg-surface text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
+      <div className="mt-12 overflow-x-auto rounded-lg border border-border bg-background shadow-md">
+        <table className="w-full min-w-[760px]">
+          <thead className="bg-surface text-xs font-black uppercase text-foreground-subtle">
             <tr>
               <th scope="col" className="px-5 py-3 text-left">
                 {t('headers.threat')}
@@ -97,7 +97,7 @@ export function SecurityThreatModel() {
           <tbody className="divide-y divide-border bg-background text-sm">
             {threats.map((row) => (
               <tr key={row.key}>
-                <td className="px-5 py-4 font-medium">{getLocalizedText(row.threat, locale)}</td>
+                <td className="px-5 py-4 font-bold">{getLocalizedText(row.threat, locale)}</td>
                 <td className="px-5 py-4">
                   <span
                     className={cn(

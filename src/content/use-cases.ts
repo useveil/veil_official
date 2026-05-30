@@ -1,5 +1,12 @@
 import type { LucideIcon } from 'lucide-react';
-import { Boxes, CircuitBoard, ShoppingCart, TerminalSquare } from 'lucide-react';
+import {
+  Boxes,
+  CircuitBoard,
+  Megaphone,
+  SearchCode,
+  ShoppingCart,
+  TerminalSquare,
+} from 'lucide-react';
 import type { LocalizedText } from './features';
 
 export type UseCase = {
@@ -9,9 +16,29 @@ export type UseCase = {
   tagline: LocalizedText;
   narrative: LocalizedText;
   capabilities: LocalizedText[];
+  platforms: string[];
 };
 
 export const useCases: UseCase[] = [
+  {
+    key: 'affiliate',
+    icon: Megaphone,
+    title: { zh: '联盟营销', en: 'Affiliate marketing' },
+    tagline: {
+      zh: '让广告账号、落地页和测试环境保持独立',
+      en: 'Keep ad accounts, landing pages, and testing environments separate',
+    },
+    narrative: {
+      zh: '为广告投放与联盟营销团队提供稳定 Profile、代理映射和自动化接入，降低账号之间因为浏览器环境重叠而被关联的风险。',
+      en: 'Stable profiles, proxy mapping, and automation access for ad and affiliate teams, reducing risk from overlapping browser environments.',
+    },
+    capabilities: [
+      { zh: '账号级指纹种子与代理绑定', en: 'Account-level fingerprint seed and proxy binding' },
+      { zh: '批量打开、检查与回收 Profile', en: 'Batch open, inspect, and recycle profiles' },
+      { zh: '可审计的自动化脚本接入', en: 'Auditable automation access' },
+    ],
+    platforms: ['Facebook', 'Google Ads', 'TikTok'],
+  },
   {
     key: 'multi-account',
     icon: Boxes,
@@ -35,6 +62,7 @@ export const useCases: UseCase[] = [
         en: 'AES-256 + SQLCipher full-database encryption',
       },
     ],
+    platforms: ['Facebook', 'LinkedIn', 'Discord'],
   },
   {
     key: 'web3',
@@ -53,6 +81,7 @@ export const useCases: UseCase[] = [
       { zh: '出站连接审计', en: 'Outbound connection audit' },
       { zh: '钱包扩展隔离', en: 'Wallet extension isolation' },
     ],
+    platforms: ['MetaMask', 'WalletConnect', 'DeFi'],
   },
   {
     key: 'ecommerce',
@@ -71,6 +100,29 @@ export const useCases: UseCase[] = [
       { zh: '审计日志可导出', en: 'Exportable audit logs' },
       { zh: '崩溃恢复保留会话', en: 'Crash-resilient sessions' },
     ],
+    platforms: ['Amazon', 'Shopify', 'Shopee', 'Temu'],
+  },
+  {
+    key: 'web-scraping',
+    icon: SearchCode,
+    title: { zh: '自动化采集', en: 'Browser automation' },
+    tagline: {
+      zh: '用真实浏览器上下文运行脚本任务',
+      en: 'Run scripted work in real browser contexts',
+    },
+    narrative: {
+      zh: '通过本地 HTTP API 启动 Profile，再让 CDP 框架接管页面。适合需要隔离账号、代理、会话和运行日志的自动化团队。',
+      en: 'Start profiles through the local HTTP API and hand them to CDP frameworks. Useful for teams that need isolated accounts, proxies, sessions, and run logs.',
+    },
+    capabilities: [
+      {
+        zh: 'Playwright / Puppeteer / Selenium 接入',
+        en: 'Playwright / Puppeteer / Selenium access',
+      },
+      { zh: 'Profile 生命周期 API', en: 'Profile lifecycle API' },
+      { zh: '脚本访问与主密码分离', en: 'Script access separated from the master password' },
+    ],
+    platforms: ['Playwright', 'Puppeteer', 'Selenium'],
   },
   {
     key: 'automation',
@@ -81,16 +133,17 @@ export const useCases: UseCase[] = [
       en: 'Profiles as infrastructure, Playwright connects directly',
     },
     narrative: {
-      zh: '通过本地 HTTP API + CDP 端点，把每个隔离身份变成可程序化资源。API Key 与主密码独立，可细粒度授权与回收；560+ 自动化测试覆盖核心组件。',
-      en: 'Local HTTP API + CDP endpoints expose each isolated identity as a programmable resource. API keys are independent from the master password, with fine-grained scopes and revocation; 560+ automated tests cover core components.',
+      zh: '通过本地 HTTP 管理 API 启动 Profile，再使用返回的 CDP WebSocket 地址接入自动化框架。API Key 与主密码独立，可细粒度授权与回收；560+ 自动化测试覆盖核心组件。',
+      en: 'Start profiles through the local HTTP management API, then connect automation frameworks using the returned CDP WebSocket address. API keys are independent from the master password, with fine-grained scopes and revocation; 560+ automated tests cover core components.',
     },
     capabilities: [
-      { zh: 'HTTP API + CDP 双通道', en: 'HTTP API + CDP dual channel' },
+      { zh: 'HTTP 管理 API + CDP 连接地址', en: 'HTTP management API + CDP connection address' },
       {
         zh: 'Playwright / Puppeteer / Selenium 兼容',
         en: 'Playwright / Puppeteer / Selenium compatible',
       },
       { zh: 'API Key 细粒度权限', en: 'Fine-grained API key permissions' },
     ],
+    platforms: ['HTTP API', 'CDP', 'CI'],
   },
 ];

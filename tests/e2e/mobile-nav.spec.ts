@@ -8,11 +8,11 @@ test('移动端打开菜单抽屉', async ({ page }) => {
   await page.getByRole('button', { name: '打开菜单' }).click();
   // SheetContent 基于 @base-ui/react/dialog，渲染 role="dialog"
   await expect(page.getByRole('dialog')).toBeVisible();
-  // primaryNav 第一项为 security，中文显示"安全"
+  // primaryNav 第一项为 security，中文显示"产品功能"
   await expect(
     page
       .locator('a')
-      .filter({ hasText: /安全|security/i })
+      .filter({ hasText: /产品功能|features/i })
       .last(),
   ).toBeVisible();
 });

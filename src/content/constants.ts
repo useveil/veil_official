@@ -1,7 +1,6 @@
 export const SITE = {
   name: 'Veil',
-  shortDescription:
-    'Self-hostable fingerprint browser. Your data never leaves your device.',
+  shortDescription: 'Self-hostable fingerprint browser. Your data never leaves your device.',
   repoUrl: 'https://github.com/useveil/veil_official',
   releaseUrl: 'https://github.com/useveil/veil_official/releases',
   buyUrl: '/pricing',

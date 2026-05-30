@@ -9,7 +9,8 @@ export const primaryNav: NavItem[] = [
   { key: 'useCases', href: '/use-cases', labelKey: 'nav.useCases' },
   { key: 'automation', href: '/automation', labelKey: 'nav.automation' },
   { key: 'pricing', href: '/pricing', labelKey: 'nav.pricing' },
-  { key: 'changelog', href: '/changelog', labelKey: 'nav.changelog' },
+  { key: 'compare', href: '/compare', labelKey: 'nav.compare' },
+  { key: 'faq', href: '/faq', labelKey: 'nav.faq' },
 ];
 
 export const footerGroups: { titleKey: string; items: NavItem[] }[] = [

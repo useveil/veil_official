@@ -52,35 +52,38 @@ export function SecurityStack() {
   const locale = useLocale() as Locale;
 
   return (
-    <section id="security" className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 md:pb-32">
-      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-      <ol className="mt-12 grid gap-3 md:max-w-2xl">
-        {layers.map((layer, index) => {
-          const Icon = layer.icon;
-          return (
-            <li key={layer.key}>
-              <div className="flex items-center gap-4 rounded-lg border border-border bg-surface-elevated p-5">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300">
-                  <Icon className="h-5 w-5" />
+    <section id="security" className="scroll-mt-24 bg-background py-24 md:py-32">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
+        <ol className="grid gap-3">
+          {layers.map((layer, index) => {
+            const Icon = layer.icon;
+            return (
+              <li key={layer.key}>
+                <div className="flex items-center gap-4 rounded-lg border border-border bg-surface-elevated p-5 shadow-sm">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-500/10 dark:text-teal-200">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-black">{getLocalizedText(layer.label, locale)}</h3>
+                    <p className="mt-1 text-sm text-foreground-muted">
+                      {getLocalizedText(layer.detail, locale)}
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs font-bold text-foreground-subtle">
+                    L{index + 1}
+                  </span>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-sm font-mono font-semibold tracking-tight">
-                    {getLocalizedText(layer.label, locale)}
-                  </h3>
-                  <p className="mt-1 text-sm text-foreground-muted">
-                    {getLocalizedText(layer.detail, locale)}
-                  </p>
-                </div>
-              </div>
-              {index < layers.length - 1 && (
-                <div className="flex justify-center py-1.5" aria-hidden>
-                  <ArrowDown className="h-4 w-4 text-foreground-subtle" />
-                </div>
-              )}
-            </li>
-          );
-        })}
-      </ol>
+                {index < layers.length - 1 && (
+                  <div className="flex justify-center py-1.5" aria-hidden>
+                    <ArrowDown className="h-4 w-4 text-teal-500" />
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </section>
   );
 }

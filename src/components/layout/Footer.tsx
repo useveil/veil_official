@@ -9,7 +9,7 @@ export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="bg-surface mt-32">
+    <footer className="mt-28 border-t border-border/70 bg-surface/80">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))]">
           <div>
@@ -17,11 +17,13 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-foreground-muted">
               {t('footer.tagline')}
             </p>
-            <p className="mt-3 text-xs text-foreground-subtle font-mono">{SITE.licenseLabel}</p>
+            <p className="mt-5 inline-flex rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground-subtle">
+              {SITE.licenseLabel}
+            </p>
           </div>
           {footerGroups.map((group) => (
             <div key={group.titleKey}>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
+              <h3 className="text-xs font-bold uppercase text-foreground">
                 {t(group.titleKey as 'footer.groups.product')}
               </h3>
               <ul className="mt-4 flex flex-col gap-2">
@@ -33,14 +35,14 @@ export function Footer() {
                         {...(item.href.startsWith('http')
                           ? { target: '_blank', rel: 'noreferrer' }
                           : {})}
-                        className="text-sm text-foreground-muted hover:text-foreground transition-colors"
+                        className="text-sm font-medium text-foreground-muted transition-colors hover:text-foreground"
                       >
                         {t(item.labelKey as 'nav.security')}
                       </a>
                     ) : (
                       <Link
                         href={item.href as Route}
-                        className="text-sm text-foreground-muted hover:text-foreground transition-colors"
+                        className="text-sm font-medium text-foreground-muted transition-colors hover:text-foreground"
                       >
                         {t(item.labelKey as 'nav.security')}
                       </Link>
@@ -51,7 +53,7 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 border-t border-border pt-6 flex items-center justify-between text-xs text-foreground-subtle">
+        <div className="mt-12 flex items-center justify-between border-t border-border pt-6 text-xs text-foreground-subtle">
           <p>© {new Date().getFullYear()} Veil</p>
           <p className="font-mono">v{SITE.currentVersion}</p>
         </div>

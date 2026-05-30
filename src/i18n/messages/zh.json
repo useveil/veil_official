@@ -6,11 +6,12 @@
     "skeleton": "骨架占位"
   },
   "nav": {
-    "security": "安全",
-    "useCases": "应用场景",
+    "home": "首页",
+    "security": "产品功能",
+    "useCases": "解决方案",
     "compare": "对比",
     "automation": "自动化",
-    "pricing": "价格",
+    "pricing": "价格方案",
     "changelog": "更新日志",
     "download": "下载",
     "faq": "常见问题",
@@ -21,7 +22,7 @@
     "refund": "退款政策"
   },
   "footer": {
-    "tagline": "面向本地优先与自托管部署的指纹浏览器。核心数据保存在你的设备或自有环境中，Veil 不提供数据托管服务。",
+    "tagline": "面向多账号、Web3、电商与自动化团队的本地优先指纹浏览器。Profile 数据保存在你的设备或自有环境中，Veil 不提供数据托管服务。",
     "groups": {
       "product": "产品",
       "developers": "开发者",
@@ -32,11 +33,13 @@
   "home": {
     "hero": {
       "eyebrow": "v0.1.0 RC · 自托管 · 不存数据",
-      "title": "把\"相信平台\"换成\"验证系统\"",
-      "subtitle": "Veil 是给高价值多账号、Web3、电商和自动化团队的指纹浏览器。数据只在你的设备上，软件可自托管——我们卖软件本身，不卖数据托管。",
-      "description": "Veil 是给高价值多账号、Web3、电商和自动化团队的指纹浏览器。数据只在你的设备上，软件可自托管——我们卖软件本身，不卖数据托管。",
-      "primaryCta": "查看价格",
-      "secondaryCta": "了解安全设计",
+      "titleLine1": "一站式",
+      "titleLine2": "安全管理多账号",
+      "title": "为高价值多账号团队打造的本地优先指纹浏览器",
+      "subtitle": "一站式创建、运行和自动化 Web 多账号 Profile，融合隔离浏览器环境、稳定指纹、独立代理和本地加密数据保护。",
+      "description": "Veil 用稳定 Profile、独立代理、可审计自动化和本地加密，把账号环境从“临时伪装”升级成可长期运营的隔离资产。",
+      "primaryCta": "立即下载试用",
+      "secondaryCta": "立即下载",
       "badges": {
         "selfHostable": "可自托管",
         "noDataRetention": "厂商不存数据",
@@ -45,22 +48,22 @@
       }
     },
     "features": {
-      "eyebrow": "为什么选择 Veil",
-      "title": "把\"相信平台\"换成\"验证系统\"",
-      "description": "六个核心特性，决定了 Veil 与其他指纹浏览器的根本差异。"
+      "eyebrow": "核心功能",
+      "title": "Veil 指纹浏览器核心功能",
+      "description": "围绕多账号安全管理、稳定指纹、自动化接入和本地数据保护构建。"
     },
     "useCases": {
-      "eyebrow": "应用场景",
-      "title": "为高价值身份隔离而生",
-      "description": "无论是多账号、钱包隔离、电商运营，还是自动化团队——Veil 都把\"隔离\"做成了可验证的工程问题。"
+      "eyebrow": "解决方案",
+      "title": "为不同出海与自动化场景提供稳定 Profile",
+      "description": "从联盟营销、电商店铺、社媒矩阵到 Web3 钱包和脚本任务，核心都是降低账号之间被浏览器环境关联的风险。"
     },
     "roadmap": {
       "eyebrow": "路线图",
       "title": "从单机完整版，到桌面端源码开放"
     },
     "finalCta": {
-      "title": "你不需要相信我们。",
-      "body": "Veil 以本地优先和自托管为基础，把关键数据与运行边界交还给你掌控。安全不只来自承诺，也来自可被检查的系统设计。",
+      "title": "与 Veil 一起，开启可验证的多账号管理",
+      "body": "用本地优先、自托管和可审计自动化，把关键账号环境交回你自己的设备和基础设施。",
       "cta": "查看价格"
     },
     "gallery": {
@@ -72,8 +75,8 @@
   "pricing": {
     "tiers": {
       "eyebrow": "价格",
-      "title": "选择你的订阅时长",
-      "description": "当前显示为早鸟价。三档订阅功能完全一致，只是时长和平均月成本不同。订阅期内全部更新与新版本免费获取。",
+      "title": "选择适合团队节奏的订阅方案",
+      "description": "三档订阅功能完全一致：无限 Profile、本地加密、自托管能力和自动化端点。差别只在订阅时长与平均月成本。",
       "earlyBird": "早鸟价",
       "monthlyEquivalent": "≈ ${value}/月",
       "mostPopular": "最受欢迎",
@@ -83,20 +86,20 @@
   },
   "faq": {
     "eyebrow": "常见问题",
-    "title": "在你决定使用之前",
+    "title": "常见问题解答",
     "description": "如果下面没有覆盖你的问题，欢迎邮件联系 support@useveil.xyz。"
   },
   "compare": {
     "eyebrow": "对比",
-    "title": "Veil 与同类工具的核心差异",
-    "description": "我们只列可以被独立验证的事实。价格信息基于 2026 年 5 月公开页面。",
+    "title": "Veil 与常见指纹浏览器的差异",
+    "description": "我们只列可以被独立验证的事实，重点看自托管、数据留存、本地加密和自动化能力。",
     "featureColumn": "特性",
     "footnote": "* 价格信息和功能集合可能随产品更新发生变化。建议在购买前以厂商官网为准。"
   },
   "download": {
     "eyebrow": "下载",
-    "title": "选择你的平台",
-    "description": "购买许可证后，可从这里下载对应平台安装包。所有发布都附带 SHA-256 校验和。",
+    "title": "立即下载 Veil 桌面端",
+    "description": "选择你的系统版本。购买许可证后即可激活使用，所有发布都附带 SHA-256 校验和。",
     "downloadFor": "下载 {platform}",
     "copyHash": "复制校验和",
     "verification": {
@@ -105,19 +108,19 @@
     }
   },
   "useCases": {
-    "eyebrow": "应用场景",
-    "title": "为不同人群，做同一件事：可验证的隔离",
-    "description": "四个真实的工作流场景。每个场景下，Veil 关心的不是看起来安全，而是可以被证明安全。",
+    "eyebrow": "解决方案",
+    "title": "Veil 指纹浏览器是多账号团队的统一环境层",
+    "description": "每个场景都可以拆成同一件事：稳定 Profile、独立代理、隔离会话和可审计自动化。",
     "capabilitiesTitle": "关键能力"
   },
   "automation": {
     "eyebrow": "自动化",
-    "title": "把 Profile 当作可调用的资源",
-    "description": "Veil 提供本地 HTTP API（生命周期管理）+ 标准 CDP 端点（页面操作）。Playwright / Puppeteer / Selenium 都能直接接入。",
+    "title": "把 Profile 当作可调用的浏览器资源",
+    "description": "Veil 只有一个本地管理 API：HTTP API。Profile 启动后会返回 CDP WebSocket 连接地址，Playwright / Puppeteer / Selenium 用它接管页面。",
     "channels": {
-      "eyebrow": "双通道",
-      "title": "Profile 通过两个端点对外暴露",
-      "description": "HTTP API 管生命周期，CDP 管页面行为。各自鉴权、各自端口，互不污染。"
+      "eyebrow": "自动化通道",
+      "title": "一个管理 API，一个浏览器连接地址",
+      "description": "7733 是 Veil 本地 HTTP 管理 API；CDP WebSocket 是 Profile 启动后返回的浏览器连接地址，不是第二套业务 API。"
     },
     "quickStart": {
       "eyebrow": "快速开始",
@@ -146,13 +149,13 @@
   },
   "security": {
     "stack": {
-      "eyebrow": "加密栈",
-      "title": "从主密码到密文落库的完整路径",
-      "description": "每一层都使用业界标准算法且可独立替换。攻击者拿到任何一层的数据都无法跳到下一层。"
+      "eyebrow": "数据安全",
+      "title": "先进的浏览器数据安全保护",
+      "description": "从主密码到密文落库，每一层都使用可审计的标准算法。攻击者拿到任何一层的数据都无法直接跳到下一层。"
     },
     "trust": {
-      "eyebrow": "为什么可信",
-      "title": "四个具体承诺，每个都可被验证"
+      "eyebrow": "可信边界",
+      "title": "安全不是口号，而是可以检查的边界"
     },
     "threats": {
       "eyebrow": "威胁模型",

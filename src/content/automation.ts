@@ -23,7 +23,7 @@ export const automationExamples: AutomationExample[] = [
 const VEIL_API = 'http://127.0.0.1:7733';
 const API_KEY = process.env.VEIL_API_KEY!;
 
-// 启动 Profile，拿到它的 CDP 端点
+// 启动 Profile，拿到浏览器 CDP 连接地址
 const res = await fetch(\`\${VEIL_API}/profiles/\${profileId}/start\`, {
   method: 'POST',
   headers: { Authorization: \`Bearer \${API_KEY}\` },
@@ -47,7 +47,8 @@ await page.goto('https://example.com');
     },
     code: `import puppeteer from 'puppeteer';
 
-const cdpEndpoint = 'ws://127.0.0.1:9222/devtools/browser/<id>';
+// cdpEndpoint 来自 /profiles/:id/start 的返回值
+const cdpEndpoint = process.env.VEIL_CDP_ENDPOINT!;
 
 const browser = await puppeteer.connect({
   browserWSEndpoint: cdpEndpoint,
@@ -66,11 +67,14 @@ await page.goto('https://example.com');
       zh: 'Selenium (Python) 接入',
       en: 'Selenium (Python) integration',
     },
-    code: `from selenium import webdriver
+    code: `import os
+
+from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 options = Options()
-options.debugger_address = "127.0.0.1:9222"
+# VEIL_CDP_HOST 从 cdpEndpoint 中取 host:port，例如 127.0.0.1:<cdp-port>
+options.debugger_address = os.environ["VEIL_CDP_HOST"]
 
 driver = webdriver.Chrome(options=options)
 driver.get("https://example.com")
@@ -122,24 +126,33 @@ export const channels: Channel[] = [
     },
     highlights: [
       { zh: 'RESTful 端点 · JSON 请求 / 响应', en: 'RESTful endpoints · JSON request / response' },
-      { zh: '细粒度作用域（read / write / admin）', en: 'Fine-grained scopes (read / write / admin)' },
-      { zh: 'API Key 可独立回收，不影响主密码', en: 'API keys revocable without touching master password' },
+      {
+        zh: '细粒度作用域（read / write / admin）',
+        en: 'Fine-grained scopes (read / write / admin)',
+      },
+      {
+        zh: 'API Key 可独立回收，不影响主密码',
+        en: 'API keys revocable without touching master password',
+      },
     ],
   },
   {
     key: 'cdp',
     icon: Globe2,
-    label: 'CDP',
-    endpoint: 'ws://127.0.0.1:9222/devtools/browser/:id',
-    purpose: { zh: '页面级操作', en: 'Page-level operations' },
+    label: 'CDP WebSocket',
+    endpoint: 'ws://127.0.0.1:<cdp-port>/devtools/browser/:id',
+    purpose: { zh: '浏览器连接地址', en: 'Browser connection address' },
     authMode: { zh: '连接时绑定 Profile', en: 'Bound to profile at connect time' },
     description: {
-      zh: '标准 Chrome DevTools Protocol。导航、截图、注入脚本、监听网络——Playwright / Puppeteer / Selenium 全部原生兼容。',
-      en: 'Standard Chrome DevTools Protocol. Navigate, screenshot, inject scripts, observe network — natively compatible with Playwright / Puppeteer / Selenium.',
+      zh: '这是 Profile 启动后返回给自动化框架的 CDP WebSocket 地址，用来导航、截图、注入脚本与监听网络；它不是第二套 HTTP API。',
+      en: 'This is the CDP WebSocket address returned after a profile starts. Automation frameworks use it for navigation, screenshots, script injection, and network observation. It is not a second HTTP API.',
     },
     highlights: [
       { zh: '与社区 CDP 工具 100% 兼容', en: '100% compatible with community CDP tools' },
-      { zh: '端点仅在 Profile 启动后开放', en: 'Endpoint exposed only after profile starts' },
+      {
+        zh: '地址由启动 Profile 的 HTTP API 返回',
+        en: 'Address returned by the HTTP API that starts the profile',
+      },
       { zh: '断开后自动清理会话状态', en: 'Session state auto-cleaned on disconnect' },
     ],
   },
@@ -170,7 +183,10 @@ export const quickStartSteps: QuickStartStep[] = [
   },
   {
     key: 'start-profile',
-    label: { zh: '启动 Profile，拿到 CDP 端点', en: 'Start a profile and grab its CDP endpoint' },
+    label: {
+      zh: '启动 Profile，拿到浏览器连接地址',
+      en: 'Start a profile and get its browser connection',
+    },
     description: {
       zh: '通过 HTTP API 启动指定 Profile，返回的 cdpEndpoint 可直接传给 Playwright / Puppeteer / Selenium。',
       en: 'Start a profile via the HTTP API. The returned cdpEndpoint plugs directly into Playwright, Puppeteer, or Selenium.',
@@ -178,7 +194,7 @@ export const quickStartSteps: QuickStartStep[] = [
     language: 'shell',
     code: `curl -X POST http://127.0.0.1:7733/profiles/$PROFILE_ID/start \\
   -H "Authorization: Bearer $VEIL_API_KEY"
-# => { "cdpEndpoint": "ws://127.0.0.1:9222/devtools/browser/abc..." }`,
+# => { "cdpEndpoint": "ws://127.0.0.1:<cdp-port>/devtools/browser/abc..." }`,
   },
   {
     key: 'connect',
@@ -188,7 +204,7 @@ export const quickStartSteps: QuickStartStep[] = [
       en: 'Playwright connects in one line. All operations run inside the isolated profile — automation never pollutes human user sessions.',
     },
     language: 'typescript',
-    code: `const browser = await chromium.connectOverCDP(cdpEndpoint);`,
+    code: 'const browser = await chromium.connectOverCDP(cdpEndpoint);',
   },
 ];
 

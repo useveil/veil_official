@@ -21,37 +21,44 @@ export function PricingTiers() {
         align="center"
       />
 
-      <div className="mt-12 grid gap-4 md:grid-cols-3">
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
         {pricingTiers.map((tier, index) => {
           const isRec = tier.recommended;
           return (
             <Reveal key={tier.key} delay={index * 0.08} className="h-full">
               <article
                 className={cn(
-                  'relative flex h-full flex-col rounded-xl border p-7 transition-all',
+                  'relative flex h-full flex-col overflow-hidden rounded-lg border p-7 transition-all',
                   isRec
-                    ? 'border-teal-500 bg-surface-elevated shadow-lg ring-2 ring-teal-500/20'
-                    : 'border-border bg-surface-elevated hover:border-border-strong',
+                    ? 'border-teal-500 bg-surface-elevated shadow-lg ring-2 ring-teal-500/15'
+                    : 'border-border bg-surface-elevated shadow-sm hover:-translate-y-1 hover:border-teal-300 hover:shadow-md',
                 )}
               >
+                <div
+                  aria-hidden
+                  className={cn(
+                    'absolute inset-x-0 top-0 h-24',
+                    isRec
+                      ? 'bg-[linear-gradient(135deg,rgba(47,100,255,0.16),rgba(180,140,255,0.16))]'
+                      : 'bg-[linear-gradient(135deg,rgba(47,100,255,0.08),transparent)]',
+                  )}
+                />
                 {isRec && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-teal-500 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-white">
+                  <span className="absolute top-4 right-4 rounded-full bg-teal-500 px-3 py-1 text-[11px] font-black uppercase text-white">
                     {t('mostPopular')}
                   </span>
                 )}
 
                 {/* Duration label */}
-                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-foreground-subtle">
+                <p className="relative font-mono text-xs font-black uppercase text-foreground-subtle">
                   {getLocalizedText(tier.duration, locale)}
                 </p>
 
                 {/* Price */}
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-5xl font-bold tracking-tight md:text-6xl">
-                    ${tier.priceUSD}
-                  </span>
+                  <span className="relative text-5xl font-black md:text-6xl">${tier.priceUSD}</span>
                 </div>
-                <p className="mt-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">
+                <p className="mt-2 font-mono text-[11px] font-black uppercase text-teal-700 dark:text-teal-300">
                   {t('earlyBird')}
                 </p>
                 <p className="mt-1.5 text-sm text-foreground-muted">
@@ -65,7 +72,7 @@ export function PricingTiers() {
                   </p>
                 )}
                 {!tier.highlight && tier.badge && (
-                  <p className="mt-3 font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
+                  <p className="mt-3 font-mono text-[11px] uppercase text-foreground-subtle">
                     {getLocalizedText(tier.badge, locale)}
                   </p>
                 )}
