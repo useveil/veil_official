@@ -102,46 +102,55 @@ export function RegisterContent({
   const downloadHref = '/download';
 
   return (
-    <AuthEntryPage
-      className="fixed inset-0 z-[60] overflow-y-auto"
-      copy={{
-        title: getLocalizedText(registerCopy.title, locale),
-        emailLabel: getLocalizedText(registerCopy.emailLabel, locale),
-        emailPlaceholder: getLocalizedText(registerCopy.emailPlaceholder, locale),
-        dividerLabel: getLocalizedText(registerCopy.dividerLabel, locale),
-        existingAccountLabel: getLocalizedText(registerCopy.existingAccountLabel, locale),
-        signInLabel: getLocalizedText(registerCopy.signInLabel, locale),
-        terms: getLocalizedText(registerCopy.terms, locale),
-        referralLabel: getLocalizedText(registerCopy.referralLabel, locale),
-      }}
-      primaryAction={{
-        href: downloadHref,
-        label: getLocalizedText(registerCopy.continueLabel, locale),
-      }}
-      secondaryAction={{
-        href: downloadHref,
-        label: getLocalizedText(registerCopy.signInLabel, locale),
-      }}
-      methods={[
-        {
-          id: 'google',
+    <>
+      <style>{`
+        html,
+        body {
+          height: 100%;
+          overflow: hidden;
+        }
+      `}</style>
+      <AuthEntryPage
+        className="fixed inset-0 z-[60] overflow-hidden"
+        copy={{
+          title: getLocalizedText(registerCopy.title, locale),
+          emailLabel: getLocalizedText(registerCopy.emailLabel, locale),
+          emailPlaceholder: getLocalizedText(registerCopy.emailPlaceholder, locale),
+          dividerLabel: getLocalizedText(registerCopy.dividerLabel, locale),
+          existingAccountLabel: getLocalizedText(registerCopy.existingAccountLabel, locale),
+          signInLabel: getLocalizedText(registerCopy.signInLabel, locale),
+          terms: getLocalizedText(registerCopy.terms, locale),
+          referralLabel: getLocalizedText(registerCopy.referralLabel, locale),
+        }}
+        primaryAction={{
           href: downloadHref,
-          label: getLocalizedText(registerCopy.googleLabel, locale),
-        },
-        {
-          id: 'github',
+          label: getLocalizedText(registerCopy.continueLabel, locale),
+        }}
+        secondaryAction={{
           href: downloadHref,
-          label: getLocalizedText(registerCopy.githubLabel, locale),
-        },
-        {
-          id: 'apple',
-          href: downloadHref,
-          label: getLocalizedText(registerCopy.appleLabel, locale),
-        },
-      ]}
-      referralCode={referralCode}
-      brandLogoSrc="/brand/veil-app-icon.svg"
-      brandLogoAlt="Veil"
-    />
+          label: getLocalizedText(registerCopy.signInLabel, locale),
+        }}
+        methods={[
+          {
+            id: 'google',
+            href: downloadHref,
+            label: getLocalizedText(registerCopy.googleLabel, locale),
+          },
+          {
+            id: 'github',
+            href: downloadHref,
+            label: getLocalizedText(registerCopy.githubLabel, locale),
+          },
+          {
+            id: 'apple',
+            href: downloadHref,
+            label: getLocalizedText(registerCopy.appleLabel, locale),
+          },
+        ]}
+        referralCode={referralCode}
+        brandLogoSrc="/brand/veil-app-icon.svg"
+        brandLogoAlt="Veil"
+      />
+    </>
   );
 }
