@@ -105,7 +105,6 @@ export function RegisterContent({
     <AuthEntryPage
       className="fixed inset-0 z-[60] overflow-y-auto"
       copy={{
-        brandName: 'Veil',
         title: getLocalizedText(registerCopy.title, locale),
         emailLabel: getLocalizedText(registerCopy.emailLabel, locale),
         emailPlaceholder: getLocalizedText(registerCopy.emailPlaceholder, locale),
