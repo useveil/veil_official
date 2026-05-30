@@ -14,6 +14,8 @@ type RegisterCopy = {
   existingAccountLabel: LocalizedText;
   signInLabel: LocalizedText;
   terms: LocalizedText;
+  activationCodeLabel: LocalizedText;
+  activationCodePlaceholder: LocalizedText;
   referralLabel: LocalizedText;
 };
 
@@ -84,11 +86,23 @@ const registerCopy: RegisterCopy = {
     ja: 'アカウントを作成すると、利用規約とプライバシーポリシーに同意したことになります。',
     ko: '계정을 만들면 서비스 약관 및 개인정보 처리방침에 동의하는 것입니다.',
   },
+  activationCodeLabel: {
+    zh: '激活码',
+    en: 'Activation code',
+    ja: 'アクティベーションコード',
+    ko: '활성화 코드',
+  },
+  activationCodePlaceholder: {
+    zh: '请输入激活码',
+    en: 'Enter activation code',
+    ja: 'アクティベーションコードを入力',
+    ko: '활성화 코드를 입력하세요',
+  },
   referralLabel: {
-    zh: '邀请码',
-    en: 'Referral code',
-    ja: '紹介コード',
-    ko: '추천 코드',
+    zh: '激活码',
+    en: 'Activation code',
+    ja: 'アクティベーションコード',
+    ko: '활성화 코드',
   },
 };
 
@@ -120,6 +134,11 @@ export function RegisterContent({
           existingAccountLabel: getLocalizedText(registerCopy.existingAccountLabel, locale),
           signInLabel: getLocalizedText(registerCopy.signInLabel, locale),
           terms: getLocalizedText(registerCopy.terms, locale),
+          activationCodeLabel: getLocalizedText(registerCopy.activationCodeLabel, locale),
+          activationCodePlaceholder: getLocalizedText(
+            registerCopy.activationCodePlaceholder,
+            locale,
+          ),
           referralLabel: getLocalizedText(registerCopy.referralLabel, locale),
         }}
         primaryAction={{
@@ -148,6 +167,8 @@ export function RegisterContent({
           },
         ]}
         referralCode={referralCode}
+        showActivationCodeInput
+        activationCodeInputName="ref"
         brandLogoSrc="/brand/veil-app-icon.svg"
         brandLogoAlt="Veil"
       />
