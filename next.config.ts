@@ -7,6 +7,7 @@ const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'mdx'],
+  transpilePackages: ['@veil/auth-pages'],
   images: {
     formats: ['image/avif', 'image/webp'],
   },

@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { type LocalizedText, getLocalizedText } from '@/content/features';
 import type { Locale } from '@/i18n/routing';
+import { AuthEntryPage } from '@veil/auth-pages';
 import { ArrowDownToLine, BadgeCheck, Gift, ShieldCheck, Sparkles } from 'lucide-react';
 
 type RegisterCopy = {
@@ -100,83 +100,43 @@ export function RegisterContent({
   locale: Locale;
   referralCode?: string;
 }) {
-  const title = getLocalizedText(registerCopy.title, locale);
-  const description = getLocalizedText(registerCopy.description, locale);
-
   return (
-    <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[minmax(0,1fr)_420px] md:items-center md:py-28">
-      <div>
-        <p className="text-xs font-semibold uppercase text-teal-600 dark:text-teal-400">
-          {getLocalizedText(registerCopy.eyebrow, locale)}
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-6xl">{title}</h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground-muted md:text-lg">
-          {description}
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button render={<a href="/download" />} size="lg">
-            <ArrowDownToLine className="h-4 w-4" />
-            {getLocalizedText(registerCopy.primaryCta, locale)}
-          </Button>
-          <Button render={<a href="/pricing" />} size="lg" variant="outline">
-            <Sparkles className="h-4 w-4" />
-            {getLocalizedText(registerCopy.secondaryCta, locale)}
-          </Button>
-        </div>
-
-        <div className="mt-10 grid gap-3 sm:grid-cols-3">
-          {registerCopy.notes.map((note) => (
-            <div
-              key={note.zh}
-              className="flex min-h-14 items-center gap-2 rounded-lg border border-border bg-surface-elevated px-3 py-2 text-sm font-bold shadow-sm"
-            >
-              <BadgeCheck className="h-4 w-4 shrink-0 text-teal-600 dark:text-teal-400" />
-              <span>{getLocalizedText(note, locale)}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <aside className="rounded-lg border border-border bg-surface-elevated p-6 shadow-lg shadow-teal-500/10">
-        <div className="flex items-start gap-4">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-teal-50 text-teal-700 dark:bg-teal-500/10 dark:text-teal-200">
-            {referralCode ? <Gift className="h-5 w-5" /> : <ShieldCheck className="h-5 w-5" />}
-          </div>
-          <div>
-            <h2 className="text-lg font-black">
-              {referralCode
-                ? getLocalizedText(registerCopy.referralTitle, locale)
-                : getLocalizedText(registerCopy.title, locale)}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-foreground-muted">
-              {getLocalizedText(
-                referralCode ? registerCopy.referralBody : registerCopy.noReferralBody,
-                locale,
-              )}
-            </p>
-          </div>
-        </div>
-
-        {referralCode ? (
-          <div className="mt-6 rounded-lg border border-teal-500/20 bg-teal-50 p-4 dark:bg-teal-500/10">
-            <p className="text-xs font-black uppercase text-teal-700 dark:text-teal-200">
-              {getLocalizedText(registerCopy.referralLabel, locale)}
-            </p>
-            <p className="mt-2 break-all font-mono text-lg font-black text-foreground">
-              {referralCode}
-            </p>
-          </div>
-        ) : null}
-
-        <div className="mt-6 overflow-hidden rounded-lg border border-border bg-background">
-          <img
-            src="/images/veil-desktop-profile-list.png"
-            alt=""
-            className="block aspect-[16/10] w-full object-cover object-left-top"
-          />
-        </div>
-      </aside>
-    </section>
+    <AuthEntryPage
+      layout="section"
+      actionPlacement="hero"
+      copy={{
+        badge: getLocalizedText(registerCopy.eyebrow, locale),
+        title: getLocalizedText(registerCopy.title, locale),
+        description: getLocalizedText(registerCopy.description, locale),
+        cardTitle: getLocalizedText(registerCopy.title, locale),
+        cardDescription: getLocalizedText(registerCopy.noReferralBody, locale),
+        referralLabel: getLocalizedText(registerCopy.referralLabel, locale),
+        referralTitle: getLocalizedText(registerCopy.referralTitle, locale),
+        referralDescription: getLocalizedText(registerCopy.referralBody, locale),
+        noReferralDescription: getLocalizedText(registerCopy.noReferralBody, locale),
+      }}
+      primaryAction={{
+        href: '/download',
+        icon: <ArrowDownToLine className="h-4 w-4" />,
+        label: getLocalizedText(registerCopy.primaryCta, locale),
+      }}
+      secondaryAction={{
+        href: '/pricing',
+        icon: <Sparkles className="h-4 w-4" />,
+        label: getLocalizedText(registerCopy.secondaryCta, locale),
+      }}
+      notes={registerCopy.notes.map((note) => ({
+        id: note.zh,
+        icon: <BadgeCheck className="h-4 w-4 shrink-0 text-primary" />,
+        label: getLocalizedText(note, locale),
+      }))}
+      referralCode={referralCode}
+      cardIcon={<ShieldCheck className="h-5 w-5" />}
+      referralIcon={<Gift className="h-5 w-5" />}
+      previewImage={{
+        src: '/images/veil-desktop-profile-list.png',
+        alt: '',
+      }}
+    />
   );
 }

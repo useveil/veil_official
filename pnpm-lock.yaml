@@ -23,6 +23,9 @@ importers:
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@veil/auth-pages':
+        specifier: file:packages/auth-pages
+        version: file:packages/auth-pages(react@19.2.6)
       '@vercel/config':
         specifier: ^0.5.0
         version: 0.5.0
@@ -1188,6 +1191,11 @@ packages:
 
   '@ungap/structured-clone@1.3.1':
     resolution: {integrity: sha512-mUFwbeTqrVgDQxFveS+df2yfap6iuP20NAKAsBt5jDEoOTDew+zwLAOilHCeQJOVSvmgCX4ogqIrA0mnyr08yQ==}
+
+  '@veil/auth-pages@file:packages/auth-pages':
+    resolution: {directory: packages/auth-pages, type: directory}
+    peerDependencies:
+      react: '>=18 <20'
 
   '@vercel/config@0.5.0':
     resolution: {integrity: sha512-92yapoNoNhdiKgSz0DUwZiJ05xx8WZWS7cdVhcjAPU9dDXwns4xY5mll04IRE3kjwLqnmxcR+mdG7vGFL7hV+A==}
@@ -4316,6 +4324,10 @@ snapshots:
   '@types/validate-npm-package-name@4.0.2': {}
 
   '@ungap/structured-clone@1.3.1': {}
+
+  '@veil/auth-pages@file:packages/auth-pages(react@19.2.6)':
+    dependencies:
+      react: 19.2.6
 
   '@vercel/config@0.5.0':
     dependencies:
