@@ -16,6 +16,17 @@ type RegisterCopy = {
   terms: LocalizedText;
   activationCodeLabel: LocalizedText;
   activationCodePlaceholder: LocalizedText;
+  verificationCodeLabel: LocalizedText;
+  verificationCodePlaceholder: LocalizedText;
+  getVerificationCodeLabel: LocalizedText;
+  passwordLabel: LocalizedText;
+  passwordPlaceholder: LocalizedText;
+  confirmPasswordLabel: LocalizedText;
+  confirmPasswordPlaceholder: LocalizedText;
+  agreementPrefix: LocalizedText;
+  termsLabel: LocalizedText;
+  privacyLabel: LocalizedText;
+  agreementConnector: LocalizedText;
   referralLabel: LocalizedText;
 };
 
@@ -39,10 +50,10 @@ const registerCopy: RegisterCopy = {
     ko: '이메일 주소',
   },
   continueLabel: {
-    zh: '继续',
-    en: 'Continue',
-    ja: '続行',
-    ko: '계속',
+    zh: '注册',
+    en: 'Register',
+    ja: '登録',
+    ko: '가입',
   },
   dividerLabel: {
     zh: '或',
@@ -93,10 +104,76 @@ const registerCopy: RegisterCopy = {
     ko: '활성화 코드',
   },
   activationCodePlaceholder: {
-    zh: '请输入激活码',
-    en: 'Enter activation code',
-    ja: 'アクティベーションコードを入力',
-    ko: '활성화 코드를 입력하세요',
+    zh: '选填',
+    en: 'Optional',
+    ja: '任意',
+    ko: '선택 사항',
+  },
+  verificationCodeLabel: {
+    zh: '验证码',
+    en: 'Verification code',
+    ja: '認証コード',
+    ko: '인증 코드',
+  },
+  verificationCodePlaceholder: {
+    zh: '请输入验证码',
+    en: 'Enter verification code',
+    ja: '認証コードを入力',
+    ko: '인증 코드를 입력하세요',
+  },
+  getVerificationCodeLabel: {
+    zh: '获取验证码',
+    en: 'Get code',
+    ja: 'コードを取得',
+    ko: '코드 받기',
+  },
+  passwordLabel: {
+    zh: '密码',
+    en: 'Password',
+    ja: 'パスワード',
+    ko: '비밀번호',
+  },
+  passwordPlaceholder: {
+    zh: '请输入密码',
+    en: 'Enter password',
+    ja: 'パスワードを入力',
+    ko: '비밀번호를 입력하세요',
+  },
+  confirmPasswordLabel: {
+    zh: '确认密码',
+    en: 'Confirm password',
+    ja: 'パスワードを確認',
+    ko: '비밀번호 확인',
+  },
+  confirmPasswordPlaceholder: {
+    zh: '请再次输入密码',
+    en: 'Enter password again',
+    ja: 'もう一度パスワードを入力',
+    ko: '비밀번호를 다시 입력하세요',
+  },
+  agreementPrefix: {
+    zh: '我已阅读并同意',
+    en: 'I have read and agree to the',
+    ja: '私は以下に同意します:',
+    ko: '다음을 읽고 동의합니다:',
+  },
+  termsLabel: {
+    zh: '用户协议',
+    en: 'Terms of Service',
+    ja: '利用規約',
+    ko: '이용약관',
+  },
+  privacyLabel: {
+    zh: '隐私政策',
+    en: 'Privacy Policy',
+    ja: 'プライバシーポリシー',
+    ko: '개인정보 처리방침',
+  },
+  agreementConnector: {
+    zh: '和',
+    en: 'and',
+    ja: 'および',
+    ko: '및',
   },
   referralLabel: {
     zh: '激活码',
@@ -105,6 +182,21 @@ const registerCopy: RegisterCopy = {
     ko: '활성화 코드',
   },
 };
+
+function getAgreementLabel(locale: Locale) {
+  return (
+    <>
+      {getLocalizedText(registerCopy.agreementPrefix, locale)}{' '}
+      <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/terms">
+        {getLocalizedText(registerCopy.termsLabel, locale)}
+      </a>{' '}
+      {getLocalizedText(registerCopy.agreementConnector, locale)}{' '}
+      <a className="font-medium text-indigo-600 hover:text-indigo-500" href="/privacy">
+        {getLocalizedText(registerCopy.privacyLabel, locale)}
+      </a>
+    </>
+  );
+}
 
 export function RegisterContent({
   locale,
@@ -133,12 +225,24 @@ export function RegisterContent({
           dividerLabel: getLocalizedText(registerCopy.dividerLabel, locale),
           existingAccountLabel: getLocalizedText(registerCopy.existingAccountLabel, locale),
           signInLabel: getLocalizedText(registerCopy.signInLabel, locale),
-          terms: getLocalizedText(registerCopy.terms, locale),
           activationCodeLabel: getLocalizedText(registerCopy.activationCodeLabel, locale),
           activationCodePlaceholder: getLocalizedText(
             registerCopy.activationCodePlaceholder,
             locale,
           ),
+          verificationCodeLabel: getLocalizedText(registerCopy.verificationCodeLabel, locale),
+          verificationCodePlaceholder: getLocalizedText(
+            registerCopy.verificationCodePlaceholder,
+            locale,
+          ),
+          passwordLabel: getLocalizedText(registerCopy.passwordLabel, locale),
+          passwordPlaceholder: getLocalizedText(registerCopy.passwordPlaceholder, locale),
+          confirmPasswordLabel: getLocalizedText(registerCopy.confirmPasswordLabel, locale),
+          confirmPasswordPlaceholder: getLocalizedText(
+            registerCopy.confirmPasswordPlaceholder,
+            locale,
+          ),
+          agreementLabel: getAgreementLabel(locale),
           referralLabel: getLocalizedText(registerCopy.referralLabel, locale),
         }}
         primaryAction={{
@@ -166,9 +270,17 @@ export function RegisterContent({
             label: getLocalizedText(registerCopy.appleLabel, locale),
           },
         ]}
+        methodLayout="compact"
         referralCode={referralCode}
         showActivationCodeInput
         activationCodeInputName="ref"
+        showVerificationCodeInput
+        verificationCodeInputName="verificationCode"
+        verificationCodeAction={{
+          label: getLocalizedText(registerCopy.getVerificationCodeLabel, locale),
+        }}
+        showPasswordInputs
+        requireAgreement
         brandLogoSrc="/brand/veil-app-icon.svg"
         brandLogoAlt="Veil"
       />
