@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000" role="img" aria-labelledby="title desc">
+  <title id="title">Veil sign-in poster</title>
+  <desc id="desc">A premium Veil poster for the WorkOS AuthKit sign-in content panel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1480" y2="1920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eef7f5"/>
+      <stop offset="0.33" stop-color="#162124"/>
+      <stop offset="0.72" stop-color="#081013"/>
+      <stop offset="1" stop-color="#0e1917"/>
+    </linearGradient>
+    <radialGradient id="aquaGlow" cx="390" cy="350" r="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.75"/>
+      <stop offset="0.38" stop-color="#2dd4bf" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="copperGlow" cx="1290" cy="1480" r="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.42"/>
+      <stop offset="0.46" stop-color="#f97316" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="240" y1="260" x2="1360" y2="1600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="line" x1="310" y1="690" x2="1260" y2="1440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.45" stop-color="#a3e635"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="veilLeft" x1="0" y1="0" x2="180" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="veilRight" x1="320" y1="0" x2="160" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.43" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="44" flood-color="#020617" flood-opacity="0.36"/>
+    </filter>
+    <filter id="smallShadow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="22" flood-color="#020617" flood-opacity="0.24"/>
+    </filter>
+    <pattern id="dotGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#ffffff" opacity="0.12"/>
+    </pattern>
+    <symbol id="veilIcon" viewBox="0 0 320 320">
+      <rect x="18" y="18" width="284" height="284" rx="70" fill="#07111f"/>
+      <rect x="18" y="18" width="284" height="284" rx="70" fill="#67e8f9" opacity="0.08"/>
+      <path d="M56 64c37 32 69 76 101 132 30 53 53 104 69 153 16-49 39-100 69-153 32-56 64-100 101-132 17-15 43-3 43 20 0 6-2 12-6 18-56 66-102 139-139 218-19 40-34 80-45 120-5 18-20 30-25 30s-20-12-25-30c-11-40-26-80-45-120C117 241 71 168 15 102c-4-6-6-12-6-18 0-23 30-35 47-20Z" transform="translate(48 0) scale(.72)" fill="url(#veilLeft)" opacity="0.95"/>
+      <path d="M264 64c-37 32-69 76-101 132-30 53-53 104-69 153-16-49-39-100-69-153C-7 140-39 96-76 64c-17-15-43-3-43 20 0 6 2 12 6 18 56 66 102 139 139 218 19 40 34 80 45 120 5 18 20 30 25 30s20-12 25-30c11-40 26-80 45-120 37-79 83-152 139-218 4-6 6-12 6-18 0-23-30-35-47-20Z" transform="translate(272 0) scale(.72)" fill="url(#veilRight)" opacity="0.88"/>
+    </symbol>
+  </defs>
+
+  <rect width="1600" height="2000" fill="url(#bg)"/>
+  <rect width="1600" height="2000" fill="url(#aquaGlow)"/>
+  <rect width="1600" height="2000" fill="url(#copperGlow)"/>
+  <rect x="-40" y="0" width="1680" height="2000" fill="url(#dotGrid)" opacity="0.46"/>
+
+  <g opacity="0.38">
+    <path d="M173 632 C468 480 658 604 841 806 S1195 1180 1450 1026" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M104 1394 C384 1220 642 1292 856 1472 S1238 1740 1514 1510" fill="none" stroke="#67e8f9" stroke-width="2"/>
+    <path d="M256 890 C518 856 728 958 917 1084 S1240 1280 1435 1160" fill="none" stroke="#a3e635" stroke-width="2" opacity="0.54"/>
+  </g>
+
+  <g transform="translate(140 118)" opacity="0.98">
+    <use href="#veilIcon" width="104" height="104"/>
+    <text x="132" y="49" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="38" font-weight="760">Veil</text>
+    <text x="132" y="88" fill="#d9f99d" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="16" font-weight="650">IDENTITY BROWSER</text>
+  </g>
+
+  <g transform="translate(136 1420)">
+    <text x="0" y="0" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="104" font-weight="780">Welcome back</text>
+    <text x="0" y="118" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="104" font-weight="780">to clean sessions.</text>
+    <text x="4" y="204" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="32" font-weight="520">Encrypted profiles, stable fingerprints, and proxy-ready browser workspaces.</text>
+  </g>
+
+  <g transform="translate(198 416)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1188" height="832" rx="74" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2"/>
+    <rect x="56" y="58" width="1076" height="716" rx="48" fill="#071013" opacity="0.78"/>
+    <rect x="56" y="58" width="1076" height="102" rx="48" fill="#ffffff" opacity="0.08"/>
+    <circle cx="112" cy="110" r="14" fill="#fb7185"/>
+    <circle cx="156" cy="110" r="14" fill="#fbbf24"/>
+    <circle cx="200" cy="110" r="14" fill="#34d399"/>
+    <rect x="282" y="88" width="364" height="44" rx="22" fill="#ffffff" opacity="0.11"/>
+    <rect x="856" y="86" width="212" height="48" rx="24" fill="#2dd4bf" opacity="0.18"/>
+
+    <g transform="translate(112 218)">
+      <rect x="0" y="0" width="284" height="422" rx="34" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="32" y="34" width="88" height="88" rx="28" fill="#67e8f9" opacity="0.2"/>
+      <use href="#veilIcon" x="45" y="47" width="62" height="62"/>
+      <text x="32" y="178" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="31" font-weight="720">Profile A-128</text>
+      <text x="32" y="222" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="22" font-weight="520">US residential proxy</text>
+      <rect x="32" y="280" width="220" height="15" rx="7" fill="#67e8f9" opacity="0.74"/>
+      <rect x="32" y="318" width="166" height="15" rx="7" fill="#a3e635" opacity="0.6"/>
+      <rect x="32" y="356" width="198" height="15" rx="7" fill="#f59e0b" opacity="0.56"/>
+    </g>
+
+    <g transform="translate(454 216)">
+      <rect x="0" y="0" width="584" height="94" rx="28" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.1"/>
+      <circle cx="54" cy="47" r="22" fill="#34d399" opacity="0.95"/>
+      <rect x="98" y="28" width="252" height="17" rx="8" fill="#f8fafc" opacity="0.8"/>
+      <rect x="98" y="58" width="188" height="14" rx="7" fill="#94a3b8" opacity="0.52"/>
+      <rect x="430" y="29" width="106" height="36" rx="18" fill="#a3e635" opacity="0.2"/>
+      <text x="454" y="54" fill="#d9f99d" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="19" font-weight="700">ready</text>
+
+      <rect x="0" y="126" width="584" height="94" rx="28" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.1"/>
+      <circle cx="54" cy="173" r="22" fill="#67e8f9" opacity="0.95"/>
+      <rect x="98" y="154" width="306" height="17" rx="8" fill="#f8fafc" opacity="0.8"/>
+      <rect x="98" y="184" width="210" height="14" rx="7" fill="#94a3b8" opacity="0.52"/>
+      <rect x="430" y="155" width="106" height="36" rx="18" fill="#67e8f9" opacity="0.2"/>
+      <text x="450" y="180" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="19" font-weight="700">synced</text>
+
+      <rect x="0" y="252" width="584" height="94" rx="28" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.1"/>
+      <circle cx="54" cy="299" r="22" fill="#f59e0b" opacity="0.95"/>
+      <rect x="98" y="280" width="276" height="17" rx="8" fill="#f8fafc" opacity="0.8"/>
+      <rect x="98" y="310" width="234" height="14" rx="7" fill="#94a3b8" opacity="0.52"/>
+      <rect x="430" y="281" width="106" height="36" rx="18" fill="#f59e0b" opacity="0.2"/>
+      <text x="452" y="306" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="19" font-weight="700">sealed</text>
+    </g>
+
+    <g transform="translate(460 626)">
+      <path d="M0 52 C144 -18 288 -18 430 52" fill="none" stroke="url(#line)" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="0" cy="52" r="17" fill="#67e8f9"/>
+      <circle cx="215" cy="0" r="17" fill="#a3e635"/>
+      <circle cx="430" cy="52" r="17" fill="#f59e0b"/>
+      <text x="0" y="126" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="24" font-weight="600">Identity vault connected</text>
+    </g>
+  </g>
+
+  <g transform="translate(126 1772)">
+    <rect x="0" y="0" width="350" height="74" rx="37" fill="#ffffff" opacity="0.1" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="46" cy="37" r="14" fill="#a3e635"/>
+    <text x="76" y="47" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Inter, Segoe UI, sans-serif" font-size="25" font-weight="670">Private by default</text>
+  </g>
+</svg>
