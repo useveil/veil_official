@@ -16,12 +16,12 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@veil/auth-pages": "git+https://github.com/useveil/veil_auth_pages.git",
     "@base-ui/react": "^1.5.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.2.6",
     "@types/mdx": "^2.0.13",
+    "@veil/auth-pages": "git+https://github.com/useveil/veil_auth_pages.git",
     "@vercel/config": "^0.5.0",
     "@vercel/og": "^0.6.5",
     "class-variance-authority": "^0.7.1",
