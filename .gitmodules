@@ -1,3 +1,0 @@
-[submodule "packages/auth-pages"]
-	path = packages/auth-pages
-	url = https://github.com/useveil/veil_auth_pages.git

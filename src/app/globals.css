@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../node_modules/@veil/auth-pages/src";
 
 /* =================================================== */
 /* @theme — Tailwind v4 设计 tokens                    */
